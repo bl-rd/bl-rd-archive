@@ -1,3 +1,6 @@
+---
+year: 2019
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +10,45 @@
   <title>bl-rd</title>
 </head>
 <body>
-  <h1>Landing page!</h1>
-
-  <nav>
+  <a style="display:none">TODO: skip to content button</a>
+  <header></header>
+  <main>
+    <nav>
+      <ul>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/projects">Projects</a>
+          </li>
+          <li>
+            <a href="/blog">Blog</a>
+          </li>
+          <li>
+            <a href="/art">Art</a>
+          </li>
+          <li>
+            <a href="/notes">Notes</a>
+          </li>
+      </ul>
+    </nav>
+    <section>
+      <h1>My name is Bill and this is my <span>Website.</span></h1>
+      <p>Welcome.</p>
+    </section>
+    <section>
+      <p>
+        I am a full-stack developer based in the Lake District,
+        currently in the employment of <a href="https://www.lancaster.ac.uk" rel="noreferrer">Lancaster University</a>.
+      </p>
+    </section>
+  </main>
+  <footer>
     <ul>
-      <li>
-        <a href="blogs">Blogs</a>
-      </li>
+      <li>© {{ year }} Bill Reid</li>
+      <li>Contact: <a href="mailto=me@bl-rd.dev">me@bl-rd.dev</a></li>
+      <li>Privacy</li>
     </ul>
-  </nav>
+  </footer>
 </body>
 </html>
