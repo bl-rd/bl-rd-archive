@@ -1,0 +1,31 @@
+nav {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+}
+
+nav button {
+  display: none;
+  visibility: hidden;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  margin: 1rem;
+  text-align: right;
+  transform-origin: right;
+  transform: rotate(-20deg);
+  transition: transform 0.3s ease-out;
+}
+
+nav li:hover {
+  transform: rotate(0deg);
+}
+
+nav li a {
+  display: inline-block;
+  padding: 1.5rem 0;
+}
