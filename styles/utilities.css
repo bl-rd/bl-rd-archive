@@ -1,0 +1,3 @@
+.max-width\:base {
+  max-width: var(--measure-width);
+}

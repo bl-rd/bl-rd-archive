@@ -1,4 +1,4 @@
-h1 {
+h1.landing {
   font-family: 'DM Serif Display', serif;
   color: var(--font-body);
   min-height: 100vh;
@@ -8,7 +8,7 @@ h1 {
   background-image: linear-gradient(to right top, #d4ff02, #dbf600, #e0ed00, #e5e500, #e8dc09);
 }
 
-h1 span:first-of-type {
+h1.landing span:first-of-type {
   display: block;
   grid-column: 2/11;
   grid-row: 1/2;
@@ -17,7 +17,7 @@ h1 span:first-of-type {
   font-weight: lighter;
 }
 
-h1 span:nth-of-type(2) {
+h1.landing span:nth-of-type(2) {
   display: block;
   grid-column: 3/11;
   grid-row: 2/3;
@@ -29,7 +29,7 @@ h1 span:nth-of-type(2) {
   letter-spacing: -0.45rem;
 }
 
-h1 span:nth-of-type(2)::after {
+h1.landing span:nth-of-type(2)::after {
   display: block;
   content: '';
   width: 100%;
@@ -38,14 +38,14 @@ h1 span:nth-of-type(2)::after {
   margin-top: -7vmin;
 }
 
-h1 span:nth-of-type(2) > span {
+h1.landing span:nth-of-type(2) > span {
   font-size: 10vmin;
   display: inline;
   margin-left: 0.75rem;
 }
 
 @media only screen and (max-width: 50rem) {
-  h1 span:nth-of-type(2) {
+  h1.landing span:nth-of-type(2) {
     grid-column: 2/14;
   }
 }

@@ -4,18 +4,75 @@
   --font-body: #23262F;
   --highlight: #FF2877;
   --highlight-2: #D4FF02;
+
+  --measure-width: 66ch;
+
+  --ratio: 1.5;
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: var(--measure-width);
+  font-size: var(--s0);
+  line-height: var(--ratio);
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-width: none;
 }
 
 html {
   background-color: #efefed;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr auto 3fr;
+}
+
+main > div {
+  grid-column: 2;
+  padding: 0 5vmin;
+}
+
+section > * + * {
+  margin-top: var(--s1);
+}
+
+section > *:first-child {
+  margin-top: var(--s2);
+}
+
 a {
   color: var(--font-body);
+}
+
+h1 {
+  font-size: var(--s4);
+}
+
+h2 {
+  font-size: var(--s3);
+}
+
+h3 {
+  font-size: var(--s2);
+}
+
+h4 {
+  font-size: var(--s1);
 }

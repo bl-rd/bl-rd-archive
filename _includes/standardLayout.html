@@ -1,4 +1,6 @@
 ---
+templateEngineOverride: njk
+title: Hello, World!
 year: 2019
 ---
 <!DOCTYPE html>
@@ -7,14 +9,13 @@ year: 2019
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>bl-rd</title>
+  <title>{{ title }}</title>
   <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display|Lexend+Deca&display=swap" rel="stylesheet"> 
-  <link href="styles/main.css" rel="stylesheet"/>
+  <link href="/styles/main.css" rel="stylesheet"/>
 </head>
 <body>
   <a style="display:none">TODO: skip to content button</a>
-  <header></header>
-  <main>
+  <header>
     <nav>
       <ul>
           <li>
@@ -34,19 +35,14 @@ year: 2019
           </li>
       </ul>
     </nav>
-    <section>
-      <h1 class="landing">
-        <span>My name is Bill and this is my</span>
-        <span>Website<span>.</span>
-      </h1>
-      <p>Welcome.</p>
-    </section>
-    <section>
-      <p>
-        I am a full-stack developer based in the Lake District,
-        currently in the employment of <a href="https://www.lancaster.ac.uk" rel="noreferrer">Lancaster University</a>.
-      </p>
-    </section>
+  </header>
+  <main>
+    <div>
+      <header class="max-width:base">
+        <h1>{{ title }}</h1>
+      </header>
+      {{ content | safe }}
+    </div>
   </main>
   <footer>
     <ul>

@@ -1,5 +1,5 @@
 ---
-layout: blogLayout.html
+layout: standardLayout.html
 title: Blog Number 1
 ---
 
