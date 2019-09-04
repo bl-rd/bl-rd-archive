@@ -1,11 +1,15 @@
 :root {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: 'Lexend Deca', sans-serif;
 
   --font-body: #23262F;
-  --highlight: #F26B76;
+  --highlight: #FF2877;
+  --highlight-2: #D4FF02;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {

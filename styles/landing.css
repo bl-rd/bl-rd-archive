@@ -5,6 +5,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-template-rows: 1fr 40vh;
+  background-image: linear-gradient(to right top, #d4ff02, #dbf600, #e0ed00, #e5e500, #e8dc09);
 }
 
 h1 span:first-of-type {
