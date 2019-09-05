@@ -2,26 +2,16 @@
   display: block;
 }
 
+.landing header {
+  height: 100vh;
+}
+
 .landing h1 {
-  display: grid;
-  grid-template-columns: max-content repeat(2, 1fr) 10vmin;
-  height: 100vmin;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 85vw;
 }
 
 .landing .landing--large {
   font-size: 20vmin;
-}
-
-.landing__top {
-  grid-column: 1/4;
-}
-
-.landing__middle {
-  grid-column: 1/2;
-}
-
-.landing__bottom {
-  grid-column: 1/4;
-  grid-row: 3;
 }
