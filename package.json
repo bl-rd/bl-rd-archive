@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run css && eleventy",
-    "start": "npm run css && eleventy --serve",
+    "start": "npm run css && eleventy --serve --formats=html,css,jpg",
     "css": "postcss styles/main.css --dir _site/styles"
   },
   "keywords": [],

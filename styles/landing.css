@@ -3,7 +3,7 @@
 }
 
 .landing header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .landing h1 {
@@ -14,4 +14,47 @@
 
 .landing .landing--large {
   font-size: 20vmin;
+}
+
+.landing section {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.landing section p {
+  grid-column: 4/11;
+  grid-row: 7/9;
+  background-color: var(--font-body);
+  color: #efefed;
+  padding: 2em;
+  margin-top: -2em;
+}
+
+.landing section p a {
+  color: #efefed;
+}
+
+.landing section a {
+  grid-column: 7/12;
+  grid-row: 9/11;
+}
+
+.landing img {
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 50%;
+  border: 2vmin solid var(--font-body);
+  border-image-outset: 1ch;
+  grid-column: 7/9;
+  grid-row: 2/7;
+}
+
+@media only screen and (max-width: 60rem) {
+  .landing section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
