@@ -36,14 +36,8 @@ year: 2019
       </ul>
     </nav>
   </header>
-  <main>
-    <div>
-      <header class="max-width:base">
-        <h1>{{ title }}</h1>
-      </header>
-      {{ content | safe }}
-    </div>
-  </main>
+  <!-- main entry point -->
+  {{ content | safe }}
   <footer>
     <ul>
       <li>© {{ year }} Bill Reid</li>

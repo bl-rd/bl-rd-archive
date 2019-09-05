@@ -1,59 +1,19 @@
 ---
-year: 2019
+layout: standardLayout.html
+title: Bill's website
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>bl-rd</title>
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display|Lexend+Deca&display=swap" rel="stylesheet"> 
-  <link href="styles/main.css" rel="stylesheet"/>
-</head>
-<body>
-  <a style="display:none">TODO: skip to content button</a>
-  <header></header>
-  <main>
-    <nav>
-      <ul>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/projects">Projects</a>
-          </li>
-          <li>
-            <a href="/blog">Blog</a>
-          </li>
-          <li>
-            <a href="/art">Art</a>
-          </li>
-          <li>
-            <a href="/notes">Notes</a>
-          </li>
-      </ul>
-    </nav>
-    <section>
-      <h1 class="landing">
-        <span>My name is Bill and this is my</span>
-        <span>Website<span>.</span>
-      </h1>
-      <p>Welcome.</p>
-    </section>
-    <section>
-      <p>
-        I am a full-stack developer based in the Lake District,
-        currently in the employment of <a href="https://www.lancaster.ac.uk" rel="noreferrer">Lancaster University</a>.
-      </p>
-    </section>
-  </main>
-  <footer>
-    <ul>
-      <li>© {{ year }} Bill Reid</li>
-      <li>Contact: <a href="mailto=me@bl-rd.dev">me@bl-rd.dev</a></li>
-      <li>Privacy</li>
-    </ul>
-  </footer>
-</body>
-</html>
+<main class="landing">
+  <header>
+    <h1>
+      <span class="landing__top landing--large">My name is</span>
+      <span class="landing__middle landing--large">Bill, this is my</span>
+      <span class="landing__bottom landing--large">Website.</span>
+    </h1>
+  </header>
+  <section>
+    <p>
+      I am a full-stack developer based in the Lake District,
+      currently in the employment of <a href="https://www.lancaster.ac.uk" rel="noreferrer">Lancaster University</a>.
+    </p>
+  </section>
+</main>

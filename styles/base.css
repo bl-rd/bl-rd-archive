@@ -39,12 +39,12 @@ html {
   background-color: #efefed;
 }
 
-main {
+main:not(.landing) {
   display: grid;
   grid-template-columns: 1fr auto 3fr;
 }
 
-main > div {
+main:not(.landing) > div {
   grid-column: 2;
   padding: 0 5vmin;
 }
@@ -61,7 +61,7 @@ a {
   color: var(--font-body);
 }
 
-h1 {
+h1, h1 > * {
   font-size: var(--s4);
 }
 
