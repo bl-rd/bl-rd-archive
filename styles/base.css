@@ -42,11 +42,12 @@ html {
 main:not(.landing) {
   display: grid;
   grid-template-columns: 1fr auto 3fr;
+  min-height: 90vh;
 }
 
 main:not(.landing) > div {
   grid-column: 2;
-  padding: 0 5vmin;
+  padding: 12vh 5vmin;
 }
 
 section > * + * {
