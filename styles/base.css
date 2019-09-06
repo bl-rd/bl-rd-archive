@@ -23,6 +23,7 @@
   max-width: var(--measure-width);
   font-size: var(--s0);
   line-height: var(--ratio);
+  color: var(--font-body);
 }
 
 html,
@@ -58,10 +59,6 @@ section > *:first-child {
   margin-top: var(--s2);
 }
 
-a {
-  color: var(--font-body);
-}
-
 h1, h1 > * {
   font-size: var(--s4);
 }
@@ -78,8 +75,26 @@ h4 {
   font-size: var(--s1);
 }
 
-footer {
+main footer {
+  margin-top: 6.28rem;
+  padding-top: 2ch;
+  border-top: 1px solid var(--font-body);
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.9em;
+}
+
+body > footer {
   min-height: 10ch;
   background-color: var(--font-body);
   color: #efefed;
+}
+
+sup a {
+  margin-left: 0.2em;
 }
