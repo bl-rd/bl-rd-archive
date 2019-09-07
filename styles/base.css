@@ -51,6 +51,12 @@ main:not(.landing) > div {
   padding: 12vh 5vmin;
 }
 
+main header p:first-of-type {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-left: 1ch solid var(--font-body);
+}
+
 section > * + * {
   margin-top: var(--s1);
 }
