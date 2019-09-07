@@ -81,6 +81,10 @@ main footer {
   border-top: 1px solid var(--font-body);
 }
 
+main {
+  counter-reset: footnotes;
+}
+
 footer ul {
   list-style: none;
 }
@@ -93,6 +97,20 @@ body > footer {
   min-height: 10ch;
   background-color: var(--font-body);
   color: #efefed;
+}
+
+a[data-footnote] {
+  counter-increment: footnotes;
+  text-decoration: none;
+  color: inherit;
+}
+
+a[data-footnote]::after {
+  content: '[' counter(footnotes) ']';
+  vertical-align: super;
+  font-size: 0.7em;
+  text-decoration: underline;
+  margin-left: 0.5ch;
 }
 
 sup {
