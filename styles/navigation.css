@@ -16,16 +16,23 @@ nav ul {
 nav li {
   margin: 1rem;
   text-align: right;
-  transform-origin: right;
-  transform: rotate(-20deg);
-  transition: transform 0.3s ease-out;
+  transition: all 0.16s ease-out;
+  background-color: var(--font-body);
 }
 
 nav li:hover {
-  transform: rotate(0deg);
+  background-size: 200%;
+  background-color: var(--highlight);
+  transform: scale(1.05);
+}
+
+nav li:hover a {
+  color: var(--font-body);
 }
 
 nav li a {
+  color: var(--base);
+  width: 100%;
   display: inline-block;
-  padding: 1.5rem 0;
+  padding: 0.66rem 1.5ch;
 }

@@ -5,6 +5,8 @@
   --font-body: #23262F;
   --highlight: #FF2877;
   --highlight-2: #D4FF02;
+  --highlight-gradient: linear-gradient(to right top, #ff2877, #ff5b4e, #ff9515, #ffcc00, #d4ff02);
+  --highlight-gradient: linear-gradient(to right top, #ff2877, #ff3b81, #ff4a8b, #fe5794, #fd639d);
 
   --measure-width: 66ch;
 

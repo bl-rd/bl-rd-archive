@@ -32,6 +32,7 @@
   width: 100%;
   height: .7ch;
   background-color: var(--highlight);
+  background-image: var(--highlight-gradient);
   margin-top: -0.4ch;
 }
 
