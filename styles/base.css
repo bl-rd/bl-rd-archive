@@ -1,6 +1,7 @@
 :root {
   font-family: 'Lexend Deca', sans-serif;
 
+  --base: #e0d8de; /* #efefed; */
   --font-body: #23262F;
   --highlight: #FF2877;
   --highlight-2: #D4FF02;
@@ -37,7 +38,7 @@ footer {
 }
 
 html {
-  background-color: #efefed;
+  background-color: var(--base);
 }
 
 main:not(.landing) {

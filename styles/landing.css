@@ -4,6 +4,7 @@
 
 .landing header {
   min-height: 100vh;
+  background-color: var(--font-body);
 }
 
 .landing h1 {
@@ -15,6 +16,23 @@
 
 .landing .landing--large {
   font-size: 20vmin;
+  color: var(--base);
+  text-shadow: -0.3ch 0 0 #181a20;
+}
+
+.landing--large .highlight {
+  font-size: inherit;
+  color: inherit;
+  text-shadow: inherit;
+}
+
+.landing--large .highlight::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: .7ch;
+  background-color: var(--highlight);
+  margin-top: -0.4ch;
 }
 
 .landing section {
