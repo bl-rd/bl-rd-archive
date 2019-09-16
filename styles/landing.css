@@ -1,4 +1,5 @@
 .landing {
+  --shadow-colour: var(--highlight);
   display: block;
 }
 
@@ -17,23 +18,26 @@
 .landing .landing--large {
   font-size: 20vmin;
   color: var(--base);
-  text-shadow: -0.3ch 0 0 #181a20;
+  text-shadow: -0.1ch 0 0 var(--shadow-colour);
 }
 
 .landing--large .highlight {
   font-size: inherit;
-  color: inherit;
-  text-shadow: inherit;
-}
+  color: var(--highlight);
+  text-shadow: -0.1ch 0 0 white;
+  text-shadow: none;
 
-.landing--large .highlight::after {
-  display: block;
-  content: '';
-  width: 100%;
-  height: .7ch;
-  background-color: var(--highlight);
-  background-image: var(--highlight-gradient);
-  margin-top: -0.4ch;
+  /* background-image: var(--highlight-gradient);
+  background-clip: text;
+  background-size: 200% 200%;
+  background-position: center left;
+  color: transparent;
+  text-shadow: none;
+
+  animation-name: background-alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
 }
 
 .landing section {
@@ -69,6 +73,15 @@
   border-image-outset: 1ch;
   grid-column: 7/9;
   grid-row: 2/7;
+}
+
+@keyframes background-alternate {
+  0% {
+    background-position: center left;
+  }
+  100% {
+    background-position: center right;
+  }
 }
 
 @media only screen and (max-width: 60rem) {

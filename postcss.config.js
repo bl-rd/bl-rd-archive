@@ -6,6 +6,8 @@ module.exports = {
   plugins: [
     postcssImport(),
     postcssPresetEnv(),
-    cssnano()   
+    cssnano({
+      reduceIndents: false
+    })   
   ]
 };

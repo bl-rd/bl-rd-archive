@@ -36,3 +36,34 @@ nav li a {
   display: inline-block;
   padding: 0.66rem 1.5ch;
 }
+
+nav li a:visited {
+  color: var(--base);
+}
+
+.mobile-menu {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  top: 100vh;
+  transform: translateY(-100%);
+  padding-bottom: 1rem;
+  background: white;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 60rem) {
+  nav {
+    right: initial;
+    top: 100vh;
+  }
+  
+  nav.show {
+    top: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+    visibility: visible;
+  }
+}

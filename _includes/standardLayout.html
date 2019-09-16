@@ -24,11 +24,11 @@ year: 2019
         <li>
           <a href="/about">About</a>
         </li>
-        <li>
-          <a href="/projects">Projects</a>
-        </li>
       </ul>
     </nav>
+    <div class="mobile-menu">
+      <button type="button">Menu</button>
+    </div>
   </header>
   <!-- main entry point -->
   {{ content | safe }}
@@ -39,5 +39,15 @@ year: 2019
       <li>Privacy</li>
     </ul>
   </footer>
+
+  <script>
+    (function() {
+      const button = document.querySelector('.mobile-menu button');
+      const menu = document.querySelector('nav');
+      button.addEventListener('click', function(e) {
+        menu.classList.toggle('show');        
+      });
+    })();
+  </script>
 </body>
 </html>
