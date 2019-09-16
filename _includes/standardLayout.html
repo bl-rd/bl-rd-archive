@@ -10,7 +10,9 @@ year: 2019
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ title }}</title>
-  <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display|Lexend+Deca&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com/css" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com/css" />
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> 
   <link href="/styles/main.css" rel="stylesheet"/>
 </head>
 <body>
@@ -26,9 +28,7 @@ year: 2019
         </li>
       </ul>
     </nav>
-    <div class="mobile-menu">
-      <button type="button">Menu</button>
-    </div>
+    <button type="button" class="mobile-button">Menu</button>
   </header>
   <!-- main entry point -->
   {{ content | safe }}
@@ -42,10 +42,13 @@ year: 2019
 
   <script>
     (function() {
-      const button = document.querySelector('.mobile-menu button');
+      const button = document.querySelector('.mobile-button');
       const menu = document.querySelector('nav');
       button.addEventListener('click', function(e) {
-        menu.classList.toggle('show');        
+        menu.classList.toggle('show');
+        button.classList.toggle('expand');
+        const text = button.classList.contains('expand') ? 'Close' : 'Menu';
+        button.innerHTML = text;
       });
     })();
   </script>
