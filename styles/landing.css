@@ -1,24 +1,32 @@
 .landing {
   --shadow-colour: var(--highlight);
-  display: block;
 }
 
 .landing header {
   min-height: 100vh;
   background-color: var(--font-body);
+  background-color: #121213;
 }
 
 .landing h1 {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   max-width: 92vw;
-  letter-spacing: -0.1em;
+  max-height: 100%; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding-top: 5vmin;
 }
 
 .landing .landing--large {
+  display: block;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.05ch;
+  line-height: 20vmin;
   font-size: 20vmin;
   color: var(--base);
   text-shadow: -0.1ch 0 0 var(--shadow-colour);
+  grid-column: 2/11;
 }
 
 .landing--large .highlight {
@@ -86,7 +94,7 @@
 
 @media only screen and (max-width: 60rem) {
   .landing h1 {
-    display: block;
+    /* display: block; */
     font-size: 12vmax;
     letter-spacing: inherit;
     line-height: 1;
