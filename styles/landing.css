@@ -9,10 +9,6 @@
 }
 
 .landing h1 {
-  /* display: flex;
-  flex-direction: column;
-  max-width: 92vw;
-  max-height: 100%; */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding-top: 5vmin;
@@ -20,32 +16,46 @@
 
 .landing .landing--large {
   display: block;
-  font-family: 'Barlow', sans-serif;
+  font-family: var(--heading-font);
   letter-spacing: 0.05ch;
-  line-height: 20vmin;
-  font-size: 20vmin;
+  line-height: 15vmin;
+  font-size: 14vmin;
   color: var(--base);
-  text-shadow: -0.1ch 0 0 var(--shadow-colour);
   grid-column: 2/11;
+
+  opacity: 0;
+  margin-top: 1.2ch;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.landing--large .highlight {
-  font-size: inherit;
-  color: var(--highlight);
-  text-shadow: -0.1ch 0 0 white;
-  text-shadow: none;
+.landing__top {
+  animation-delay: 0.5s;
+}
 
-  /* background-image: var(--highlight-gradient);
-  background-clip: text;
-  background-size: 200% 200%;
-  background-position: center left;
-  color: transparent;
-  text-shadow: none;
+.landing__middle {
+  animation-delay: 1.1s;
+}
 
-  animation-name: background-alternate;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
+.landing__bottom {
+  animation-delay: 1.7s;
+}
+
+.landing__last {
+  animation-delay: 2.3s;
+}
+
+.landing--shadow.landing--large[data-shadow-text]::before {
+  content: attr(data-shadow-text);
+  position: absolute;
+  color: var(--shadow-colour);
+  z-index: -1;
+  opacity: 0;
+  animation-name: shadow;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 .landing section {
@@ -89,6 +99,28 @@
   }
   100% {
     background-position: center right;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    margin-top: 1.2ch;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-left: -0.2ch;
   }
 }
 

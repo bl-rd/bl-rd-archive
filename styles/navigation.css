@@ -92,7 +92,7 @@ nav li a:visited {
   nav li a {
     padding-right: 0.7ch;
     font-size: var(--s3);
-    font-family: 'Barlow';
+    font-family: var(--heading-font);
     text-shadow: -0.2ch 0 0 var(--font-body);
   }
   

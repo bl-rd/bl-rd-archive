@@ -5,14 +5,10 @@ title: Bill's website
 <main class="landing">
   <header>
     <h1>
-      <!-- <span>This</span>
-      <span>is</span>
-      <span>my</span>
-      <span>website</span> -->
-      <span class="landing__top landing--large">This</span>
-      <span class="landing__middle landing--large">is</span>
-      <span class="landing__bottom landing--large">my</span>
-      <span class="landing--large highlight" data-shadow-text="website">website.</span>
+      <span class="landing__top landing--large" data-shadow-text="This">This</span>
+      <span class="landing__middle landing--large" data-shadow-text="is">is</span>
+      <span class="landing__bottom landing--large" data-shadow-text="my">my</span>
+      <span class="landing__last landing--large" data-shadow-text="website.">website.</span>
     </h1>
   </header>
   <section class="max-width:none">
@@ -25,3 +21,8 @@ title: Bill's website
     <a href="/about">More about me</a>
   </section>
 </main>
+
+<script type="module">
+import { landingAnimation } from '/scripts/landing.js';
+landingAnimation();
+</script>
