@@ -6,6 +6,7 @@
   --base: #e0d8de; /* #efefed; */
   --font-body: #23262F;
   --highlight: #FF2877;
+  --highlight-offset: #CC215F; 
   --highlight-2: #D4FF02;
   --highlight-gradient: linear-gradient(to right top, #ff2877, #ff5b4e, #ff9515, #ffcc00, #d4ff02);
   --highlight-gradient: linear-gradient(to right top, #ff2877, #ff3b81, #ff4a8b, #fe5794, #fd639d);
@@ -13,7 +14,7 @@
   --measure-width: 66ch;
 
   --ratio: 1.5;
-  --s0: 1rem;
+  --s0: 1.1rem;
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
@@ -60,10 +61,8 @@ main:not(.landing) > div {
   padding: 12vh 5vmin;
 }
 
-main header p:first-of-type {
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  border-left: 1ch solid var(--font-body);
+section {
+  margin-top: 6.6rem;
 }
 
 section > * + * {
@@ -71,15 +70,33 @@ section > * + * {
 }
 
 section > *:first-child {
-  margin-top: var(--s2);
+  margin: var(--s2) 0;
 }
 
-h1, h2, h3 {
-  /* text-shadow: -0.1ch 0 0 var(--highlight); */
+h2, h3 {
+  text-shadow: -0.1ch 0 0 var(--highlight-2);
+}
+
+h2::before,
+h2::before {
+  content: attr(data-background);
+  color: var(--highlight);
+  background-color: var(--highlight);
+  text-shadow: none;
+  display: inline-block;
+  position: absolute;
+  transform: rotate(-5deg) translateX(-10%);
+  z-index: -1;
 }
 
 h1, h1 > * {
   font-size: var(--s4);
+}
+
+h1 + p {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  border-left: 1ch solid var(--font-body);
 }
 
 h2 {

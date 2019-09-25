@@ -17,7 +17,7 @@
 .landing .landing--large {
   display: block;
   font-family: var(--heading-font);
-  letter-spacing: 0.05ch;
+  letter-spacing: -0.01ch;
   line-height: 15vmin;
   font-size: 14vmin;
   color: var(--base);
@@ -93,15 +93,6 @@
   grid-row: 2/7;
 }
 
-@keyframes background-alternate {
-  0% {
-    background-position: center left;
-  }
-  100% {
-    background-position: center right;
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
@@ -121,12 +112,12 @@
   100% {
     opacity: 1;
     margin-left: -0.2ch;
+    text-shadow: -0.1ch 0 0 var(--highlight-offset);
   }
 }
 
 @media only screen and (max-width: 60rem) {
   .landing h1 {
-    /* display: block; */
     font-size: 12vmax;
     letter-spacing: inherit;
     line-height: 1;
