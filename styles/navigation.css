@@ -50,6 +50,7 @@ nav li a:visited {
   top: calc(100vh - 1ch);
   right: 1ch;
   transform: translateY(-100%);
+  z-index: 1000;
 
   width: 70px;
   height: 70px;
@@ -79,39 +80,43 @@ nav li a:visited {
   color: var(--font-body);
 }
 
-@media only screen and (max-width: 60rem) {
-  nav {
-    right: initial;
-    top: 100vh;
-  }
+nav {
+  right: initial;
+  top: 100vh;
+  z-index: 999;
+}
 
-  nav li {
-    background-color: initial;
-  }
+nav li {
+  background-color: initial;
+  max-width: initial;
+  margin-right: 10vmin;
+}
 
-  nav li a {
-    padding-right: 0.7ch;
-    font-size: var(--s3);
-    font-family: var(--heading-font);
-    text-shadow: -0.2ch 0 0 var(--font-body);
-  }
-  
-  nav.show {
-    transition: top 0.25s ease-in;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--highlight);
-  }
+nav li a {
+  padding-right: 0.7ch;
+  font-size: var(--s3);
+  font-family: var(--heading-font);
+  text-shadow: -0.2ch 0 0 var(--font-body);
+}
 
-  .mobile-button {
-    display: block;
-    visibility: visible;
-  }
+nav.show {
+  transition: top 0.25s ease-in;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--highlight);
+}
+
+.mobile-button {
+  display: block;
+  visibility: visible;
 }
 
 @keyframes button-collapse {
   100% {
     background-color: var(--highlight);
   }
+}
+
+@media only screen and (max-width: 60rem) {
 }
