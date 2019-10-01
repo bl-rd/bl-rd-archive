@@ -5,7 +5,6 @@
 .landing header {
   min-height: 100vh;
   background-color: var(--font-body);
-  background-color: #121213;
 }
 
 .landing h1 {
