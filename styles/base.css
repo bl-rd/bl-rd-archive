@@ -20,6 +20,8 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
+
+  --grid: 3fr 2fr auto 4fr;
 }
 
 * {
@@ -52,7 +54,7 @@ h1, h2, h3 {
 
 main:not(.landing) {
   display: grid;
-  grid-template-columns: 3fr 2fr auto 4fr;
+  grid-template-columns: var(--grid);
   grid-template-rows: auto auto auto;
   min-height: 90vh;
 }
@@ -149,10 +151,18 @@ main {
 
 footer ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer ul li,
+footer ul li a {
+  color: var(--base);
 }
 
 footer ul li {
-  margin-bottom: 0.9em;
+  padding: 2.66rem 1.3rem 1.3rem 1.3rem;
 }
 
 body > footer {
