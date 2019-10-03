@@ -52,7 +52,7 @@ h1, h2, h3 {
 
 main:not(.landing) {
   display: grid;
-  grid-template-columns: 1fr auto 4fr;
+  grid-template-columns: 3fr 2fr auto 4fr;
   grid-template-rows: auto auto auto;
   min-height: 90vh;
 }
@@ -60,7 +60,7 @@ main:not(.landing) {
 
 section, section + footer {
   margin-top: 6.6rem;
-  grid-column: 2/4;
+  grid-column: 3/3;
 }
 
 section + footer {
@@ -79,7 +79,6 @@ h2, h3 {
   text-shadow: -0.1ch 0 0 var(--highlight-2);
 }
 
-h2::before,
 h2::before {
   content: attr(data-background);
   color: var(--highlight);
@@ -93,7 +92,7 @@ h2::before {
 
 h1 {
   grid-row: 1/1;
-  grid-column: 2/2;
+  grid-column: 2/4;
   color: var(--highlight);
   margin: 4rem 0 2rem;
   text-shadow: -0.1ch 0 0 var(--base);
@@ -110,7 +109,6 @@ h1::before {
   position: absolute;
   transform: rotate(9deg);
   z-index: -1;
-  text-shadow: -0.1ch 0 0 var(--highlight-2);
   margin-left: -1rem;
 }
 
@@ -123,7 +121,8 @@ h1 + p {
   padding: 1rem 2rem;
   border-left: 1ch solid var(--font-body);
   grid-row: 2/2;
-  grid-column: 2/3;
+  grid-column: 2/4;
+  font-size: var(--s2);
 }
 
 h2 {
