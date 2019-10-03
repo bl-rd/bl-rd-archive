@@ -59,9 +59,11 @@ main:not(.landing) {
   min-height: 90vh;
 }
 
+section {
+  margin-top: 6.6rem;
+}
 
 section, section + footer {
-  margin-top: 6.6rem;
   grid-column: 3/3;
 }
 
@@ -75,6 +77,10 @@ section > * + * {
 
 section > *:first-child {
   margin: var(--s2) 0;
+}
+
+section:last-of-type {
+  margin-bottom: 6.6rem;
 }
 
 h2, h3 {
@@ -140,7 +146,6 @@ h4 {
 }
 
 main footer {
-  margin-top: 6.28rem;
   padding-top: 6ch;
   border-top: 1px solid var(--font-body);
 }
