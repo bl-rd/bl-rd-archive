@@ -182,3 +182,13 @@ sup a {
   margin-left: 0.2em;
   font-size: calc(var(--s0) * 0.8);
 }
+
+@media only screen and (max-width: 60rem) {
+  h1 {
+    font-size: var(--s3);
+  }
+
+  h1 + p {
+    font-size: var(--s1);
+  }
+}

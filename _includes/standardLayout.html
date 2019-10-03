@@ -24,14 +24,14 @@ year: 2019
     <menu-button></menu-button>
     <nav>
       <ul class="max-width:none">
-        <li class="active">
+        <li>
           <a href="/" rel="me">Home</a>
         </li>
         <li>
-          <a href="/about">About</a>
+          <a href="/about/">About</a>
         </li>
         <li>
-          <a href="/now">/now</a>
+          <a href="/now/">/now</a>
         </li>
       </ul>
     </nav>
@@ -103,7 +103,6 @@ year: 2019
 
         connectedCallback() {
           this.open = false;
-          console.log(this.shadowRoot.querySelectorAll('svg'));
           this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
           this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');
 
@@ -140,6 +139,17 @@ year: 2019
       function handleMenuClick(event) { 
         menu.classList.toggle('show');
       }
+
+      function initialiseNavStyles() {
+        const links = Array.from(document.querySelectorAll('nav li a'));
+        const { pathname } = location;
+        links.forEach(l => {
+          if (pathname === l.getAttribute('href')) {
+            l.parentElement.classList.add('active');
+          }
+        });
+      }
+      initialiseNavStyles();
     })();
   </script>
 </body>

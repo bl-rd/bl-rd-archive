@@ -22,7 +22,6 @@ nav li {
 
 nav li:hover {
   background-size: 200%;
-  /* background-color: var(--highlight); */
   transform: scale(1.05);
 }
 
@@ -50,7 +49,7 @@ nav li a {
 nav {
   right: initial;
   top: 0;
-  left: 105vw;
+  left: 150vw;
   z-index: 999;
   transition: left 0.25s ease-out;
   background-color: var(--highlight);
@@ -62,6 +61,7 @@ nav li {
   background-color: initial;
   max-width: initial;
   margin-right: -30vw;
+  opacity: 0;
   transition: all 0.2s ease;
 }
 
@@ -115,7 +115,7 @@ nav.show li:nth-child(3) {
 @keyframes list-appear {
   0% {
     margin-right: -30vw;
-    opacity: 0.3;
+    opacity: 0;
   }
   100% {
     margin-right: 20vmin;
