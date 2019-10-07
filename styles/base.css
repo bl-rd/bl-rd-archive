@@ -21,7 +21,7 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
 
-  --grid: 3fr 2fr auto 4fr;
+  --grid: 2fr 4fr auto 4fr;
 }
 
 * {
@@ -57,6 +57,7 @@ main:not(.landing) {
   grid-template-columns: var(--grid);
   grid-template-rows: auto auto auto;
   min-height: 90vh;
+  padding: 0 1ch;
 }
 
 section {

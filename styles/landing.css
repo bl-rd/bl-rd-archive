@@ -134,6 +134,6 @@
   }
   .landing .landing--large {
     padding-left: 0;
-    transform: (0deg);
+    transform: rotate(0deg);
   }
 }
