@@ -26,14 +26,7 @@ year: 2019
   <!-- main entry point -->
   {{ content | safe }}
 
-  <footer>
-    <ul class="max-width:none">
-      <li>© {{ year }} Bill Reid</li>
-      <li>Contact: <a href="mailto:me@bl-rd.dev">me@bl-rd.dev</a></li>
-      <li>
-        <a href="/privacy/">Privacy</a></li>
-    </ul>
-  </footer>
+  {% include "partials/footer.html" %}
 
   <script type="module" src="/scripts/components/menu-button.js" async defer></script>
 
