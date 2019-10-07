@@ -1,0 +1,20 @@
+<header>
+    
+    <menu-button></menu-button>
+
+    <nav>
+        <ul class="max-width:none">
+            {% for item in navigation %}
+            <li>
+                <a href="{{ item.url }}" rel="me">{{ item.text}} </a>
+            </li>
+            <!-- <li>
+                <a href="/about/">About</a>
+            </li>
+            <li>
+                <a href="/now/">/now</a>
+            </li> -->
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

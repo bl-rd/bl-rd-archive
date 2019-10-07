@@ -20,24 +20,12 @@ year: 2019
 </head>
 <body>
   <a style="display:none">TODO: skip to content button</a>
-  <header>
-    <menu-button></menu-button>
-    <nav>
-      <ul class="max-width:none">
-        <li>
-          <a href="/" rel="me">Home</a>
-        </li>
-        <li>
-          <a href="/about/">About</a>
-        </li>
-        <li>
-          <a href="/now/">/now</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+
+  {% include "partials/navigation.njk" %}
+
   <!-- main entry point -->
   {{ content | safe }}
+  
   <footer>
     <ul class="max-width:none">
       <li>© {{ year }} Bill Reid</li>
