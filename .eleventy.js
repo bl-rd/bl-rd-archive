@@ -1,6 +1,12 @@
 const fs = require('fs');
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addPassthroughCopy('img');
+  eleventyConfig.addPassthroughCopy('icons');
+  eleventyConfig.addPassthroughCopy('scripts');
+  eleventyConfig.addPassthroughCopy('styles');
+
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: async function(err, bs) {
