@@ -85,7 +85,11 @@ nav li.active a::before {
   left: .5ch;
   top: .5ch;
   transform: translateY(50%) rotate(-15deg);
-  transition: all 0.16s ease-in;
+  transition: all 0.12s ease-out;
+}
+
+nav li.active:hover a::before {
+  transform: translate(20%, 70%) rotate(-37deg) scale(1.2);
 }
 
 nav.show {
