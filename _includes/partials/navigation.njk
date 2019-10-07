@@ -1,20 +1,60 @@
+<template id="menu-button-template">
+    <button>
+        <style>
+        p {
+            position: absolute;
+            left: -9999px;
+        }
+        svg {
+            display: none;
+            visibility: hidden;
+            stroke: var(--font-body);
+        }
+        .active {
+            display: inline-block;
+            visibility: visible;
+        }
+        button {
+            position: fixed;
+            z-index: 10000;
+            right: 1rem;
+            top: 1rem;
+            background-color: var(--base);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (max-width: 60rem) {
+            button {
+            top: initial;
+            bottom: 1rem;
+            }
+        }
+        </style>
+        <p id="hamburgerIconTitle">Open menu</p>
+        <svg id="open-menu-icon" class="active" role="img" xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 24 24" aria-labelledby="hamburgerIconTitle" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="hamburgerIconTitle">Menu</title> <path d="M6 7L18 7M6 12L18 12M6 17L18 17"/> </svg>
+        <p id="closeIconTitle">Close menu</p>
+        <svg id="close-menu-icon" role="img" xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 24 24" aria-labelledby="closeIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="closeIconTitle">Close</title> <path d="M6.34314575 6.34314575L17.6568542 17.6568542M6.34314575 17.6568542L17.6568542 6.34314575"/> </svg>
+    </button>
+</template>
+
 <header>
     
     <menu-button></menu-button>
 
     <nav>
         <ul class="max-width:none">
+            <!-- todo: add appropriate rels -->
             {% for item in navigation %}
             <li>
                 <a href="{{ item.url }}" rel="me">{{ item.text}} </a>
             </li>
-            <!-- <li>
-                <a href="/about/">About</a>
-            </li>
-            <li>
-                <a href="/now/">/now</a>
-            </li> -->
             {% endfor %}
         </ul>
     </nav>
+
 </header>
