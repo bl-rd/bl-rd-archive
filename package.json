@@ -6,8 +6,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run css && eleventy",
-    "start": "concurrently \"eleventy --serve --formats=html\" \"npm run css -- --watch\"",
-    "css": "postcss styles/main.css --dir _site/styles"
+    "start": "concurrently \"eleventy --serve --formats=html\" \"npm run css:inline -- --watch\" \"npm run css:main -- --watch\"",
+    "css": "npm run css:inline && npm run css:main",
+    "css:main": "postcss styles/main.css --dir _site/styles",
+    "css:inline": "postcss styles/base.css --dir _includes/partials/css"
   },
   "keywords": [],
   "author": "",
