@@ -116,6 +116,39 @@ nav.show li:nth-child(3) {
   animation-delay: 0.4s;
 }
 
+.no-js nav * {
+  animation: none;
+}
+
+.no-js nav {
+  position: initial;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: var(--font-body);
+}
+
+.no-js nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.no-js nav ul li {
+  opacity: 1;
+  transition: none;
+  margin: 0;
+}
+
+.no-js nav ul li a {
+  color: var(--base);
+  font-size: var(--s1);
+}
+
+
+
 @keyframes list-appear {
   0% {
     margin-right: -30vw;
