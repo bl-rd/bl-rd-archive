@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Akashi";
+  src: url("/fonts/akashi-webfont.woff2") format("woff2"), /* Modern browsers */
+  url("/fonts/akashi-webfont.woff") format("woff"); /* Legacy browsers */
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/manrope-extrabold.woff2") format("woff2"), /* Modern browsers */
+  url("/fonts/manrope-extrabold.woff") format("woff"); /* Legacy browsers */
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "SpaceMono";
+  src: url("/fonts/SpaceMono-Regular.woff2") format("woff2"), /* Modern browsers */
+  url("/fonts/SpaceMono-Regular.woff") format("woff"); /* Legacy browsers */
+}
+@font-face {
+  font-family: "SpaceMono Bold";
+  src: url("/fonts/SpaceMono-Bold.woff2") format("woff2"), /* Modern browsers */
+  url("/fonts/SpaceMono-Bold.woff") format("woff"); /* Legacy browsers */
+}
+@font-face {
+  font-family: "SpaceMono Italic";
+  src: url("/fonts/SpaceMono-Italic.woff2") format("woff2"), /* Modern browsers */
+  url("/fonts/SpaceMono-Italic.woff") format("woff"); /* Legacy browsers */
+}

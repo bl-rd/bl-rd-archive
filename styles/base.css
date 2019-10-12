@@ -1,7 +1,7 @@
 :root {
-  font-family: 'Literata', sans-serif;
+  font-family: 'SpaceMono', 'Fira Code', monospace;
 
-  --heading-font: 'Bungee', sans-serif;
+  --heading-font: 'Akashi', 'Manrope', 'Bungee', sans-serif;
 
   --base: #fefeff;
   --font-body: #121213;
@@ -12,14 +12,14 @@
   --measure-width: 66ch;
 
   --ratio: 1.5;
-  --s0: 1.1rem;
+  --s0: 1.166rem;
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
 
-  --grid: 2fr 4fr auto 4fr;
+  --grid: minmax(1fr, 4fr) minmax(0, 3fr) auto 4fr;
 }
 
 * {
@@ -30,6 +30,16 @@
   font-size: var(--s0);
   line-height: var(--ratio);
   color: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+*:before,
+*:after {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
 html,
@@ -48,6 +58,8 @@ html {
 
 h1, h2, h3 {
   font-family: var(--heading-font);
+  font-weight: 800;
+  /* text-transform: uppercase; */
 }
 
 main:not(.landing) {
@@ -83,6 +95,7 @@ section:last-of-type {
 }
 
 h2, h3 {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif, sans-serif;
   text-shadow: -0.1ch 0 0 var(--highlight-2);
 }
 
@@ -195,6 +208,14 @@ sup {
 sup a {
   margin-left: 0.2em;
   font-size: calc(var(--s0) * 0.8);
+}
+
+i, em {
+  font-family: 'SpaceMono Italic', 'Fira Code', monospace;
+}
+
+b, strong {
+  font-family: 'SpaceMono Bold', 'Fira Code', monospace;
 }
 
 @media only screen and (max-width: 60rem) {
