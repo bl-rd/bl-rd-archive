@@ -1,13 +1,9 @@
 :root {
-  font-family: 'SpaceMono', 'Fira Code', monospace;
 
   --heading-font: 'Akashi', 'Manrope', 'Bungee', sans-serif;
 
   --base: #fefeff;
   --font-body: #121213;
-  --highlight: #FF2877;
-  --highlight-offset: #CC215F; 
-  --highlight-2: #D4FF02;
 
   --measure-width: 66ch;
 
@@ -19,7 +15,26 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
 
-  --grid: minmax(1fr, 4fr) minmax(0, 3fr) auto 4fr;
+  /* font variables */
+  --font-heading: 'Akashi', 'Manrope', sans-serif;
+  --font-sub-heading: 'Manrope', Helvetica, Arial, sans-serif;
+  --font-body: 'SpaceMono', monospace;
+
+  /* colours */
+  --white: #fff;
+  --black: #000;
+  --highlight: #FF2877;
+  --highlight-offset: #CC215F; 
+  --highlight-2: #D4FF02;
+
+  /* theme */
+  --app-colour-body: var(--black);
+  --app-colour-background: var(--white);
+  --stripe-width: 3px;
+
+  /* layout */
+  --grid-columns-full: minmax(0,1fr)  repeat(4, .75fr) minmax(0,1fr);
+  --grid-columns-mobile: auto auto repeat(3, .75fr) auto;
 }
 
 * {
@@ -28,8 +43,9 @@
   box-sizing: border-box;
   max-width: var(--measure-width);
   font-size: var(--s0);
+  font-family: var(--font-body);
   line-height: var(--ratio);
-  color: var(--font-body);
+  color: var(--app-colour-body);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
@@ -42,188 +58,143 @@
   font-smoothing: antialiased;
 }
 
-html,
-body,
-div,
-header,
-nav,
-main,
-footer {
+html, body, main, article, article > header {
   max-width: none;
 }
 
-html {
-  background-color: var(--base);
+
+h1, h2, p, li, header, section {
+  margin: 0.25em 0 1em;
 }
 
-h1, h2, h3 {
-  font-family: var(--heading-font);
-  font-weight: 800;
-  /* text-transform: uppercase; */
-}
-
-main:not(.landing) {
+article {
   display: grid;
-  grid-template-columns: var(--grid);
-  grid-template-rows: auto auto auto;
-  min-height: 90vh;
-  padding: 0 1ch;
+  grid-template-columns: minmax(0,1fr)  repeat(4, .75fr) minmax(0,1fr);
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+}
+
+article > header {
+  grid-column: 2/6;
+  border-image: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) var(--stripe-width),
+    #000 var(--stripe-width),
+    #000 calc(var(--stripe-width) * 2)
+  ) 15;
+  border-bottom: 15px solid black;
+  padding: 0 2rem 0.8rem 0;
+  
+}
+
+article > header p {
+  font-size: var(--s2);
+}
+
+article nav ul {
+  margin: 1rem 0;
+}
+
+header > * + *,
+section > * + * {
+  max-width: 66ch;
+}
+
+.supplemtary {
+  grid-column: 2/3;
+  grid-row: 2/5;
+}
+
+.supplemtary nav {
+  border-top: 1px solid black;
+  border-bottom: var(--stripe-width) solid black;
 }
 
 section {
-  margin-top: 6.6rem;
+  grid-column: 3/6;
 }
 
-section, section + footer {
-  grid-column: 3/3;
+section:first-of-type {
+  margin-top: 0;
 }
 
-section + footer {
-  margin-bottom: 4rem;
+section:first-of-type header {
+  margin-top: 0;
 }
 
-section > * + * {
-  margin-top: var(--s1);
-}
-
-section > *:first-child {
-  margin: var(--s2) 0;
-}
-
-section:last-of-type {
-  margin-bottom: 6.6rem;
-}
-
-h2, h3 {
-  font-family: 'Manrope', Arial, Helvetica, sans-serif, sans-serif;
-  text-shadow: -0.1ch 0 0 var(--highlight-2);
-}
-
-h2::before {
-  content: attr(data-background);
-  color: var(--highlight);
-  background-color: var(--highlight);
-  text-shadow: none;
-  display: inline-block;
-  position: absolute;
-  transform: rotate(-5deg) translateX(-10%);
-  z-index: -1;
+section:first-of-type header h2 {
+  margin-top: 0;
 }
 
 h1 {
-  grid-row: 1/1;
-  grid-column: 2/4;
-  color: var(--highlight);
-  margin: 4rem 0 2rem;
-  text-shadow: -0.1ch 0 0 var(--base);
-  display: inline;
-  position: relative;
-}
-
-h1::before {
-  content: '';
-  display: block;
-  width: 80%;
-  height: 100%;
-  background-color: var(--font-body);
-  position: absolute;
-  transform: rotate(9deg);
-  z-index: -1;
-  margin-left: -1rem;
-}
-
-h1, h1 > * {
+  margin-bottom: 0.33em;
+  font-family: var(--font-heading);
+  display: inline-block;
   font-size: var(--s4);
-}
-
-h1 + p {
-  margin-top: 3rem;
-  padding: 1rem 2rem;
-  border-left: 1ch solid var(--font-body);
-  grid-row: 2/2;
-  grid-column: 2/4;
-  font-size: var(--s2);
+  line-height: calc(var(--ratio) / 1.3);
 }
 
 h2 {
-  font-size: var(--s3);
-}
-
-h3 {
   font-size: var(--s2);
+  position: relative;
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  margin-bottom: 0.18em;
 }
 
-h4 {
-  font-size: var(--s1);
+a {
+  color: black;
 }
 
-main footer {
-  padding-top: 6ch;
-  border-top: 1px solid var(--font-body);
-}
-
-main {
-  counter-reset: footnotes;
-}
-
-footer ul {
+li {
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-footer ul li,
-footer ul li a {
-  color: var(--base);
+aside {
+  height: auto;
+  background-color: black;
+  position: relative;
+  color: white;
+  margin-top: 1rem;
 }
 
-footer ul li {
-  padding: 2.66rem 1.3rem 1.3rem 1.3rem;
+aside ul {
+  padding: 1rem;
 }
 
-body > footer {
-  min-height: 10ch;
-  background-color: var(--font-body);
-  color: #efefed;
+aside ul li {
+  color: var(--app-colour-background);
 }
 
-a[data-footnote] {
-  counter-increment: footnotes;
-  text-decoration: none;
-  color: inherit;
+aside::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin-top: 1em;
+  height: calc(var(--stripe-width) * 5);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) var(--stripe-width),
+    #000 var(--stripe-width),
+    #000 calc(var(--stripe-width) * 2)
+  );
 }
 
-a[data-footnote]::after {
-  content: '[' counter(footnotes) ']';
-  vertical-align: super;
-  font-size: 0.7em;
-  text-decoration: underline;
-  margin-left: 0.5ch;
-}
-
-sup {
-  display: inline-flex;
-}
-sup a {
-  margin-left: 0.2em;
-  font-size: calc(var(--s0) * 0.8);
-}
-
-i, em {
-  font-family: 'SpaceMono Italic', 'Fira Code', monospace;
-}
-
-b, strong {
-  font-family: 'SpaceMono Bold', 'Fira Code', monospace;
-}
-
-@media only screen and (max-width: 60rem) {
-  h1 {
-    font-size: var(--s3);
+@media only screen and (max-width: 66rem) {
+  article {
+    grid-template-columns: auto auto repeat(3, .75fr) auto;
+    grid-column-gap: 0px;
+    padding: 0 1rem;
   }
-
-  h1 + p {
-    font-size: var(--s1);
+  .supplemtary {
+    grid-column: 3/6;
+    height: auto;
+  }
+  
+  section:first-of-type {
+    margin-top: 3.33rem;
   }
 }
