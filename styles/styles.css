@@ -19,3 +19,8 @@
         opacity: 0;
     }
 }
+
+.no-component template {
+    display: none;
+    visibility: hidden;
+}

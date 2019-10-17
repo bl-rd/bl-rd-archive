@@ -2,10 +2,15 @@ class MenuButton extends HTMLButtonElement {
     constructor() {
         super();
         let template = document.getElementById('menu-button-template');
-        const shadowRoot = this.attachShadow({ mode: 'open'}).appendChild(template.content.cloneNode(true));
+        this.attachShadow({ mode: 'open'}).appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
+        const style = document.createElement('link');
+        style.setAttribute('rel', 'stylesheet');
+        style.setAttribute('href', '/components/menu-button/menu-button.css');
+        this.shadowRoot.appendChild(style);
+
         this.open = false;
         this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
         this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');

@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('scripts');
   eleventyConfig.addPassthroughCopy('styles');
   eleventyConfig.addPassthroughCopy('fonts');
+  eleventyConfig.addPassthroughCopy('components');
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
