@@ -5,3 +5,8 @@
 .max-width\:none {
   max-width: none;
 }
+
+.display\:none {
+  display: none;
+  visibility: hidden;
+}

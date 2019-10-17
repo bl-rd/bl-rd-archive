@@ -3,14 +3,13 @@ class MenuButton extends HTMLButtonElement {
         super();
         let template = document.getElementById('menu-button-template');
         this.attachShadow({ mode: 'open'}).appendChild(template.content.cloneNode(true));
+
+        const link = document.createElement('style');
+        link.textContent = style();
+        this.shadowRoot.appendChild(link);
     }
 
     connectedCallback() {
-        const style = document.createElement('link');
-        style.setAttribute('rel', 'stylesheet');
-        style.setAttribute('href', '/components/menu-button/menu-button.css');
-        this.shadowRoot.appendChild(style);
-
         this.open = false;
         this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
         this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');
@@ -36,6 +35,46 @@ class MenuButton extends HTMLButtonElement {
         this.openSvg.classList.toggle('active');
         this.closeSvg.classList.toggle('active');
     }
+}
+
+function style() {
+    return String.raw`
+    p {
+        position: absolute;
+        left: -9999px;
+    }
+    svg {
+        display: none;
+        visibility: hidden;
+        stroke: var(--app-colour-body);
+    }
+    .active {
+        display: inline-block;
+        visibility: visible;
+    }
+    button {
+        position: fixed;
+        z-index: 10000;
+        right: 1rem;
+        top: 1rem;
+        background-color: var(--base);
+        border: none;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    @media only screen and (max-width: 60rem) {
+        button {
+            top: initial;
+            bottom: 1rem;
+        }
+    }
+    `;
 }
 
 if ('customElements' in window) {
