@@ -1,0 +1,10 @@
+<nav>
+    <ul class="max-width:none">
+        <!-- todo: add appropriate rels -->
+        {% for item in navigation %}
+        <li>
+            <a href="{{ item.url }}" rel="me">{{ item.text}} </a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -27,7 +27,7 @@ year: 2019
 <body>
   <a style="display:none">TODO: skip to content button</a>
 
-  {% include "partials/navigation.njk" %}
+  {% include "partials/navigation/header.njk" %}
 
   <!-- main entry point -->
   {{ content | safe }}
@@ -35,31 +35,7 @@ year: 2019
   {% include "partials/footer.html" %}
 
   <script type="module" src="/scripts/components/menu-button.js" async defer></script>
-
-  <script>
-    (function() {
-      const menu = document.querySelector('nav');
-
-      document.addEventListener('menuclick', handleMenuClick);
-
-      /**
-       * @param {Event} event
-       */
-      function handleMenuClick(event) { 
-        menu.classList.toggle('show');
-      }
-
-      function initialiseNavStyles() {
-        const links = Array.from(document.querySelectorAll('nav li a'));
-        const { pathname } = location;
-        links.forEach(l => {
-          if (pathname === l.getAttribute('href')) {
-            l.parentElement.classList.add('active');
-          }
-        });
-      }
-      initialiseNavStyles();
-    })();
-  </script>
+  <script type="module" src="/scripts/components/slide-menu.js" async defer></script>
+  
 </body>
 </html>

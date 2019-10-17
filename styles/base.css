@@ -58,8 +58,7 @@
   font-smoothing: antialiased;
 }
 
-html, body, main, article,
-article > header,
+html, body, main, article, header,
 header > nav {
   max-width: none;
 }
