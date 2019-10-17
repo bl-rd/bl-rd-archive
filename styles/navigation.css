@@ -7,15 +7,10 @@ header > nav {
   left: 150vw;
   z-index: 999;
   transition: left 0.25s ease-out;
-  background-color: var(--highlight);
+  background-color: var(--app-colour-body);
   width: 100vw;
   height: 100vh;
 }
-
-/* header > nav button {
-  display: none;
-  visibility: hidden;
-} */
 
 header > nav ul {
   list-style: none;
@@ -25,57 +20,33 @@ header > nav li {
   margin: 1rem;
   text-align: right;
   transition: all 0.16s ease-out;
-  /* background-color: var(--font-body); */
   background-color: initial;
   max-width: initial;
   margin-right: -30vw;
   opacity: 0;
-  transition: all 0.2s ease;
-}
-
-header > nav li:hover {
-  background-size: 200%;
-  transform: scale(1.05);
 }
 
 header > nav li a {
-  color: var(--base);
-  /* width: 100%; */
+  display: inline-block;
+  transition: all 0.12s ease-in;
+}
+
+header > nav li a:hover,
+header > nav li a:focus {
+  transform: scale(1.3);
+}
+
+header > nav li a {
+  color: var(--app-colour-background);
   display: inline-block;
   padding: 0.66rem 1.5ch;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 800;
   padding-right: 0.7ch;
   font-size: var(--s3);
   font-family: var(--heading-font);
   text-shadow: -0.2ch 0 0 var(--font-body);
-  display: inline;
   position: relative;
-}
-
-/* .mobile-menu button {
-  margin-right: 1rem;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 0;
-  background-color: var(--font-body);
-  color: white;
-  transform-origin: center;
-  transition: all 0.2s;
-} */
-
-header > nav {
-  
-}
-
-header > nav li {
-  
-}
-
-header > nav li a {
-  
 }
 
 header > nav li.active a::before {
@@ -84,16 +55,16 @@ header > nav li.active a::before {
   z-index: -1;
   width: 1ch;
   height: 1ch;
-  background-color: var(--highlight-2);
+  background-color: var(--highlight);
   position: absolute;
-  left: .5ch;
+  left: -.15ch;
   top: .5ch;
-  transform: translateY(50%) rotate(-15deg);
   transition: all 0.12s ease-out;
 }
 
-header > nav li.active:hover a::before {
-  transform: translate(20%, 70%) rotate(-37deg) scale(1.2);
+header > nav li.active a:hover::before,
+header > nav li.active a:focus::before {
+  transform: translate(100%) rotate(-30deg) scale(1.2);
 }
 
 header > nav.show {
