@@ -1,53 +1,7 @@
-nav {
+header > nav {
   position: fixed;
   right: 2rem;
   top: 2rem;
-}
-
-nav button {
-  display: none;
-  visibility: hidden;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav li {
-  margin: 1rem;
-  text-align: right;
-  transition: all 0.16s ease-out;
-  background-color: var(--font-body);
-}
-
-nav li:hover {
-  background-size: 200%;
-  transform: scale(1.05);
-}
-
-nav li a {
-  color: var(--base);
-  width: 100%;
-  display: inline-block;
-  padding: 0.66rem 1.5ch;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.mobile-menu button {
-  margin-right: 1rem;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 0;
-  background-color: var(--font-body);
-  color: white;
-  transform-origin: center;
-  transition: all 0.2s;
-}
-
-nav {
   right: initial;
   top: 0;
   left: 150vw;
@@ -58,7 +12,20 @@ nav {
   height: 100vh;
 }
 
-nav li {
+/* header > nav button {
+  display: none;
+  visibility: hidden;
+} */
+
+header > nav ul {
+  list-style: none;
+}
+
+header > nav li {
+  margin: 1rem;
+  text-align: right;
+  transition: all 0.16s ease-out;
+  /* background-color: var(--font-body); */
   background-color: initial;
   max-width: initial;
   margin-right: -30vw;
@@ -66,7 +33,19 @@ nav li {
   transition: all 0.2s ease;
 }
 
-nav li a {
+header > nav li:hover {
+  background-size: 200%;
+  transform: scale(1.05);
+}
+
+header > nav li a {
+  color: var(--base);
+  /* width: 100%; */
+  display: inline-block;
+  padding: 0.66rem 1.5ch;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
   padding-right: 0.7ch;
   font-size: var(--s3);
   font-family: var(--heading-font);
@@ -75,7 +54,31 @@ nav li a {
   position: relative;
 }
 
-nav li.active a::before {
+/* .mobile-menu button {
+  margin-right: 1rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 0;
+  background-color: var(--font-body);
+  color: white;
+  transform-origin: center;
+  transition: all 0.2s;
+} */
+
+header > nav {
+  
+}
+
+header > nav li {
+  
+}
+
+header > nav li a {
+  
+}
+
+header > nav li.active a::before {
   content: '';
   display: block;
   z-index: -1;
@@ -89,39 +92,39 @@ nav li.active a::before {
   transition: all 0.12s ease-out;
 }
 
-nav li.active:hover a::before {
+header > nav li.active:hover a::before {
   transform: translate(20%, 70%) rotate(-37deg) scale(1.2);
 }
 
-nav.show {
+header > nav.show {
   transition: left 0.25s ease-out;
   left: 0;
 }
 
-nav.show li {
+header > nav.show li {
   animation-name: list-appear;
   animation-fill-mode: forwards;
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
 }
 
-nav.show li:nth-child(1) {
+header > nav.show li:nth-child(1) {
   animation-delay: 0.2s;
 }
 
-nav.show li:nth-child(2) {
+header > nav.show li:nth-child(2) {
   animation-delay: 0.3s;
 }
 
-nav.show li:nth-child(3) {
+header > nav.show li:nth-child(3) {
   animation-delay: 0.4s;
 }
 
-.no-js nav * {
+.no-js header > nav * {
   animation: none;
 }
 
-.no-js nav {
+.no-js header > nav {
   position: initial;
   width: 100%;
   height: auto;
@@ -130,20 +133,20 @@ nav.show li:nth-child(3) {
   background: var(--font-body);
 }
 
-.no-js nav ul {
+.no-js header > nav ul {
   display: flex;
   justify-content: flex-end;
   margin-right: 1.5rem;
   padding: 1.5rem 0;
 }
 
-.no-js nav ul li {
+.no-js header > nav ul li {
   opacity: 1;
   transition: none;
   margin: 0;
 }
 
-.no-js nav ul li a {
+.no-js header > nav ul li a {
   color: var(--base);
   font-size: var(--s1);
 }
