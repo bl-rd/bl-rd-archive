@@ -1,0 +1,46 @@
+/**
+ * Styles for the main footer element
+ */
+
+body > footer {
+    background-color: var(--app-colour-body);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    min-height: 15vh;
+    padding: 3rem 0 2rem 0;
+}
+
+body > footer ul {
+    grid-column: 2/6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body > footer li {
+    margin: 0.75em;
+    color: var(--app-colour-background);
+    font-size: 0.8em;
+}
+
+body > footer li a {
+    color: var(--app-colour-background);
+    font-size: inherit;
+}
+
+@media only screen and (max-width: 66rem) {
+    body > footer {
+        display: block;
+        padding: 1rem 0;
+    }
+
+    body > footer ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+
+    body > footer li {
+        margin-left: 0;
+    }
+}
