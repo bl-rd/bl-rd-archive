@@ -71,6 +71,11 @@ h1, h2, p, li, header, section {
   margin: 0.25em 0 1em;
 }
 
+body > header,
+main > header {
+  margin: 0;
+}
+
 article {
   display: grid;
   grid-template-columns: minmax(0,1fr)  repeat(4, .75fr) minmax(0,1fr);
