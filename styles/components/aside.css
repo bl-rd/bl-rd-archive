@@ -4,24 +4,28 @@
 }
 
 .supplementary nav {
-    border-top: 1px solid black;
-    border-bottom: var(--stripe-width) solid black;
+    border-top: 1px solid var(--app-colour-body);
+    border-bottom: var(--stripe-width) solid var(--app-colour-body);
 }
 
 @supports (position:sticky) {
     .supplementary {
         position: sticky;
         top: 20px;
-        height: 70vh;
+        height: 60vh;
     }
 }
 
 aside {
     height: auto;
-    background-color: black;
+    min-height: 150px;
+    background-color: var(--app-colour-body);
     position: relative;
     color: white;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   aside {
@@ -34,6 +38,10 @@ aside {
 
   aside li {
     margin-right: .75em;
+  }
+
+  aside time {
+    margin-bottom: 0.3em;
   }
 
   aside time,  

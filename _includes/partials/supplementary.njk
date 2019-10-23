@@ -12,8 +12,8 @@
     {% endif %}
     <aside>
         {% if not hideDate %}
-        <time class="font:reduced">
-            10th Oct 2019
+        <time class="font:reduced" datetime="{{ page.date  | iso }}">
+            {{ page.date | formatDate }}
         </time>
         {% endif %}
         <ul>

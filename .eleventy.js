@@ -1,13 +1,16 @@
 const fs = require('fs');
+const filters = require('./_eleventy/filters');
+const { passthrough } = require('./_eleventy/options');
 
 module.exports = function(eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy('img');
-  eleventyConfig.addPassthroughCopy('icons');
-  eleventyConfig.addPassthroughCopy('scripts');
-  eleventyConfig.addPassthroughCopy('styles');
-  eleventyConfig.addPassthroughCopy('fonts');
-  eleventyConfig.addPassthroughCopy('components');
+  // add filters
+  Object.keys(filters).forEach(f => {
+    eleventyConfig.addFilter(f, filters[f]);
+  });
+
+  // pass through types
+  passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
