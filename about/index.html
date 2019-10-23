@@ -1,6 +1,25 @@
----
-layout: standardLayout.html
-title: About me
+---json
+{
+  "layout": "standardLayout.html",
+  "templateEngineOverride": "njk",
+  "title": "About me",
+  "hideDate": false,
+  "tags": ["popcorn", "nintendo"],
+  "sections": [
+    {
+      "id": "#work",
+      "text": "Work"
+    },
+    {
+      "id": "#not-work",
+      "text": "Not work"
+    },
+    {
+      "id": "#website",
+      "text": "This website"
+    }
+  ]
+}
 ---
 <main>
   <article>
@@ -8,81 +27,59 @@ title: About me
       <h1>{{ title }}</h1>
       <p>My name is Bill and I'm a human. </p>
     </header>
-    <div class="supplemtary">
-        <nav>
-          <ul>
-            <li>
-              <a href="#work">Work</a>
-            </li>
-            <li>
-              <a href="#not-work">Not work</a>
-            </li>
-            <li>
-              <a href="#website">This website</a>
-            </li>
-          </ul>
-        </nav>
-        <aside>
-          <ul>
-            <li>
-              10th Oct 2019
-            </li>
-            <li>
-              #tag-1, #tag-2
-            </li>
-          </ul>
-        </aside>
-      </div>
-      <section id="work">
-        <header>
-          <h2>Work</h2>
-        </header>
-        <p>
-          I currently work at <a href="https://www.lancaster.ac.uk" rel="noreferrer noopener">Lancaster University</a>, one of the <a href="https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019" rel="noreferrer noopener">top 10 universities in the UK</a>.
-        </p>
-        <p>
-          I am a developer in a small team, focusing on providing platforms such as the <a href="https://portal.lancaster.ac.uk/portal/news" rel="noreferrer noopener">Student Portal</a> and <a href="https://portal.lancaster.ac.uk/intranet/news" rel="noreferrer noopener">Staff Intranet</a>, as well as APIs and systems for developers and staff at the University.
-        </p>
-        <p>
-          <i>Technically</i>, I guess I'm a full-stack developer, using .NET and SQL Server on the back-end, but really I consider
-          <a href="#full-stack-footnote" data-footnote aria-describedby="full-stack-footnote">
-            myself a front-end developer.
-          </a>
-        </p>
-        <p>
-          If I had to commit, my JavaScript framework of choice is currently <a href="https://vuejs.org/" rel="noreferrer noopener">Vue</a>, but where possible I prefer to write well-structured semantic HTML, with plain old CSS and JavaScript. I put a fair few (but not all!) of <a href="/projects" rel="me">my side projects</a> on <a href="https://github.com/bl-rd" rel="noreferrer">GitHub</a>, <a href="#github-footnote" data-footnote aria-describedby="github-footnote">feel free to have a look.</a>
-        </p>
-        <p>
-          My favourite part of my job is making performant, accessible and progressively enhanced websites.
-        </p>
-        <p>
-          Feel free to have a look at my full CV on LinkedIn.
-        </p>
-      </section>
-      <section id="not-work">
-        <header>
-          <h2>Not work</h2>
-        </header>
-        <p>
-          I’m a dad so I don’t actually have that much free time. When I can make the time, I enjoy climbing and skateboarding (knees allowing).
-        </p>
-        <p>
-          Going full in on <i>better late than never</i>, I’m also tentatively dipping my toes into the world of <a href="/art">making things that don’t involve code</a>.
-        </p>
-      </section>
-      <section id="website">
-        <header>
-          <h2>This website</h2>
-        </header>
-        <p>
-          Animi reiciendis voluptatem facere consequatur sunt reprehenderit molestiae molestias. Est autem omnis velit quia voluptatibus eos. Doloribus sit ea nobis nesciunt omnis. Debitis quasi incidunt quis et totam voluptatem nihil et.
-        </p>
-        <p>
-          Et aut laudantium qui omnis voluptates enim vero. Et itaque est omnis nihil quis. Aperiam sed impedit architecto harum esse perferendis ut.
-        </p>      
-        <p>
-          Nemo dolorem minus repellat. Est dolor et aut pariatur veritatis. Provident sapiente doloremque et voluptate consequuntur. Ducimus et laborum dolor quos commodi.
-        </p>
-      </section>
+    
+    {% include "partials/supplementary.njk" %}
+
+    <section id="work">
+      <header>
+        <h2>Work</h2>
+      </header>
+      <p>
+        I currently work at <a href="https://www.lancaster.ac.uk" rel="noreferrer noopener">Lancaster University</a>, one of the <a href="https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019" rel="noreferrer noopener">top 10 universities in the UK</a>.
+      </p>
+      <p>
+        I am a developer in a small team, focusing on providing platforms such as the <a href="https://portal.lancaster.ac.uk/portal/news" rel="noreferrer noopener">Student Portal</a> and <a href="https://portal.lancaster.ac.uk/intranet/news" rel="noreferrer noopener">Staff Intranet</a>, as well as APIs and systems for developers and staff at the University.
+      </p>
+      <p>
+        <i>Technically</i>, I guess I'm a full-stack developer, using .NET and SQL Server on the back-end, but really I consider
+        <a href="#full-stack-footnote" data-footnote aria-describedby="full-stack-footnote">
+          myself a front-end developer.
+        </a>
+      </p>
+      <p>
+        If I had to commit, my JavaScript framework of choice is currently <a href="https://vuejs.org/" rel="noreferrer noopener">Vue</a>, but where possible I prefer to write well-structured semantic HTML, with plain old CSS and JavaScript. I put a fair few (but not all!) of <a href="/projects" rel="me">my side projects</a> on <a href="https://github.com/bl-rd" rel="noreferrer">GitHub</a>, <a href="#github-footnote" data-footnote aria-describedby="github-footnote">feel free to have a look.</a>
+      </p>
+      <p>
+        My favourite part of my job is making performant, accessible and progressively enhanced websites.
+      </p>
+      <p>
+        Feel free to have a look at my full CV on LinkedIn.
+      </p>
+    </section>
+    <section id="not-work">
+      <header>
+        <h2>Not work</h2>
+      </header>
+      <p>
+        I’m a dad so I don’t actually have that much free time. When I can make the time, I enjoy climbing and skateboarding (knees allowing).
+      </p>
+      <p>
+        Going full in on <i>better late than never</i>, I’m also tentatively dipping my toes into the world of <a href="/art">making things that don’t involve code</a>.
+      </p>
+    </section>
+    <section id="website">
+      <header>
+        <h2>This website</h2>
+      </header>
+      <p>
+        Animi reiciendis voluptatem facere consequatur sunt reprehenderit molestiae molestias. Est autem omnis velit quia voluptatibus eos. Doloribus sit ea nobis nesciunt omnis. Debitis quasi incidunt quis et totam voluptatem nihil et.
+      </p>
+      <p>
+        Et aut laudantium qui omnis voluptates enim vero. Et itaque est omnis nihil quis. Aperiam sed impedit architecto harum esse perferendis ut.
+      </p>      
+      <p>
+        Nemo dolorem minus repellat. Est dolor et aut pariatur veritatis. Provident sapiente doloremque et voluptate consequuntur. Ducimus et laborum dolor quos commodi.
+      </p>
+    </section>
   </article>
 </main>

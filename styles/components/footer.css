@@ -20,7 +20,7 @@ body > footer ul {
 body > footer li {
     margin: 0.75em;
     color: var(--app-colour-background);
-    font-size: 0.8em;
+    font-size: var(--font-size-reduced);
 }
 
 body > footer li a {

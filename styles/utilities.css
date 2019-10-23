@@ -10,3 +10,7 @@
   display: none;
   visibility: hidden;
 }
+
+.font\:reduced {
+  font-size: var(--font-size-reduced);
+}

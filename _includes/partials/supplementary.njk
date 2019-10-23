@@ -1,0 +1,27 @@
+<div class="supplementary">
+    {% if sections %}
+    <nav>
+        <ul>
+            {% for item in sections %}
+            <li>
+                <a href="{{item.id}}" class="font:reduced">{{ item.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    {% endif %}
+    <aside>
+        {% if not hideDate %}
+        <time class="font:reduced">
+            10th Oct 2019
+        </time>
+        {% endif %}
+        <ul>
+            {% for tag in tags %}
+            <li class="font:reduced">
+                #{{tag}}
+            </li>
+            {% endfor %}
+        </ul>
+    </aside>
+</div>

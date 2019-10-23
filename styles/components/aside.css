@@ -1,0 +1,71 @@
+.supplementary {
+    grid-column: 2/3;
+    grid-row: 2/5;
+}
+
+.supplementary nav {
+    border-top: 1px solid black;
+    border-bottom: var(--stripe-width) solid black;
+}
+
+@supports (position:sticky) {
+    .supplementary {
+        position: sticky;
+        top: 20px;
+        height: 70vh;
+    }
+}
+
+aside {
+    height: auto;
+    background-color: black;
+    position: relative;
+    color: white;
+    margin-top: 1rem;
+  }
+  
+  aside {
+    padding: 1rem;
+  }
+
+  aside ul {
+    display: flex;
+  }
+
+  aside li {
+    margin-right: .75em;
+  }
+
+  aside time,  
+  aside li,
+  aside li a {
+    color: var(--app-colour-background);
+  }
+  
+  aside::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 1em;
+    height: calc(var(--stripe-width) * 5);
+    background-color: var(--app-colour-body);
+    background: repeating-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0) var(--stripe-width),
+      #000 var(--stripe-width),
+      #000 calc(var(--stripe-width) * 2)
+    );
+  }
+
+  @media only screen and (max-width: 66rem) {
+      .supplementary {
+            grid-column: 3/6;
+          position: relative;
+          top: auto;
+          height: auto;
+      }
+  }
