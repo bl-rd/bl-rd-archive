@@ -34,7 +34,7 @@
   --stripe-width: 3px;
 
   /* layout */
-  --grid-columns-full: minmax(0,10vmin)  repeat(4, .75fr) minmax(0,10vmin);
+  --grid-columns-full: minmax(0,1fr)  repeat(4, .75fr) minmax(0,1fr); /*minmax(0,10vmin)  repeat(4, .75fr) minmax(0,10vmin);*/
   --grid-columns-mobile: auto auto repeat(3, .75fr) auto;
 }
 
@@ -79,7 +79,7 @@ main > header {
 
 article {
   display: grid;
-  grid-template-columns: minmax(0,1fr)  repeat(4, .75fr) minmax(0,1fr);
+  grid-template-columns: var(--grid-columns-full);
   grid-template-rows: auto;
   grid-gap: 2rem;
 }
@@ -155,7 +155,7 @@ li {
     --measure-width: auto;
   }
   article {
-    grid-template-columns: auto auto repeat(3, .75fr) auto;
+    grid-template-columns: var(--grid-columns-mobile);
     grid-column-gap: 0px;
     padding: 0 1rem;
   }
