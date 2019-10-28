@@ -8,6 +8,10 @@
     border-bottom: var(--stripe-width) solid var(--app-colour-body);
 }
 
+.supplementary nav a {
+  font-family: var(--font-body);
+}
+
 @supports (position:sticky) {
     .supplementary {
         position: sticky;
@@ -48,6 +52,7 @@ aside {
   aside li,
   aside li a {
     color: var(--app-colour-background);
+    font-family: var(--font-body);
   }
   
   aside::after {
@@ -71,7 +76,7 @@ aside {
 
   @media only screen and (max-width: 66rem) {
       .supplementary {
-            grid-column: 3/6;
+          grid-column: 3/6;
           position: relative;
           top: auto;
           height: auto;

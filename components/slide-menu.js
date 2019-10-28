@@ -76,8 +76,8 @@ function style() {
       text-decoration: none;
       padding-right: 0.7ch;
       font-size: var(--s3);
-      font-family: var(--heading-font);
-      text-shadow: -0.2ch 0 0 var(--font-body);
+      font-family: var(--font-heading);
+      text-shadow: -0.2ch 0 0 var(--app-colour-body);
       position: relative;
     }
 

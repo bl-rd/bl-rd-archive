@@ -1,12 +1,5 @@
 :root {
-
-  --heading-font: 'Akashi', 'Manrope', 'Bungee', sans-serif;
-
-  --base: #fefeff;
-  --font-body: #121213;
-
-  --measure-width: 66ch;
-
+  /* typograohy scale */  
   --ratio: 1.5;
   --s0: 1.166rem;
   --s1: calc(var(--s0) * var(--ratio));
@@ -18,7 +11,8 @@
   /* font variables */
   --font-heading: 'Akashi', 'Manrope', sans-serif;
   --font-sub-heading: 'Manrope', Helvetica, Arial, sans-serif;
-  --font-body: 'SpaceMono', monospace;
+  --font-body: 'SpaceMono', 'Fira Code', monospace;
+  --font-body-bold: 'SpaceMono Bold', 'Fira Code Bold', 'Fira Code', monospace;
   --font-size-reduced: 0.8em;
 
   /* colours */
@@ -34,6 +28,7 @@
   --stripe-width: 3px;
 
   /* layout */
+  --measure-width: 66ch;
   --grid-columns-full: minmax(0,1fr)  repeat(4, .75fr) minmax(0,1fr); /*minmax(0,10vmin)  repeat(4, .75fr) minmax(0,10vmin);*/
   --grid-columns-mobile: auto auto repeat(3, .75fr) auto;
 }
@@ -140,10 +135,6 @@ h2 {
   position: relative;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   margin-bottom: 0.18em;
-}
-
-a {
-  color: black;
 }
 
 li {
