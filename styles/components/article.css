@@ -1,0 +1,13 @@
+article > section:last-of-type {
+    margin-bottom: 5rem;
+}
+
+article > section:last-of-type::after {
+    display: block;
+    content: '';
+    margin-top: 5rem;
+    filter: drop-shadow(-1ch 1ch 0 var(--highlight));
+    width: 6vmin;
+    height: 6vmin;
+    background-color: var(--app-colour-body);
+}

@@ -12,13 +12,13 @@
   font-family: var(--font-body);
 }
 
-@supports (position:sticky) {
+/* @supports (position:sticky) {
     .supplementary {
         position: sticky;
         top: 20px;
         height: 60vh;
     }
-}
+} */
 
 aside {
     height: auto;
