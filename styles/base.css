@@ -141,6 +141,10 @@ li {
   list-style: none;
 }
 
+em, i {
+  font-family: 'SpaceMono Italic', monospace;
+}
+
 @media only screen and (max-width: 66rem) {
   :root {
     --measure-width: auto;
