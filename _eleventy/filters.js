@@ -5,9 +5,9 @@ module.exports = {
         return DateTime.fromJSDate(date).toISO({
             includeOffset: false,
             suppressMilliseconds: true
-        })
+        });
     },
     formatDate: function (date) {
         return DateTime.fromJSDate(date).toFormat('dd MMM y');
     }
-}
+};

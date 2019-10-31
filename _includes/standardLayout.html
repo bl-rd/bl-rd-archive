@@ -5,6 +5,7 @@ year: 2019
 ---
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +15,21 @@ year: 2019
 
   <link rel="preconnect" href="https://fonts.googleapis.com/css" />
   <link rel="dns-prefetch" href="https://fonts.googleapis.com/css" />
-  
+
   <link href="https://fonts.googleapis.com/css?family=Bungee|Literata:400,400i&display=swap" rel="stylesheet">
   <style>
-    {% include "partials/css/base.css" %}
+    {
+      % include "partials/css/base.css"%
+    }
   </style>
 
-  <script>document.documentElement.classList.remove('no-js');</script>
+  <script>
+    document.documentElement.classList.remove('no-js');
+  </script>
 
-  <link href="/styles/main.css" rel="stylesheet"/>
+  <link href="/styles/main.css" rel="stylesheet" />
 </head>
+
 <body>
   <a style="display:none">TODO: skip to content button</a>
 
@@ -35,6 +41,7 @@ year: 2019
   {% include "partials/footer.html" %}
 
   {% include "partials/web-components.html" %}
-  
+
 </body>
+
 </html>

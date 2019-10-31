@@ -3,11 +3,11 @@ const postcssImport = require('postcss-import');
 const cssnano = require('cssnano');
 
 module.exports = {
-  plugins: [
-    postcssImport(),
-    postcssPresetEnv(),
-    cssnano({
-      reduceIndents: false
-    })   
-  ]
+    plugins: [
+        postcssImport(),
+        postcssPresetEnv(),
+        cssnano({
+            reduceIndents: false
+        })   
+    ]
 };

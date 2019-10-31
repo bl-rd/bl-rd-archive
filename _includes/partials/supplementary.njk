@@ -1,28 +1,28 @@
 <div class="supplementary">
-    {% if sections %}
-    <nav>
-        <ul>
-            {% for item in sections %}
-            <li>
-                <a href="{{item.id}}" class="font:reduced">{{ item.text }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </nav>
+  {% if sections %}
+  <nav>
+    <ul>
+      {% for item in sections %}
+      <li>
+        <a href="{{item.id}}" class="font:reduced">{{ item.text }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  {% endif %}
+  <aside>
+    {% if not hideDate %}
+    <time class="font:reduced" datetime="{{ page.date  | iso }}">
+      {{ page.date | formatDate }}
+    </time>
     {% endif %}
-    <aside>
-        {% if not hideDate %}
-        <time class="font:reduced" datetime="{{ page.date  | iso }}">
-            {{ page.date | formatDate }}
-        </time>
-        {% endif %}
-        <ul>
-            {% for tag in tags %}
-            <li class="font:reduced">
-                #{{tag}}
-            </li>
-            {% endfor %}
-        </ul>
-    </aside>
-    {% include "partials/templates/back-to-top.njk" %}
+    <ul>
+      {% for tag in tags %}
+      <li class="font:reduced">
+        #{{tag}}
+      </li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% include "partials/templates/back-to-top.njk" %}
 </div>
