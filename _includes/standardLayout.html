@@ -34,15 +34,7 @@ year: 2019
 
   {% include "partials/footer.html" %}
 
-  <script type="module" src="/components/menu-button.js" async defer></script>
-  <script type="module" src="/components/slide-menu.js" async defer></script>
-  <script nomodule>
-    (function() {
-      if (!('customElements' in window)) {
-        document.documentElement.className += ' no-component';
-      }
-    })();
-  </script>
+  {% include "partials/web-components.html" %}
   
 </body>
 </html>

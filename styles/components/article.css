@@ -10,4 +10,5 @@ article > section:last-of-type::after {
     width: 6vmin;
     height: 6vmin;
     background-color: var(--app-colour-body);
+    margin-left: 1ch;
 }
