@@ -5,6 +5,6 @@
 @import './components/animations.css';
 
 .no-component template {
-    display: none;
-    visibility: hidden;
+  display: none;
+  visibility: hidden;
 }

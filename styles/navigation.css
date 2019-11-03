@@ -35,7 +35,6 @@ noscript nav ul,
   grid-column: 2/6;
   display: flex;
   justify-content: flex-end;
-  margin-right: 1.5rem;
   padding: 1.5rem 0;
 
   /* resets */
