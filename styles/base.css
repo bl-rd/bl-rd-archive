@@ -83,7 +83,7 @@ article {
   display: grid;
   grid-template-columns: var(--grid-columns-full);
   grid-template-rows: auto;
-  grid-gap: 2rem;
+  column-gap: 2rem;
 }
 
 article > header {

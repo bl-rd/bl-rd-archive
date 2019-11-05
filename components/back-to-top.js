@@ -7,15 +7,100 @@ class BackToTop extends HTMLElement {
         const link = document.createElement('style');
         link.textContent = style();
         this.shadowRoot.appendChild(link);
+
+        this.observer = null;
     }
 
     connectedCallback() {
         this.addEventListener('click', () => window.scrollTo({ top: 0 }));
+
+        // add an intersection observer listener for the transition styles
+        let element = this.shadowRoot.querySelector('button');
+        this.observer = new IntersectionObserver(function(entries) {
+            const { isIntersecting } = entries.pop();
+            const visiblityClass = 'back-to-top--visible';
+            
+            if (isIntersecting) {
+                element.classList.remove(visiblityClass);
+            } else {
+                element.classList.add(visiblityClass);
+            }
+        }, {
+            root: null,
+            rootMargin: '0px'
+        });
+
+        const target = document.querySelector('.supplementary aside');
+        this.observer.observe(target);
     }
+
+    disconnectedCallback() {
+        this.observer.disconnect();
+    }
+
+    
 }
 
 function style() {
     return String.raw`
+        button {
+            --opacity: 0;
+            background: none;
+            outline: none;
+            border: none;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-top: 2em;
+            padding-left: 0;
+            transition: all 0.33s ease-in;
+            opacity: var(--opacity);
+        }
+
+        .back-to-top--visible {
+            --opacity: 1;
+        }
+        
+        button:hover {
+            color: var(--highlight);
+        }
+        
+        button:focus {
+            outline-color: var(--highlight);
+            outline-offset: .25ch;
+            outline-style: solid;
+            outline-width: .4ch;
+        }
+        
+        button:active {
+            outline: none;
+            color: var(--white);
+            background-color: var(--highlight);
+            text-decoration: none;
+        }
+
+        @supports (position:sticky) {
+            div {
+                position: sticky;
+                top: -1px;
+            }
+        }
+
+        div::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: calc(var(--stripe-width) * 5);
+            background-color: var(--app-colour-body);
+            background: repeating-linear-gradient(
+              -45deg,
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0) var(--stripe-width),
+              #000 var(--stripe-width),
+              #000 calc(var(--stripe-width) * 2)
+            );
+          }
     `;
 }
 
