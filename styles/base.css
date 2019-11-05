@@ -7,6 +7,7 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
+  --s-small: calc(var(--s0) * 0.8);
 
   /* font variables */
   --font-heading: 'Akashi', 'Manrope', sans-serif;
@@ -151,6 +152,10 @@ li {
 em,
 i {
   font-family: 'SpaceMono Italic', monospace;
+}
+
+small {
+  font-size: var(--s-small);
 }
 
 @media only screen and (max-width: 66rem) {
