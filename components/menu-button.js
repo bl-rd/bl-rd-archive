@@ -57,7 +57,7 @@ function style() {
         z-index: 10000;
         right: 1rem;
         top: 1rem;
-        background-color: var(--base);
+        background-color: var(--app-colour-background);
         border: none;
         width: 60px;
         height: 60px;
