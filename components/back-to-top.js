@@ -44,20 +44,22 @@ class BackToTop extends HTMLElement {
 function style() {
     return String.raw`
         button {
-            --opacity: 0;
+            --btt-opacity: 0;
+            --btt-margin-top: 4rem;
             background: none;
             outline: none;
             border: none;
             text-decoration: underline;
             cursor: pointer;
-            margin-top: 2em;
+            margin-top: var(--btt-margin-top);
             padding-left: 0;
-            transition: all 0.33s ease-in;
-            opacity: var(--opacity);
+            transition: all 0.66s ease-out;
+            opacity: var(--btt-opacity);
         }
 
         .back-to-top--visible {
-            --opacity: 1;
+            --btt-opacity: 1;
+            --btt-margin-top: 2rem;
         }
         
         button:hover {
