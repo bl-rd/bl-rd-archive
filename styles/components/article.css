@@ -48,6 +48,7 @@ article > footer li * {
   font-size: var(--s-small);
 }
 
+article a[data-footnote]:target,
 article > footer small:target {
   animation-name: flash-background;
   animation-duration: 3s;
