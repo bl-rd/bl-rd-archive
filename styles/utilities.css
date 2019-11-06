@@ -14,3 +14,11 @@
 .font\:reduced {
   font-size: var(--font-size-reduced);
 }
+
+.visibility\:hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  z-index: -10;
+  left: -9999px;
+}
