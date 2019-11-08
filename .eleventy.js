@@ -1,6 +1,8 @@
 const fs = require('fs');
 const filters = require('./_eleventy/filters');
 const { passthrough } = require('./_eleventy/options');
+const markdownIt = require('markdown-it');
+const mila = require('markdown-it-link-attributes');
 
 module.exports = function(eleventyConfig) {
 
@@ -13,8 +15,34 @@ module.exports = function(eleventyConfig) {
   passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
 
   // Layouts
-  eleventyConfig.addLayoutAlias('standard', 'layouts/standardLayout.html');
+  eleventyConfig.addLayoutAlias('standard', 'layouts/standardLayout.njk');
+  eleventyConfig.addLayoutAlias('article', 'layouts/article.njk');
 
+  // Markdown config
+  const options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  
+  eleventyConfig.setLibrary("md", 
+    markdownIt(options)
+        .use(mila, [{
+            pattern: /^https:/,
+            attrs: {
+                rel: 'noreferrer noopener',
+                target: '_blank'
+            }
+        }, {
+            pattern: /^\//,
+            attrs: {
+                rel: 'me'
+            }
+        }])
+    );
+
+
+  // Allow 404 when testing locally
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: async function(err, bs) {

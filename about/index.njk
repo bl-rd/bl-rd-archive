@@ -1,0 +1,136 @@
+---json
+{
+  "layout": "standard",
+  "title": "About me",
+  "hideDate": false,
+  "tags": ["popcorn", "nintendo"],
+  "sections": [
+    {
+      "id": "#work",
+      "text": "Work"
+    },
+    {
+      "id": "#not-work",
+      "text": "Not work"
+    },
+    {
+      "id": "#website",
+      "text": "This website"
+    }
+  ]
+}
+---
+<main>
+  <article>
+    <header>
+      <h1>{{ title }}</h1>
+      <p>My name is Bill and I&apos;m a human. </p>
+    </header>
+
+    {% include "partials/supplementary.njk" %}
+
+    <section>
+      <p>
+        And I'm also a web developer by trade. I enjoy making performant, accessible and
+        <a href="#pew-footnote" data-footnote aria-describedby="footnote-description" aria-labelledby="pew-footnote"
+          id="pew-link">progressively enhanced
+          websites</a>,
+        some of which you can find on my <a href="/projects" rel="me">projects page</a>.
+      </p>
+      <p>
+        I live <s>in</s> very near the Lake District in Cumbria, not too far away from where I grew up. Having been away
+        to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol'
+        Cumbrian countryside <a href="#yam-footnote" data-footnote aria-describedby="footnote-description"
+          aria-labelledby="yam-footnote" id="yam-link"><i>yam</i></a>.
+      </p>
+    </section>
+    <section id="work">
+      <header>
+        <h2>Work</h2>
+      </header>
+      <p>
+        Currently, I work as a full-stack developer in a small team at <a href="https://www.lancaster.ac.uk"
+          rel="noreferrer noopener">Lancaster University</a> (one of <a
+          href="https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019"
+          rel="noreferrer noopener">the top 10 universities in the UK</a>, don't you know).
+      </p>
+      <p>
+        Feel free to take a look at my CV, or if you prefer you can find me on LinkedIn.
+      </p>
+    </section>
+    <section id="not-work">
+      <header>
+        <h2>Not work</h2>
+      </header>
+      <p>
+        Doing dad-things takes up most of my non-work time. While this is awesome, I try and do other, non-code related,
+        things too!
+      </p>
+      <p>
+        I'm really into climbing, having had a late-start to the sport a few years ago. Of late, I've also been trying
+        to get back into playing guitar after an extended foray in drumming. Occasionally I kid myself into thinking
+        that I can still skateboard (I can't), and find myself really relating to <a
+          href="https://pkewx3.bandcamp.com/track/mid-20s-skateboarder-4" rel="noreferrer noopener"
+          title="Mid-20s Skateboarder by Pkew Pkew Pkew">this song</a> by
+        Pkew Pkew Pkew (early&ndash;thirties and min&ndash;twenties are practically the same thing, aren't they?).
+      </p>
+      <p>
+        You can get a better idea of what I'm up to <em>right now</em> on <a href="/now" rel="me">my now page</a>.
+      </p>
+    </section>
+    <section id="website">
+      <header>
+        <h2>This website</h2>
+      </header>
+      <p>
+        I was inspired to put this website together after coming across a handful of awesome personal websites (notably
+        <a href="https://www.jvt.me/posts/2019/07/22/why-website/" rel="noreferrer noopener"
+          title="Why I Have a Website and You Should Too">this blog article</a> by <a href="https://www.jvt.me/"
+          rel="noreferrer noopener">Jamie Tanner</a>) and <a href="https://indieweb.org/" rel="noreferrer noopener">the
+          indieweb movement</a>.
+      </p>
+      <p>
+        This inspiration came around the same time I was looking to get back into web <em>design</em>, and felt like it
+        would be a good opportunity to do just that.
+      </p>
+      <p>
+        I also wanted to challenge myself as in the past I've always been reluctant (read: terrified) of putting stuff
+        on social media. As others have pointed out, a personal site feels like a safe way to put stuff out there. Most
+        likely it will just disappear into the void, but if people find it and it read it then, well, that's fine!
+      </p>
+      <p>
+        This site is powered by <a href="https://github.com/11ty/eleventy/" rel="noreferrer noopener">eleventy</a> and
+        <a href="https://www.netlify.com/" rel="noreferrer noopener">netlify</a> (the cool kids' combo of the month).
+        The source code is available to view on <a href="https://github.com/bl-rd/bl-rd"
+          rel="noreferrer noopener">GitHub</a>.
+      </p>
+    </section>
+
+    <footer class="max-width:none">
+      <h2 id="footnote-description" class="visibility:hidden">Footnotes</h2>
+      <ol class="max-width:none">
+        <li>
+          <small id="pew-footnote">
+            I've done my best to make this site is
+            <a href="https://hankchizljaw.com/wrote/the-p-in-progressive-enhancement-stands-for-pragmatism/"
+              rel="noreferrer noopener"
+              title="The “P” in Progressive Enhancement stands for “Pragmatism” by Andy Bell">progressively
+              enhanced</a>.
+            I've done my best to make it still work way back into the IEs, and also without JavaScript while still
+            opting
+            to use things like web-components, service workers and css grid. Please let me know if there is anything
+            that can be done better!
+          </small>
+          <a href="#pew-link">Back</a>
+        </li>
+        <li>
+          <small id="yam-footnote" tabindex="-1">
+            &ldquo;Yam&rdquo; is the traditional Cumbrian term for &ldquo;home&rdquo;. In fact, one of my favourite
+            sayings is <i>&ldquo;'As gaan yam&rdquo;</i> (I'm going home).
+          </small>
+          <a href="#yam-link">Back</a>
+        </li>
+      </ol>
+    </footer>
+  </article>
+</main>
