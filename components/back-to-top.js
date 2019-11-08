@@ -55,6 +55,7 @@ function style() {
             padding-left: 0;
             transition: all 0.66s ease-out;
             opacity: var(--btt-opacity);
+            font-family: var(--font-body-bold);
         }
 
         .back-to-top--visible {

@@ -12,6 +12,9 @@ module.exports = function(eleventyConfig) {
   // pass through types
   passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
 
+  // Layouts
+  eleventyConfig.addLayoutAlias('standard', 'layouts/standardLayout.html');
+
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: async function(err, bs) {
