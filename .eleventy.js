@@ -5,6 +5,7 @@ const footnoteBack = require('./_eleventy/shortcodes/footnoteBack');
 const { passthrough } = require('./_eleventy/options');
 const markdownIt = require('markdown-it');
 const mila = require('markdown-it-link-attributes');
+const namedHeaders = require('markdown-it-named-headers');
 
 module.exports = function(eleventyConfig) {
 
@@ -45,6 +46,7 @@ module.exports = function(eleventyConfig) {
                 rel: 'me'
             }
         }])
+        .use(namedHeaders)
     );
 
 

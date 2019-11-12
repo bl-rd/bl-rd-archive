@@ -2,6 +2,13 @@
 title: About yo
 layout: article
 tags: [music, burritos]
+sections: 
+    - id: "#work"
+      text: Work
+    - id: "#not-work"
+      text: Not work
+    - id: "#this-website"
+      text: This website
 ---
 
 <header>
