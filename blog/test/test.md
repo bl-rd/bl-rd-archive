@@ -10,9 +10,9 @@ tags: [music, burritos]
 My name Bill and I&apos;m a human.
 </header>
 
-And I'm also a web developer by trade. I enjoy making performant, accessible and <a href="#pew-footnote" data-footnote aria-describedby="footnote-description" aria-labelledby="pew-footnote" id="pew-link">progressively enhanced websites</a>, some of which you can find on my [projects page](/projects).
+And I'm also a web developer by trade. I enjoy making performant, accessible and [progressively enhanced webites](#pew-footnote|data-footnote|aria-describedBy=footnote-description|aria-labelledby=pew-footnote|id=pew-link), some of which you can find on my [projects page](/projects).
 
-I live ~~in~~ very near the Lake District in Cumbria, not too far away from where I grew up. Having been away to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol' Cumbrian countryside <a href="#yam-footnote" data-footnote aria-describedby="footnote-description" aria-labelledby="yam-footnote" id="yam-link"><i>yam</i></a>.
+I live ~~in~~ very near the Lake District in Cumbria, not too far away from where I grew up. Having been away to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol' Cumbrian countryside _[yam](#yam-footnote|data-footnote|aria-describedby=footnote-description|aria-labelledby=yam-footnote|id=yam-link)_.
 
 ## Work
 
@@ -31,6 +31,7 @@ You can get a better idea of what I'm up to _right now_ on [my now page](/now).
 <footer>
 <h2 id="footnote-description" class="visibility:hidden">Footnotes</h2>
 
-1. Here is a link
+1. <p id="pew-footnote">Here is a footnote!</p>
+2. <p id="yam-footnote">And another</p>
 
 </footer>
