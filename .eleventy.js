@@ -1,5 +1,7 @@
 const fs = require('fs');
 const filters = require('./_eleventy/filters');
+const blogFooter = require('./_eleventy/shortcodes/blogFooter');
+const footnoteBack = require('./_eleventy/shortcodes/footnoteBack');
 const { passthrough } = require('./_eleventy/options');
 const markdownIt = require('markdown-it');
 const mila = require('markdown-it-link-attributes');
@@ -10,6 +12,10 @@ module.exports = function(eleventyConfig) {
   Object.keys(filters).forEach(f => {
     eleventyConfig.addFilter(f, filters[f]);
   });
+
+  // shortcodes
+  eleventyConfig.addPairedShortcode('blogFooter', blogFooter);
+  eleventyConfig.addShortcode('footnoteBack', footnoteBack);
 
   // pass through types
   passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
