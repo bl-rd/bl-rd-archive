@@ -2,6 +2,10 @@ article {
   counter-reset: footnotes;
 }
 
+article > * {
+  grid-column: 3/6;
+}
+
 article > section:last-of-type {
   margin-bottom: 5rem;
 }

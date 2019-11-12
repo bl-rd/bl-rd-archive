@@ -1,8 +1,7 @@
 ---
 title: About yo
 layout: article
-hideDate: false
-tags: ["music", "burritos"]
+tags: [music, burritos]
 ---
 
 <header>
@@ -29,3 +28,9 @@ I'm really into climbing, having had a late-start to the sport a few years ago. 
 
 You can get a better idea of what I'm up to _right now_ on [my now page](/now).
 
+<footer>
+<h2 id="footnote-description" class="visibility:hidden">Footnotes</h2>
+
+1. Here is a link
+
+</footer>
