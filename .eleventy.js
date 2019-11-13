@@ -7,6 +7,7 @@ const { passthrough } = require('./_eleventy/options');
 const markdownIt = require('markdown-it');
 const mila = require('markdown-it-link-attributes');
 const namedHeaders = require('markdown-it-named-headers');
+const hljs = require('highlight.js');
 
 module.exports = function(eleventyConfig) {
 
@@ -31,7 +32,15 @@ module.exports = function(eleventyConfig) {
   const options = {
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+          try {
+            return `<pre class="hljs"><code>${hljs.highlight(lang, str, true).value}</code></pre>`;
+          } catch (__) {}
+        }    
+        return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
+    }
   };
   
   eleventyConfig.setLibrary("md", 

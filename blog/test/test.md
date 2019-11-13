@@ -21,11 +21,24 @@ And I'm also a web developer by trade. I enjoy making performant, accessible and
 
 I live ~~in~~ very near the Lake District in Cumbria, not too far away from where I grew up. Having been away to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol' Cumbrian countryside _{% footnoteLink "yam-link", "yam-footnote" %}yam{% endfootnoteLink %}_.
 
-
+```js
+function hereIsAFunction() {
+    const msg = 'hello';
+    return `${msg}!`.toUpperCase();
+}
+```
 
 ## Work
 
 Currently, I work as a full-stack developer in a small team at [Lancaster University](https://www.lancaster.ac.uk) (one of [the tope 10 universities in the UK](https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019) don't you know).
+
+```rust
+use std;
+
+fn main() {
+    println!("hello");
+}
+```
 
 Feel free to take a look at my CV, or if you prefer you can find me on LinkedIn.
 

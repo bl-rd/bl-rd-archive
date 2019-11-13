@@ -54,5 +54,8 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
+  },
+  "dependencies": {
+    "highlight.js": "^9.16.2"
   }
 }
