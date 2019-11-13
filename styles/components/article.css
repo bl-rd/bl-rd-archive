@@ -1,9 +1,11 @@
 article {
   counter-reset: footnotes;
+  margin: 0 auto;
+  max-width: calc(var(--measure-width) + 10vw);
 }
 
 article > * {
-  grid-column: 3/6;
+  grid-column: 2/4;
 }
 
 article > p:last-of-type::after {
@@ -33,7 +35,7 @@ article a[data-footnote]::after {
 }
 
 article > footer {
-  grid-column: 2/6;
+  grid-column: 1/4;
   margin: 1rem 0 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--app-colour-body);
@@ -61,6 +63,10 @@ article > footer :target {
 }
 
 @media only screen and (max-width: 66rem) {
+  article > * {
+    grid-column: 1/4;
+  }
+
   article > footer li {
     list-style-position: inside;
   }

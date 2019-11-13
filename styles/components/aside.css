@@ -40,7 +40,7 @@ aside li a {
 }
 
 .supplementary {
-  grid-column: 2/3;
+  grid-column: 1/2;
   grid-row: 2/99;
 }
 
@@ -63,7 +63,7 @@ aside li a {
 
 @media only screen and (max-width: 66rem) {
   .supplementary {
-    grid-column: 3/6;
+    grid-column: 1/4;
     position: relative;
     top: auto;
     height: auto;
