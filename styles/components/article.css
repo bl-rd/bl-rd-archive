@@ -6,11 +6,7 @@ article > * {
   grid-column: 3/6;
 }
 
-article > section:last-of-type {
-  margin-bottom: 5rem;
-}
-
-article > section:last-of-type::after {
+article > p:last-of-type::after {
   display: block;
   content: '';
   margin-top: 5rem;
@@ -19,6 +15,7 @@ article > section:last-of-type::after {
   height: 6vmin;
   background-color: var(--app-colour-body);
   margin-left: 1ch;
+  margin-bottom: 5rem;
 }
 
 article a[data-footnote] {
@@ -57,7 +54,7 @@ article a[data-footnote] > * {
 }
 
 article a[data-footnote]:target,
-article > footer small:target {
+article > footer :target {
   animation-name: flash-background;
   animation-duration: 3s;
   animation-delay: 0.2s;
