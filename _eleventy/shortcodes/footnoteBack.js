@@ -1,13 +1,12 @@
+const prependHash = require('../util').prependHash;
+
 /**
- * 
+ * Link from a footer item back to the original content
  * @param {String} id 
+ * @returns {String}
  */
 function footnoteBack(id) {
-    id = id.startsWith('#')
-        ? id
-        : `#${id}`;
-
-    return `<a href="${id}">Back</a>`;
+    return `<a href="${prependHash(id)}">Back</a>`;
 }
 
 module.exports = footnoteBack;
