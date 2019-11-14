@@ -1,21 +1,9 @@
 ---
 title: About yo
+summary: My name is Bill and I&apos;m a human.
 layout: article
-tags: [music, burritos]
-sections: 
-    - id: "#work"
-      text: Work
-    - id: "#not-work"
-      text: Not work
-    - id: "#this-website"
-      text: This website
+tags: [mario, luigi]
 ---
-
-<header>
-<h1>{{ title }}</h1>
-
-My name Bill and I&apos;m a human.
-</header>
 
 And I'm also a web developer by trade. I enjoy making performant, accessible and progressively enhanced webites, some of which you can find on my [projects page](/projects).
 
