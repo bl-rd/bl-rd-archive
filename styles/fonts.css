@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
-@font-face {
+/* @font-face {
   font-family: "Akashi";
-  src: url("/fonts/akashi-webfont.woff2") format("woff2"), url("/fonts/akashi-webfont.woff") format("woff"); /* Legacy browsers */
+  src: url("/fonts/akashi-webfont.woff2") format("woff2"), url("/fonts/akashi-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
-}
+} */
 
 @font-face {
   font-family: "Manrope";

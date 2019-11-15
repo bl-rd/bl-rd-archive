@@ -1,7 +1,7 @@
 :root {
   /* typograohy scale */
   --ratio: 1.5;
-  --s0: 1.166rem;
+  --s0: 1.066rem;
   --s1: calc(var(--s0) * var(--ratio));
   --s2: calc(var(--s1) * var(--ratio));
   --s3: calc(var(--s2) * var(--ratio));
@@ -10,7 +10,7 @@
   --s-small: calc(var(--s0) * 0.8);
 
   /* font variables */
-  --font-heading: 'Akashi', 'Manrope', sans-serif;
+  --font-heading: 'Manrope', sans-serif;
   --font-sub-heading: 'Manrope', Helvetica, Arial, sans-serif;
   --font-body: 'SpaceMono', 'Fira Code', monospace;
   --font-body-bold: 'SpaceMono Bold', 'Fira Code Bold', 'Fira Code', monospace;
@@ -30,7 +30,7 @@
 
   /* layout */
   --measure-width: 66ch;
-  --grid-columns-full: repeat(3, 0.75fr);
+  --grid-columns-full: repeat(4, 1fr);
 }
 
 * {
@@ -87,7 +87,7 @@ article {
 }
 
 article > header {
-  grid-column: 1/4;
+  grid-column: 1/5;
   border-image:
     repeating-linear-gradient(
       -45deg,
@@ -97,6 +97,7 @@ article > header {
       #000 calc(var(--stripe-width) * 2)
     ) 15;
   border-bottom: 15px solid black;
+  margin-bottom: 3.33rem;
   padding: 0 2rem 0.8rem 0;
 }
 
@@ -108,8 +109,7 @@ article nav ul {
   margin: 1rem 0;
 }
 
-header > * + *,
-section > * + * {
+header > * + * {
   max-width: var(--measure-width);
 }
 
@@ -126,22 +126,6 @@ h2 {
   position: relative;
   font-family: 'Manrope', Arial, Helvetica, sans-serif;
   margin-bottom: 0.18em;
-}
-
-section {
-  grid-column: 3/6;
-}
-
-section:first-of-type {
-  margin-top: 0;
-}
-
-section:first-of-type header {
-  margin-top: 0;
-}
-
-section:first-of-type header h2 {
-  margin-top: 0;
 }
 
 li {
@@ -165,9 +149,5 @@ small {
   article {
     grid-column-gap: 0;
     padding: 0 1rem;
-  }
-
-  section:first-of-type {
-    margin-top: 3.33rem;
   }
 }

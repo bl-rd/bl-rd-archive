@@ -1,11 +1,11 @@
 article {
   counter-reset: footnotes;
   margin: 0 auto;
-  max-width: calc(var(--measure-width) + 10vw);
+  max-width: calc(var(--measure-width) + 5vw);
 }
 
 article > * {
-  grid-column: 2/4;
+  grid-column: 2/5;
 }
 
 article > p:last-of-type::after {
@@ -35,7 +35,7 @@ article a[data-footnote]::after {
 }
 
 article > footer {
-  grid-column: 1/4;
+  grid-column: 1/5;
   margin: 1rem 0 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--app-colour-body);
@@ -51,6 +51,10 @@ article > footer li * {
   font-size: var(--s-small);
 }
 
+article > h2 {
+  margin: 3rem 0 2rem;
+}
+
 article a[data-footnote] > * {
   font-weight: bold;
 }
@@ -64,7 +68,7 @@ article > footer :target {
 
 @media only screen and (max-width: 66rem) {
   article > * {
-    grid-column: 1/4;
+    grid-column: 1/5;
   }
 
   article > footer li {

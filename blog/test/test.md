@@ -1,8 +1,13 @@
 ---
 title: About yo
-summary: My name is Bill and I&apos;m a human.
+summary: Aut doloremque quos rerum odio quasi necessitatibus. Et ratione nam et suscipit eveniet quaerat soluta.
 layout: article
 tags: [mario, luigi]
+sections:
+    - id: '#work'
+      text: 'Work'
+    - id: '#not-work'
+      text: 'Not work'
 ---
 
 And I'm also a web developer by trade. I enjoy making performant, accessible and progressively enhanced webites, some of which you can find on my [projects page](/projects).
