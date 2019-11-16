@@ -10,6 +10,8 @@
     </ul>
   </nav>
   {% endif %}
+
+  {% if not hideDate or tags %}
   <aside>
     {% if not hideDate %}
     <time class="font:reduced" datetime="{{ page.date  | iso }}">
@@ -24,5 +26,8 @@
       {% endfor %}
     </ul>
   </aside>
+  {% endif %}
+
+  <div data-button-observer></div>
   {% include "partials/templates/back-to-top.njk" %}
 </div>

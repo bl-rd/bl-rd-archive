@@ -30,7 +30,7 @@ class BackToTop extends HTMLElement {
             rootMargin: '0px'
         });
 
-        const target = document.querySelector('.supplementary aside');
+        const target = document.querySelector('div[data-button-observer]');
         this.observer.observe(target);
     }
 

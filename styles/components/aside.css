@@ -53,6 +53,10 @@ aside li a {
   font-family: var(--font-body);
 }
 
+div[data-button-observer] {
+  height: 1px;
+}
+
 /* @supports (position:sticky) {
     .supplementary {
         position: sticky;
