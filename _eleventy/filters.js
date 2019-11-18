@@ -9,5 +9,8 @@ module.exports = {
     },
     formatDate: function (date) {
         return DateTime.fromJSDate(date).toFormat('dd MMM y');
+    },
+    fullDate: function (date) {
+        return DateTime.fromJSDate(date).toFormat('HH:mm dd MMM y');
     }
 };

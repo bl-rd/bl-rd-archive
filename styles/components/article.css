@@ -66,6 +66,10 @@ article > footer :target {
   animation-delay: 0.2s;
 }
 
+article .supplementary + h2 {
+  margin-top: 0;
+}
+
 @media only screen and (max-width: 66rem) {
   article > * {
     grid-column: 1/5;
