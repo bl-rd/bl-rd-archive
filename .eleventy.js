@@ -25,8 +25,8 @@ module.exports = function(eleventyConfig) {
   passthrough.forEach(p => eleventyConfig.addPassthroughCopy(p));
 
   // Layouts
-  eleventyConfig.addLayoutAlias('standard', 'layouts/standardLayout.njk');
-  eleventyConfig.addLayoutAlias('article', 'layouts/article.njk');
+  eleventyConfig.addLayoutAlias('standard', 'standardLayout.njk');
+  eleventyConfig.addLayoutAlias('article', 'article.njk');
 
   // Markdown config
   const options = {
@@ -75,4 +75,13 @@ module.exports = function(eleventyConfig) {
       }
     }
   });
+
+  return {
+      dir: {
+          input: '_content',
+          includes: '_includes',
+          layouts: '_includes/layouts',
+          data: '_data'
+      }
+  };
 };
