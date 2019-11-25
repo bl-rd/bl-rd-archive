@@ -1,0 +1,75 @@
+aside {
+  height: auto;
+  min-height: 150px;
+  background-color: var(--app-colour-body);
+  position: relative;
+  color: white;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+aside.extra {
+  display: contents;
+}
+
+aside.extra > * {
+  grid-column: 2/3;
+}
+
+aside ul {
+  display: flex;
+}
+
+aside li {
+  margin-right: 0.75em;
+}
+
+aside time {
+  margin-bottom: 0.3em;
+}
+
+aside time,
+aside li,
+aside li a {
+  color: var(--app-colour-background);
+  font-family: var(--font-body);
+}
+
+.supplementary {
+  grid-column: 1/2;
+  grid-row: 2/99;
+}
+
+.supplementary nav {
+  border-top: 1px solid var(--app-colour-body);
+  border-bottom: var(--stripe-width) solid var(--app-colour-body);
+}
+
+.supplementary nav a {
+  font-family: var(--font-body);
+}
+
+div[data-button-observer] {
+  height: 1px;
+}
+
+/* @supports (position:sticky) {
+    .supplementary {
+        position: sticky;
+        top: 20px;
+        height: 60vh;
+    }
+} */
+
+@media only screen and (max-width: 66rem) {
+  .supplementary {
+    grid-column: 1/4;
+    position: relative;
+    top: auto;
+    height: auto;
+  }
+}

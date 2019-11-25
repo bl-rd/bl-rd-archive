@@ -1,0 +1,22 @@
+.landing {
+  min-height: 85vh;
+}
+
+.landing > * {
+  max-width: 100ch;
+  margin: 0 auto;
+  padding: 1ch;
+}
+
+.landing header {
+  padding-top: 15vmin;
+}
+
+.landing h1 {
+  font-size: 15vmin;
+}
+
+.landing p {
+  padding-left: 0.66em;
+  max-width: var(--measure-width);
+}

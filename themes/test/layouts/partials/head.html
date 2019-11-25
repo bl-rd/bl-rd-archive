@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>{{ .Title }}</title>
+
+{{ $css := resources.Get "css/main.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
+<link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+<script>
+  document.documentElement.classList.remove('no-js');
+</script>

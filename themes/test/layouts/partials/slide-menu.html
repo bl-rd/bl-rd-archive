@@ -1,0 +1,15 @@
+<template id="slide-menu-template">
+  <nav>
+    <ul class="max-width:none">
+      <!-- todo: add appropriate rels -->
+      {{ range .navigation }}
+        <li>
+          <a href="{{ .url }}" rel="me">{{ .text }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+
+</template>
+
+<slide-menu></slide-menu>

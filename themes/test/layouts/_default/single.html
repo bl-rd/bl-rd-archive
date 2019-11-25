@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    
+    {{ partial "head.html" . }}
+    
+</head>
+<body>
+  {{ partial "header.html" .Site.Data }}
+  <main>
+    <article>
+      <header>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </header>
+      
+      <div class="supplementary">
+        <div data-button-observer></div>
+        <back-to-top></back-to-top>
+      </div>
+
+      {{ .Content }}
+    </article>
+  </main>
+  {{ partial "web-components.html" . }}
+</body>
+</html>

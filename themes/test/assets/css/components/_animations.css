@@ -1,0 +1,58 @@
+/* h1::after {
+    content: '_';
+    display: inline;
+    animation-name: flash;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+} */
+
+@keyframes flash {
+  49% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    margin-top: 1.2ch;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 0;
+    margin-left: 0;
+  }
+
+  100% {
+    opacity: 1;
+    margin-left: -0.2ch;
+    text-shadow: -0.1ch 0 0 var(--highlight-offset);
+  }
+}
+
+@keyframes flash-background {
+  0% {
+    background-color: var(--highlight-2);
+  }
+
+  100% {
+    background-color: initial;
+  }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    
+    {{ partial "head.html" . }}
+    
+</head>
+<body>
+
+  {{ partial "header.html" .Site.Data }}
+
+  <main class="landing">
+    <header>
+      <h1>Good evening</h1>
+      <p>Thanks for stopping by.</p>
+    </header>
+    <section>
+      {{ .Content }}
+    </section>
+  </main>
+
+  {{ partial "footer.html" }}
+
+  {{ partial "web-components.html" . }}
+</body>
+</html>

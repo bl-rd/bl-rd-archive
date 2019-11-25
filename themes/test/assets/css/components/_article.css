@@ -1,0 +1,81 @@
+article {
+  counter-reset: footnotes;
+  margin: 0 auto;
+  max-width: calc(var(--measure-width) + 5vw);
+}
+
+article > * {
+  grid-column: 2/5;
+}
+
+article > p:last-of-type::after {
+  display: block;
+  content: '';
+  margin-top: 5rem;
+  filter: drop-shadow(-1ch 1ch 0 var(--highlight));
+  width: 6vmin;
+  height: 6vmin;
+  background-color: var(--app-colour-body);
+  margin-left: 1ch;
+  margin-bottom: 5rem;
+}
+
+article a[data-footnote] {
+  counter-increment: footnotes;
+  text-decoration: none;
+  color: inherit;
+}
+
+article a[data-footnote]::after {
+  content: '[' counter(footnotes) ']';
+  vertical-align: super;
+  font-size: 0.7em;
+  text-decoration: underline;
+  margin-left: 0.5ch;
+}
+
+article > footer {
+  grid-column: 1/5;
+  margin: 1rem 0 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--app-colour-body);
+}
+
+article > footer li {
+  list-style: inherit;
+  font-size: var(--s-small);
+  max-width: none;
+}
+
+article > footer li * {
+  font-size: var(--s-small);
+}
+
+article > h2 {
+  margin: 3rem 0 2rem;
+}
+
+article a[data-footnote] > * {
+  font-weight: bold;
+}
+
+article a[data-footnote]:target,
+article > footer :target {
+  animation-name: flash-background;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
+}
+
+article .supplementary + h2 {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 66rem) {
+  article > * {
+    grid-column: 1/5;
+  }
+
+  article > footer li {
+    list-style-position: inside;
+  }
+}

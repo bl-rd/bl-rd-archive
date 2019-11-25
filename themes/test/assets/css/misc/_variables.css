@@ -1,0 +1,53 @@
+:root {
+    /* typograohy scale */
+    --ratio: 1.5;
+    --s0: 1.066rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+    --s-small: calc(var(--s0) * 0.8);
+  
+    /* font variables */
+    --font-heading: 'Manrope', sans-serif;
+    --font-sub-heading: 'Manrope', Helvetica, Arial, sans-serif;
+    --font-body: 'SpaceMono', 'Fira Code', monospace;
+    --font-body-bold: 'SpaceMono Bold', 'Fira Code Bold', 'Fira Code', monospace;
+    --font-size-reduced: 0.8em;
+  
+    /* colours */
+    --white: #fff;
+    --black: #000;
+    --highlight: #ff2877;
+    --highlight-offset: #cc215f;
+    --highlight-2: #d4ff02;
+  
+    /* theme */
+    --app-colour-body: var(--black);
+    --app-colour-background: var(--white);
+    --stripe-width: 3px;
+  
+    /* layout */
+    --measure-width: 66ch;
+    --grid-columns-full: repeat(4, 1fr);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: var(--measure-width);
+    font-size: var(--s0);
+    font-family: var(--font-body);
+    line-height: var(--ratio);
+    color: var(--app-colour-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  *::before,
+  *::after {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
