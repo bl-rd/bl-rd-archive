@@ -10,3 +10,10 @@
 <script type="module" src="{{ $slide.Permalink }}" async defer></script>
 <script type="module" src="{{ $menuButton.Permalink }}" async defer></script>
 <script type="module" src="{{ $backToTop.Permalink }}" async defer></script>
+<script type="module">
+  (function() {
+    if ('customElements' in window) {
+      document.documentElement.classList.remove('no-component');
+    }
+  })();
+</script>
