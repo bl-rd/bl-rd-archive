@@ -8,18 +8,6 @@ article > * {
   grid-column: 2/5;
 }
 
-article > p:last-of-type::after {
-  display: block;
-  content: '';
-  margin-top: 5rem;
-  filter: drop-shadow(-1ch 1ch 0 var(--highlight));
-  width: 6vmin;
-  height: 6vmin;
-  background-color: var(--app-colour-body);
-  margin-left: 1ch;
-  margin-bottom: 5rem;
-}
-
 article a[data-footnote] {
   counter-increment: footnotes;
   text-decoration: none;

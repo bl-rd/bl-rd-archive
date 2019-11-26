@@ -22,3 +22,5 @@ At work I'm working on implementing [web push] notifications on our [Staff Intra
 - Currently listening to [Romaplasm] by [Baths] a lot. I even bought the CD(!). Added it to my [2019 music log].
 - Trying my hardest to finish the first Game of Thrones book, prompted by nostalgia from the final series ending. I'm enjoying it, but it's just sooooo long...
 - Having fun playing Bayonetta 2 on the Wii U. This is to make room for the Switch we might possibly definitely be getting at Christmas 🙂.
+
+{{<signoff>}}

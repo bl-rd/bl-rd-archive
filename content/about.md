@@ -23,6 +23,8 @@ I'm really into climbing, having had a late-start to the sport a few years ago. 
 
 You can get a better idea of what I'm up to _right now_ on [my now page](/now).
 
+{{<signoff>}}
+
 {{<blogfooter>}}
 <li id="yam-footnote">
     &ldquo;Yam&rdquo; is the traditional Cumbrian term for &ldquo;home&rdquo;. In fact, one of my favourite sayings is <i>&ldquo;'As gaan yam&rdquo;</i> (I'm going home).
