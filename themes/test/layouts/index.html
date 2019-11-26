@@ -11,7 +11,7 @@
 
   <main class="landing">
     <header>
-      <h1>Good evening</h1>
+      <h1>Good day</h1>
       <p>Thanks for stopping by.</p>
     </header>
     <section>
@@ -20,6 +20,9 @@
   </main>
 
   {{ partial "footer.html" }}
+
+  {{ $landingScript := resources.Get "js/landing.js" | resources.Minify }}
+  <script src="{{ $landingScript.Permalink }}" async defer></script>
 
   {{ partial "web-components.html" . }}
 </body>
