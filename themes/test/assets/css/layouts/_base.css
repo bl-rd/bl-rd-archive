@@ -59,15 +59,7 @@ article {
 
 article > header {
   grid-column: 1/5;
-  border-image:
-    repeating-linear-gradient(
-      -45deg,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0) var(--stripe-width),
-      #000 var(--stripe-width),
-      #000 calc(var(--stripe-width) * 2)
-    ) 15;
-  border-bottom: 15px solid black;
+  border-bottom: 0.33ch solid black;
   margin-bottom: 3.33rem;
   padding: 0 2rem 0.8rem 0;
 }

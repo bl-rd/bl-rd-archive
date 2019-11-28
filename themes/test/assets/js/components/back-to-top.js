@@ -88,6 +88,10 @@ function style() {
             }
         }
 
+        div {
+            margin-top: 1ch;
+        }
+
         div::before {
             content: '';
             display: block;
