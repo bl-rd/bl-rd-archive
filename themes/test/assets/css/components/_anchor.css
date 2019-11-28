@@ -2,6 +2,7 @@ a {
   color: var(--app-colour-body);
   transition: all 0.1s ease-out;
   font-family: var(--font-body-bold);
+  text-underline-offset: 0.3ch;
 }
 
 h1 > a,
