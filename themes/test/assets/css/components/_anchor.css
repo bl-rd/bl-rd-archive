@@ -4,7 +4,9 @@ a {
   font-family: var(--font-body-bold);
 }
 
-h1 > a, h2 > a, h3 > a {
+h1 > a,
+h2 > a,
+h3 > a {
   font-size: inherit;
   font-family: inherit;
 }
