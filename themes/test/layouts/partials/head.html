@@ -8,5 +8,10 @@
 <link rel="stylesheet" href="{{ $css.Permalink }}" />
 
 <script>
-  document.documentElement.classList.remove('no-js');
+  (function() {
+    document.documentElement.classList.remove('no-js');
+    if ('customElements' in window) {
+      document.documentElement.classList.remove('no-component');
+    }
+  })();
 </script>

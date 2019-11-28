@@ -46,6 +46,10 @@ main > header {
   margin: 0;
 }
 
+main {
+  min-height: 85vh;
+}
+
 article {
   display: grid;
   grid-template-columns: var(--grid-columns-full);
@@ -91,7 +95,7 @@ h1 {
 h2 {
   font-size: var(--s2);
   position: relative;
-  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-family: var(--font-sub-heading);
   margin-bottom: 0.18em;
 }
 

@@ -21,7 +21,13 @@ class SlideMenu extends HTMLElement {
         const links = Array.from(this.shadowRoot.querySelectorAll('nav li a'));
         const { pathname } = location;
         links.forEach(l => {
-            if (pathname === l.getAttribute('href')) {
+            const href = l.getAttribute('href');
+            // only add on the root if it matches exactly
+            if (href === pathname) {
+                l.parentElement.classList.add('active');
+                return;
+            }
+            if (pathname.indexOf(href) > -1 && href !== '/') {
                 l.parentElement.classList.add('active');
             }
         });
@@ -85,18 +91,19 @@ function style() {
 			content: '';
 			display: block;
 			z-index: -1;
-			width: 1ch;
-			height: 1ch;
+			width: 1.5ch;
+			height: 1.5ch;
 			background-color: var(--highlight);
 			position: absolute;
-			left: -.15ch;
-			top: .5ch;
+			left: .5ch;
+            top: .5ch;
+            transform: rotate(-30deg);
 			transition: all 0.12s ease-out;
 		}
 
 		nav li.active a:hover::before,
 		nav li.active a:focus::before {
-			transform: translate(100%) rotate(-30deg) scale(1.2);
+			transform: translateX(-50%) rotate(0deg) scale(0.8);
 		}
 
 		nav.show {
@@ -116,12 +123,16 @@ function style() {
 		}
 
 		nav.show li:nth-child(2) {
-					animation-delay: 0.3s;
+            animation-delay: 0.3s;
 		}
 
 		nav.show li:nth-child(3) {
 			animation-delay: 0.4s;
-		}
+        }
+
+        nav.show li:nth-child(4) {
+			animation-delay: 0.5s;
+        }
 
 		@keyframes list-appear {
 			0% {

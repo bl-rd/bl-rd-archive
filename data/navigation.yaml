@@ -4,3 +4,5 @@
   url: /about/
 - text: /now
   url: /now/
+- text: Blog
+  url: /posts/

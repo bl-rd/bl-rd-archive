@@ -1,1 +1,19 @@
-<!-- list -->
+{{ define "main" }}
+
+<header>
+  <h1>Posts</h1>
+</header>
+
+{{ .Content }}
+
+<ul>
+{{ range first 10 .Pages }}
+  <li>
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Description }}</p>
+    </article>
+  </li>
+{{ end }}
+</ul>
+{{ end }}
