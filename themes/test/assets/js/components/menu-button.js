@@ -39,6 +39,15 @@ class MenuButton extends HTMLButtonElement {
 
 function style() {
     return String.raw`
+    div {
+        --menu-button-size: 60px;
+        --menu-button-offset: calc(var(--menu-button-size) * 3);
+        max-width: calc(var(--measure-width) + 5vw + var(--menu-button-offset));
+        margin: 0 auto;
+        padding-top: 1em;
+        display: flex;
+        justify-content: flex-end;
+    }
     p {
         position: absolute;
         left: -9999px;
@@ -55,12 +64,10 @@ function style() {
     button {
         position: fixed;
         z-index: 10000;
-        right: 1rem;
-        top: 1rem;
         background-color: var(--app-colour-background);
         border: none;
-        width: 60px;
-        height: 60px;
+        width: var(--menu-button-size);
+        height: var(--menu-button-size);
         border-radius: 50%;
         display: flex;
         justify-content: center;

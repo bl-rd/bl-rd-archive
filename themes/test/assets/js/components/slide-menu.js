@@ -51,7 +51,9 @@ function style() {
 		}
 
 		nav ul {
-			list-style: none;
+            list-style: none;
+            max-width: var(--measure-width);
+            margin: 0 auto;
 		}
 
 		nav li {
@@ -140,7 +142,7 @@ function style() {
 					opacity: 0;
 			}
 			100% {
-					margin-right: 20vmin;
+					margin-right: 0;
 					opacity: 1;
 			}
 		}

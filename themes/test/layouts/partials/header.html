@@ -1,16 +1,4 @@
 <header>
-  <noscript>
-    <nav>
-        <ul class="max-width:none">
-          <!-- todo: add appropriate rels -->
-          {{ range .navigation }}
-            <li>
-              <a href="{{ .url }}" rel="me">{{ .text }}</a>
-            </li>
-          {{ end }}
-        </ul>
-      </nav>
-  </noscript>
   {{/* no component navigation */}}
   <div>
     <nav>
@@ -24,4 +12,8 @@
         </ul>
       </nav>
   </div>
+
+  <menu-button></menu-button>
+  <slide-menu></slide-menu>
+
 </header>
