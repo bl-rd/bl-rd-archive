@@ -1,5 +1,4 @@
 ---
 title: Blog
+description: Here are some blog entries
 ---
-
-Here are some blog entries.
