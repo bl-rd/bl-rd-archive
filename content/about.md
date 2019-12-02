@@ -7,7 +7,7 @@ description: My name is Bill, and I'm a human.
 
 And I'm also a web developer by trade. I enjoy making performant, accessible and progressively enhanced webites, some of which you can find on my [projects page](/projects).
 
-I live ~~in~~ very near the Lake District in Cumbria, not too far away from where I grew up. Having been away to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol' Cumbrian countryside _{{<footnote-link yam>}}yam{{</footnote-link>}}_.
+I live ~~in~~ very near the Lake District in Cumbria, not too far away from where I grew up. Having been away to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol' Cumbrian countryside {{<footnote-link yam>}}_yam_{{</footnote-link>}}.
 
 ## Work
 

@@ -3,5 +3,5 @@
   data-footnote
   aria-describedby="footnote-description"
   aria-labelledby="{{ index .Params 0}}-footnote">
-  {{ .Inner }}
+  {{ .Inner | markdownify }}
 </a>

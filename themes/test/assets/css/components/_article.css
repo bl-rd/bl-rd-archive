@@ -19,7 +19,7 @@ article a[data-footnote]::after {
   vertical-align: super;
   font-size: 0.7em;
   text-decoration: underline;
-  margin-left: 0.5ch;
+  margin-left: -0.5ch;
 }
 
 article > footer {
