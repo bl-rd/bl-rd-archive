@@ -1,20 +1,24 @@
-article {
+.single {
   counter-reset: footnotes;
   margin: 0 auto;
   max-width: calc(var(--measure-width) + 5vw);
+  display: grid;
+  grid-template-columns: var(--grid-columns-full);
+  grid-template-rows: auto;
+  column-gap: 2rem;
 }
 
-article > * {
+.single > * {
   grid-column: 2/5;
 }
 
-article a[data-footnote] {
+.single a[data-footnote] {
   counter-increment: footnotes;
   text-decoration: none;
   color: inherit;
 }
 
-article a[data-footnote]::after {
+.single a[data-footnote]::after {
   content: '[' counter(footnotes) ']';
   vertical-align: super;
   font-size: 0.7em;
@@ -22,48 +26,65 @@ article a[data-footnote]::after {
   margin-left: -0.5ch;
 }
 
-article > footer {
+.single > footer {
   grid-column: 1/5;
   margin: 1rem 0 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--app-colour-body);
 }
 
-article > footer li {
+.single > footer li {
   list-style: inherit;
   font-size: var(--s-small);
   max-width: none;
 }
 
-article > footer li * {
+.single > footer li * {
   font-size: var(--s-small);
 }
 
-article > h2 {
+.single > h2 {
   margin: 3rem 0 2rem;
 }
 
-article a[data-footnote] > * {
+.single a[data-footnote] > * {
   font-weight: bold;
 }
 
-article a[data-footnote]:target,
-article > footer :target {
+.single a[data-footnote]:target,
+.single > footer :target {
   animation-name: flash-background;
   animation-duration: 3s;
   animation-delay: 0.2s;
 }
 
-article .supplementary + h2 {
+.single .supplementary + h2 {
   margin-top: 0;
 }
 
+.single > header {
+  grid-column: 1/5;
+  border-bottom: 0.33ch solid black;
+  margin-bottom: 3.33rem;
+  padding: 0 2rem 0.8rem 0;
+}
+
+.single > header p {
+  font-size: var(--s2);
+}
+
+.single nav ul {
+  margin: 1rem 0;
+}
+
 @media only screen and (max-width: 66rem) {
-  article > * {
+  .single > * {
     grid-column: 1/5;
+    grid-column-gap: 0;
+    padding: 0 1rem;
   }
 
-  article > footer li {
+  .single > footer li {
     list-style-position: inside;
   }
 }

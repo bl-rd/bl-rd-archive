@@ -58,10 +58,22 @@ div[data-button-observer] {
 }
 
 @media only screen and (max-width: 66rem) {
+  .single header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .supplementary {
+    /*
+
+    Hide the supplementary class on mobile until a better solution can be thought of...
+
     grid-column: 1/4;
     position: relative;
     top: auto;
     height: auto;
+    */
+    display: none;
+    visibility: hidden;
   }
 }

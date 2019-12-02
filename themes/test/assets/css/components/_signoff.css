@@ -9,3 +9,10 @@
   margin-left: 1ch;
   margin-bottom: 5rem;
 }
+
+@media only screen and (max-width: 66rem) {
+  .signoff {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

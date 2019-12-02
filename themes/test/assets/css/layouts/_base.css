@@ -50,28 +50,6 @@ main {
   min-height: 85vh;
 }
 
-article {
-  display: grid;
-  grid-template-columns: var(--grid-columns-full);
-  grid-template-rows: auto;
-  column-gap: 2rem;
-}
-
-article > header {
-  grid-column: 1/5;
-  border-bottom: 0.33ch solid black;
-  margin-bottom: 3.33rem;
-  padding: 0 2rem 0.8rem 0;
-}
-
-article > header p {
-  font-size: var(--s2);
-}
-
-article nav ul {
-  margin: 1rem 0;
-}
-
 header > * + * {
   max-width: var(--measure-width);
 }
@@ -107,10 +85,5 @@ small {
 @media only screen and (max-width: 66rem) {
   :root {
     --measure-width: auto;
-  }
-
-  article {
-    grid-column-gap: 0;
-    padding: 0 1rem;
   }
 }
