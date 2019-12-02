@@ -7,11 +7,13 @@ draft: true
 
 ## Now pages
 
-Find out more about [now pages](https://nownownow.com/about).
+Find out more about {{<external-link href="https://nownownow.com/about">}}now pages.{{</external-link>}}
 
 ## What I'm doing now
 
 My main focus is trying to shift my skillset from being a full-stack developer who prefers working on the front-end to a _front-end developer_ proper&#8482;. There are quite a few areas to consider here, and I like to think I have a good grounding in the foundations of the web (HTML, CSS, JavaScript), as well as a lot of experience using popular JavaScript frameworks. However, I really want to hone in on accessibility, performance and semantic markup, as well as good design.
+
+[Monoculture talk](https://youtu.be/gjlBcsSNEpU?t=1438)
 
 I'm learning [Rust] and [WebAssembly], and how they might be additional tools that can be used for (performant) web interfaces. Currently, I'm working my way through the [Rust language book] and the [Rust WebAssembly book]&mdash;both really great introductions into the language. Hopefully I'll be able to update this page with Rust-related projects soon!
 
