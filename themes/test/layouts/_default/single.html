@@ -12,7 +12,13 @@
     <article class="single">
       <header>
         <h1>{{ .Title }}</h1>
-        <p>{{ .Description }}</p>
+        <p>
+          {{ if isset .Params "intro" }}
+          {{ index .Params "intro" }}
+          {{ else }}
+          {{ index .Params "description" }}
+          {{ end }}
+        </p>
       </header>
 
       <div class="supplementary">

@@ -69,8 +69,12 @@ h2 {
   margin-bottom: 0.18em;
 }
 
+ul {
+  margin: 1.25rem 1em;
+}
+
 li {
-  list-style: none;
+  list-style-position: initial;
 }
 
 em,

@@ -14,6 +14,7 @@
 @import 'components/_footer.css';
 @import 'components/_animations.css';
 @import 'components/_signoff.css';
+@import 'components/_list.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';
