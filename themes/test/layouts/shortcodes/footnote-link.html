@@ -2,6 +2,4 @@
   id="{{ index .Params 0 }}-link"
   data-footnote
   aria-describedby="footnote-description"
-  aria-labelledby="{{ index .Params 0}}-footnote">
-  {{ .Inner | markdownify }}
-</a>
+  aria-labelledby="{{ index .Params 0}}-footnote">{{ .Inner | markdownify }}</a>
