@@ -33,6 +33,22 @@ Obviously this is all going to be documented in blog form &mdash; or at least, I
 
 The bottom line is that I'm hoping to enjoy it. It will be nice to revisit why I enjoy working in this industry, and to experiment and challenge myself on the way. All in my safe little corner of the world wide web.
 
+```javascript
+export async function test(msg = 'hello') {
+    return () => `${msg}, world!`;
+}
+```
+
+```rust
+use::std:fmt::{ Display };
+
+fn main() {
+    let mut test = true;
+
+    println!("{:?}", test);
+}
+```
+
 - Keep a track of things
 - Experiment
 - Fun, remember why I started doing code in the first place

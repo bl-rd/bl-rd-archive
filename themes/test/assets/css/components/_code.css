@@ -1,0 +1,14 @@
+.highlight {
+  --padding: 1.75ch;
+
+  margin: 1rem calc(var(--padding) * -1);
+}
+
+.highlight pre {
+  padding: var(--padding);
+  border-radius: 0.5ch;
+}
+
+.highlight code {
+  color: var(--app-colour-background);
+}
