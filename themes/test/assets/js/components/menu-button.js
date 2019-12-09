@@ -1,4 +1,9 @@
-class MenuButton extends HTMLButtonElement {
+/**
+ * Have to extend HTMLElement (instead of HTMLButtonElement) as
+ * `attachShadow` is only supported on custom autonomous components, not
+ * custom built-in elements
+ */
+class MenuButton extends HTMLElement {
     constructor() {
         super();
         let template = document.getElementById('menu-button-template');
@@ -85,7 +90,7 @@ function style() {
 }
 
 if ('customElements' in window) {
-    customElements.define('menu-button', MenuButton, { extends: 'button'});
+    customElements.define('menu-button', MenuButton);
 }
 
 export default MenuButton;
