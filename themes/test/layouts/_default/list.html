@@ -14,6 +14,9 @@
     <li>
       <article>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <small>
+          <time timestamp="{{ .PublishDate }}">{{ .PublishDate.Format "2 January 2006" }}</time>
+        </small>
         <p>{{ .Description }}</p>
       </article>
     </li>

@@ -47,6 +47,11 @@
   margin: 3rem 0 2rem;
 }
 
+.single > h2:first-of-type {
+  border-top: solid 0.25rem var(--app-colour-body);
+  padding-top: 0.6em;
+}
+
 .single a[data-footnote] > * {
   font-weight: bold;
 }
@@ -64,8 +69,7 @@
 
 .single > header {
   grid-column: 1/5;
-  border-bottom: 0.33ch solid black;
-  margin-bottom: 3.33rem;
+  margin: 0;
   padding: 0 2rem 0.8rem 0;
 }
 

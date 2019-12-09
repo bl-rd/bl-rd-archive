@@ -44,13 +44,13 @@ aside li a {
   grid-row: 2/99;
 }
 
-.supplementary nav {
-  border-top: 1px solid var(--app-colour-body);
-  border-bottom: var(--stripe-width) solid var(--app-colour-body);
+.supplementary .supplementary__date {
+  background: var(--app-colour-body);
+  padding: 0.75rem 0.5rem;
 }
 
-.supplementary nav a {
-  font-family: var(--font-body);
+.supplementary .supplementary__date * {
+  color: var(--app-colour-background);
 }
 
 div[data-button-observer] {
