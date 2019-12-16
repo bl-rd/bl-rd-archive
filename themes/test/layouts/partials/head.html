@@ -4,6 +4,13 @@
 
 <title>{{ .Title }}</title>
 
+{{ if isset .Params "description" }}
+<meta name="description" content="{{ .Params.description }}">
+{{ else }}
+<meta name="description" content="{{ .Site.Data.config.descriptionFallback }}">
+{{ end }}
+<link rel="canonical" href="https://bl-rd.dev/">
+
 {{ $css := resources.Get "css/main.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
 <link rel="stylesheet" href="{{ $css.Permalink }}" />
 
