@@ -1,13 +1,10 @@
 {{/* web component templates */}}
-{{ partial "menu-button.html" }}
 {{ partial "slide-menu.html" .Site.Data }}
 {{ partial "back-to-top.html" }}
 
 {{ $slide := resources.Get "js/components/slide-menu.js" | resources.Minify }}
-{{ $menuButton := resources.Get "js/components/menu-button.js" | resources.Minify }}
 {{ $backToTop := resources.Get "js/components/back-to-top.js" | resources.Minify }}
 
 <script type="module" src="{{ $slide.Permalink }}" async defer></script>
-<script type="module" src="{{ $menuButton.Permalink }}" async defer></script>
 <script type="module" src="{{ $backToTop.Permalink }}" async defer></script>
 </script>

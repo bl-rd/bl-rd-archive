@@ -10,16 +10,92 @@ class SlideMenu extends HTMLElement {
     }
 
     connectedCallback() {
-        const menu = this.shadowRoot.querySelector('nav');
+        // button state
+        this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
+        this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');
+        this.button = this.shadowRoot.querySelector('button');
+        this.addEventListener('click', this.clickHandler);
+
+        // menu state
+        this.menu = this.shadowRoot.querySelector('nav div:nth-of-type(2)');
+        this.links = Array.from(this.shadowRoot.querySelectorAll('nav li a'));
+
         this.initialiseNavStyles();
-        document.addEventListener('menuclick', function handleMenuClick() {
-            menu.classList.toggle('show');
-        });
     }
 
-    initialiseNavStyles() {
-        const links = Array.from(this.shadowRoot.querySelectorAll('nav li a'));
+    /**
+     * Is the menu currently in the `open` state
+     * @returns {Boolean}
+     */
+    get open() {
+        return this.menu && this.menu.classList.contains('show');
+    }
+
+    /**
+     * Update all the attributes on the menu
+     */
+    attributeHandler() {
+        const { menu, links } = this;
+        if (this.open) {
+            menu.removeAttribute('aria-hidden');
+
+            // focus on the first element
+            // ...or maybe not
+            // links[0].focus();
+
+            // make all the anchor elements focusable
+            links.forEach(l => l.setAttribute('tabindex', '0'));
+
+            // keep focus with the menu
+            document.addEventListener.apply(this, ['keydown', this.keypressHandler]);
+        } else {
+            // this.menuButton.focus();
+
+            menu.setAttribute('aria-hidden', 'true');
+
+            // don't make the links focusable if the parent is hidden
+            // https://www.w3.org/TR/using-aria/#fourth
+            links.forEach(l => l.setAttribute('tabindex', '-1'));
+
+            document.removeEventListener.apply(this, ['keydown', this.keypressHandler]);
+        }
+    }
+
+    /**
+     * Handle keypresses
+     * @param {KeyboardEvent} e 
+     */
+    keypressHandler(e) {
+        // watch for esc
+        if (e.keyCode === 27) {
+            this.toggle();
+        }
+    }
+
+    /**
+     * Handle clicking on the menu button
+     */
+    clickHandler() {
+        this.toggle();
+    }
+
+    /**
+     * Flip the state of the menu
+     */
+    toggle() {
+        this.openSvg.classList.toggle('active');
+        this.closeSvg.classList.toggle('active');
+        this.menu.classList.toggle('show');
+        this.attributeHandler();
+    }
+
+    /**
+     * Add the active class to the active route
+     */
+    initialiseNavStyles() {        
         const { pathname } = location;
+        const { links } = this;
+
         links.forEach(l => {
             const href = l.getAttribute('href');
             // only add on the root if it matches exactly
@@ -36,8 +112,14 @@ class SlideMenu extends HTMLElement {
 
 function style() {
     return String.raw`
-		nav {
-			position: fixed;
+		nav ul {
+            list-style: none;
+            margin: 0 auto;
+            min-width: var(--measure-width);
+        }
+        
+        nav div:nth-of-type(2) {
+            position: fixed;
 			right: 2rem;
 			top: 2rem;
 			right: initial;
@@ -47,22 +129,16 @@ function style() {
 			transition: left 0.25s ease-out;
 			background-color: var(--app-colour-body);
 			width: 100vw;
-			height: 100vh;
-		}
-
-		nav ul {
-            list-style: none;
-            max-width: var(--measure-width);
-            margin: 0 auto;
-		}
+            height: 100vh;
+            max-width: initial;
+        }
 
 		nav li {
-			margin: 1rem;
+			margin: 0 auto;
 			text-align: right;
 			transition: all 0.16s ease-out;
 			background-color: initial;
-			max-width: initial;
-			margin-right: -30vw;
+			max-width: var(--measure-width);
 			opacity: 0;
 		}
 
@@ -108,31 +184,31 @@ function style() {
 			transform: translateX(-50%) rotate(0deg) scale(0.8);
 		}
 
-		nav.show {
+		nav div.show {
 			transition: left 0.25s ease-out;
-			left: 0;
+            left: 0;
 		}
 
-		nav.show li {
+		nav div.show li {
 			animation-name: list-appear;
 			animation-fill-mode: forwards;
 			animation-duration: 0.2s;
 			animation-timing-function: ease-out;
 		}
 
-		nav.show li:nth-child(1) {
+		nav div.show li:nth-child(1) {
 			animation-delay: 0.2s;
 		}
 
-		nav.show li:nth-child(2) {
+		nav div.show li:nth-child(2) {
             animation-delay: 0.3s;
 		}
 
-		nav.show li:nth-child(3) {
+		nav div.show li:nth-child(3) {
 			animation-delay: 0.4s;
         }
 
-        nav.show li:nth-child(4) {
+        nav div.show li:nth-child(4) {
 			animation-delay: 0.5s;
         }
 
@@ -145,7 +221,57 @@ function style() {
 					margin-right: 0;
 					opacity: 1;
 			}
-		}
+        }
+        /* button styles */
+        div {
+            --menu-button-size: 60px;
+            --menu-button-offset: calc(var(--menu-button-size) * 3);
+            max-width: calc(var(--measure-width) + 5vw + var(--menu-button-offset));
+            margin: 0 auto;
+            padding-top: 1em;
+            display: flex;
+            justify-content: flex-end;
+        }
+        p {
+            position: absolute;
+            left: -9999px;
+        }
+        svg {
+            display: none;
+            visibility: hidden;
+            stroke: var(--app-colour-body);
+        }
+        svg.active {
+            display: inline-block;
+            visibility: visible;
+        }
+        button {
+            position: fixed;
+            z-index: 10000;
+            background-color: var(--app-colour-background);
+            border: none;
+            width: var(--menu-button-size);
+            height: var(--menu-button-size);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        button:focus {
+            border: .5ch solid var(--highlight);
+            outline: none;
+        }
+        button:focus > * {
+            outline: none;
+        }
+        
+        @media only screen and (max-width: 60rem) {
+            button {
+                top: initial;
+                bottom: 1rem;
+            }
+        }
 	`;
 }
 
