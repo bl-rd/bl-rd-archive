@@ -1,7 +1,7 @@
 <template id="slide-menu-template">
   <nav>
     <div>
-      <button>
+      <button aria-expanded="false" aria-controls="menu-list">
         <p id="hamburgerIconTitle">Open menu</p>
         <svg id="open-menu-icon" class="active" role="img" xmlns="http://www.w3.org/2000/svg" width="48px" height="48px"
           viewBox="0 0 24 24" aria-labelledby="hamburgerIconTitle" stroke-width="1" stroke-linecap="square"
@@ -18,8 +18,8 @@
         </svg>
       </button>
     </div>
-    <div aria-hidden="true">
-      <ul>
+    <div hidden>
+      <ul id="menu-list">
         <!-- todo: add appropriate rels -->
         {{ range .navigation }}
           <li>

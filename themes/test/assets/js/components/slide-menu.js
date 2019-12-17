@@ -35,9 +35,10 @@ class SlideMenu extends HTMLElement {
      * Update all the attributes on the menu
      */
     attributeHandler() {
-        const { menu, links } = this;
+        const { menu, links, button } = this;
         if (this.open) {
-            menu.removeAttribute('aria-hidden');
+            menu.removeAttribute('hidden');
+            button.setAttribute('aria-expanded', 'true');
 
             // focus on the first element
             // ...or maybe not
@@ -50,8 +51,8 @@ class SlideMenu extends HTMLElement {
             document.addEventListener.apply(this, ['keydown', this.keypressHandler]);
         } else {
             // this.menuButton.focus();
-
-            menu.setAttribute('aria-hidden', 'true');
+            button.setAttribute('aria-expanded', 'false');
+            menu.setAttribute('hidden', 'true');
 
             // don't make the links focusable if the parent is hidden
             // https://www.w3.org/TR/using-aria/#fourth
@@ -271,6 +272,10 @@ function style() {
                 top: initial;
                 bottom: 1rem;
             }
+        }
+
+        [hidden] > ul {
+            display: none;
         }
 	`;
 }
