@@ -14,9 +14,10 @@ class SlideMenu extends HTMLElement {
         this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
         this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');
         this.button = this.shadowRoot.querySelector('button');
-        this.addEventListener('click', this.clickHandler);
+        this.button.addEventListener.apply(this.button, ['click', () => this.toggle()]);
 
         // menu state
+        this.activeLinkIndex = 0;
         this.menu = this.shadowRoot.querySelector('nav div:nth-of-type(2)');
         this.links = Array.from(this.shadowRoot.querySelectorAll('nav li a'));
 
@@ -29,6 +30,15 @@ class SlideMenu extends HTMLElement {
      */
     get open() {
         return this.menu && this.menu.classList.contains('show');
+    }
+
+    /**
+     * @returns {HTMLAnchorElement}
+     */
+    get activeLink() {
+        return Array.isArray(this.links)
+            ? this.links[this.activeLinkIndex]
+            : null;
     }
 
     /**
@@ -67,17 +77,21 @@ class SlideMenu extends HTMLElement {
      * @param {KeyboardEvent} e 
      */
     keypressHandler(e) {
-        // watch for esc
-        if (e.keyCode === 27) {
-            this.toggle();
-        }
-    }
 
-    /**
-     * Handle clicking on the menu button
-     */
-    clickHandler() {
-        this.toggle();
+        const { keyCode: key, shiftKey } = e;
+
+        switch (key) {
+        // ESC
+        case 27:
+            this.toggle();
+            this.button.focus();
+            break;
+            // TAB
+        case 9:
+            e.preventDefault();
+            this.updateActiveLinkIndex(shiftKey);
+            break;
+        }
     }
 
     /**
@@ -108,6 +122,37 @@ class SlideMenu extends HTMLElement {
                 l.parentElement.classList.add('active');
             }
         });
+    }
+
+    /**
+     * Update which element should be focused next
+     * @param {Boolean} shiftPressed
+     */
+    updateActiveLinkIndex(shiftPressed) {
+
+        // check if the menu button is the currently focused element
+        const onButton = this.shadowRoot.activeElement.nodeName.toLowerCase() === 'button';
+
+        if (onButton) {
+            this.activeLinkIndex = shiftPressed
+                ? this.links.length - 1
+                : 0;
+            this.links[this.activeLinkIndex].focus();
+            return;
+        }
+
+        // update the index up (or down, if shift is pressed)
+        shiftPressed ? this.activeLinkIndex-- : this.activeLinkIndex++;
+
+        // if at beginning or end of array the button should be focused to provide an exit!
+        if (this.activeLinkIndex < 0 || this.activeLinkIndex >= this.links.length) {
+            this.activeLinkIndex = 0;
+            this.button.focus();
+            return;
+        }
+
+        // focus on the new active link
+        this.activeLink && this.activeLink.focus();
     }
 }
 
