@@ -11,8 +11,18 @@
 {{ end }}
 <link rel="canonical" href="https://bl-rd.dev/">
 
+{{ range .Site.Data.config.fonts }}
+<link rel="preload" href="{{ . }}" as="font" />
+{{ end }}
+
 {{ $css := resources.Get "css/main.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
+<link rel="preload" href="{{ $css.Permalink }}" as="style" />
 <link rel="stylesheet" href="{{ $css.Permalink }}" />
+
+{{ $slide := resources.Get "js/components/slide-menu.js" | resources.Minify }}
+{{ $backToTop := resources.Get "js/components/back-to-top.js" | resources.Minify }}
+<link rel="preload" href="{{ $slide.Permalink }}" as="script" />
+<link rel="preload" href="{{ $backToTop.Permalink }}" as="script" />
 
 <script>
   (function() {
