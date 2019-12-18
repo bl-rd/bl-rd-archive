@@ -9,7 +9,7 @@
 {{ else }}
 <meta name="description" content="{{ .Site.Data.config.descriptionFallback }}">
 {{ end }}
-<link rel="canonical" href="https://bl-rd.dev/">
+<link rel="canonical" href="{{ .Permalink }}">
 
 {{ range .Site.Data.config.fonts }}
 <link rel="preload" href="{{ . }}" as="font" />
