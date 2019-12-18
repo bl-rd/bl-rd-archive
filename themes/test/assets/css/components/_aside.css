@@ -47,6 +47,10 @@ aside li a {
 .supplementary .supplementary__date {
   background: var(--app-colour-body);
   padding: 0.75rem 0.5rem;
+  min-height: 15ch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .supplementary .supplementary__date * {

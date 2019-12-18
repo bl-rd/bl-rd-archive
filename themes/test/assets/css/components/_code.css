@@ -1,14 +1,29 @@
 .highlight {
   --padding: 1.75ch;
 
+  margin: 1rem 0;
   margin: 1rem calc(var(--padding) * -1);
 }
 
 .highlight pre {
   padding: var(--padding);
   border-radius: 0.5ch;
+  white-space: pre-wrap;
 }
 
 .highlight code {
   color: var(--app-colour-background);
+}
+
+@media only screen and (max-width: 66rem) {
+  .highlight {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .highlight pre {
+    padding: 1rem;
+    border-radius: 0;
+  }
 }

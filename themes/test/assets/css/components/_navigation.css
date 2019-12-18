@@ -32,13 +32,18 @@ noscript nav,
 
 noscript nav ul,
 .no-component nav ul {
-  grid-column: 2/6;
+  width: var(--measure-width);
+  margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   padding: 1.5rem 3ch 1.5rem 0;
+}
 
-  /* resets */
-  margin: initial;
+@supports (display: grid) {
+  noscript nav,
+  .no-component nav ul {
+    grid-column: 2/6;
+  }
 }
 
 noscript nav ul li,
@@ -46,4 +51,5 @@ noscript nav ul li,
   margin-left: 2rem;
   margin-right: initial;
   opacity: 1;
+  list-style: none;
 }

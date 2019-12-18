@@ -298,7 +298,6 @@ function style() {
             border: none;
             width: var(--menu-button-size);
             height: var(--menu-button-size);
-            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
