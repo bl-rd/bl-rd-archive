@@ -1,0 +1,14 @@
+baseURL: https://www.bl-rd.dev/
+languageCode: en-gb
+title: Bill's Website
+newContentEditor: code
+theme: test
+markup:
+    highlight:
+        codeFences: true
+        lineNoStart: 1
+        lineNos: false
+        lineNumbersInTable: true
+        noClasses: true
+        style: swapoff
+        tabWidth: 2
