@@ -1,6 +1,6 @@
 descriptionFallback: "Bill Reid is a web-developer/human based in Cumbria, UK"
 fonts:
-    - /static/fonts/manrope-extrabold.woff2
-    - /static/fonts/SpaceMono-Bold.woff2
-    - /static/fonts/SpaceMono-Italic.woff2
-    - /static/fonts/SpaceMono-Regular.woff2
+    - /fonts/manrope-extrabold.woff2
+    - /fonts/SpaceMono-Bold.woff2
+    - /fonts/SpaceMono-Italic.woff2
+    - /fonts/SpaceMono-Regular.woff2
