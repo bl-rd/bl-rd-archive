@@ -1,0 +1,33 @@
+<div class="animation" aria-hidden="true">
+  <div class="animation__container">
+    <div class="animation__fragment"></div>
+    <div class="animation__fragment"></div>
+    <div class="animation__fragment"></div>
+    <div class="animation__fragment"></div>
+  </div>
+</div>
+
+<style>  
+  .animation__fragment {
+    width: var(--elem-width);
+    height: calc(var(--elem-width) * 10);
+    left: 50%;
+    top: 50%;
+    margin-left: calc(var(--elem-width) / 2 * -1);
+    margin-top: -25%;
+    background-color: var(--foreground);
+    position: absolute;
+  }
+  
+  .animation__fragment:nth-of-type(1) {
+    transform-origin: center;
+  }
+  
+  .animation__fragment:nth-of-type(2),
+  .animation__fragment:nth-of-type(3){
+    transform-origin: bottom;
+  }
+</style>
+
+{{ $script := resources.Get "js/animations/1-hello-world.js" | resources.Minify }}
+<script src="{{ $script.Permalink }}" async defer></script>

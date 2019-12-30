@@ -8,6 +8,11 @@
   <main>
     <article class="single">
       <header>
+        <!--  -->
+        {{ if isset .Params "animation" }}
+        {{ $anim := index .Params "animation" }}
+        {{ partial $anim }}
+        {{ end }}
         <h1>{{ .Title }}</h1>
         <p>
           {{ if isset .Params "intro" }}

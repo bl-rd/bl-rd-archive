@@ -4,6 +4,7 @@ date: 2019-11-19T21:44:37Z
 description: Now on the internet property ladder...
 intro: I've created a personal website! It has a blog! Ok, now what?
 draft: true
+animation: "anim-1-hello-world.html"
 ---
 
 ## Why
