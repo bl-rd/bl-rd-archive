@@ -1,4 +1,4 @@
 ---
 title: Blog
-description: Here are some blog entries
+description: Some random stuff written by me.
 ---
