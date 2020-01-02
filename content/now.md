@@ -1,6 +1,6 @@
 ---
 title: "/now"
-date: 2019-11-19T22:04:05Z
+date: 2019-12-19T22:04:05Z
 description: "Where I try and keep track of the things that are currently have my attention."
 ---
 

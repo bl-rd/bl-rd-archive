@@ -3,6 +3,7 @@ languageCode: en-gb
 title: Bill's Website
 newContentEditor: code
 theme: test
+enableGitInfo: true
 markup:
     highlight:
         codeFences: true
