@@ -2,4 +2,4 @@
 Title: Bill's Website
 ---
 
-[I'm Bill](/about), and this is my website. Find out about some of my [recent projects](/projects), what [I'm up to now](/now) or what I've previously been doing. There is even a [blog](/posts) here, although this is new ground for me.
+[I'm Bill](/about), I'm a web developer and this is my website. Feel free to take a look at what [I'm up to now](/now) or have a gander at my blog [blog](/posts). **Disclaimer**: I'm very new to blogging.
