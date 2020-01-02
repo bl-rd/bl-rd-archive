@@ -1,27 +1,33 @@
 ---
 title: "About"
-date: 2019-11-19T13:10:18Z
-draft: true
+date: 2019-12-19T13:10:18Z
 description: My name is Bill, and I'm a human.
 ---
 
-And I'm also a web developer by trade. I enjoy making performant, accessible and progressively enhanced website, some of which you can find on my [projects page](/projects).
+And I'm also a web developer by trade. I enjoy making performant, accessible and progressively enhanced websites.
 
 I live ~~in~~ very near the Lake District in Cumbria, not too far away from where I grew up. Having been away to uni, travelled and lived the big(ish) city-life, myself, my wife and our two children now call the good ol' Cumbrian countryside {{<footnote-link yam>}}_&ldquo;yam&rdquo;_{{</footnote-link>}}.
 
 ## Work
 
-Currently, I work as a full-stack developer in a small team at {{<external-link href="https://www.lancaster.ac.uk">}}Lancaster University{{</external-link>}} (one of {{<external-link href="https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019">}}the top 10 universities in the UK{{</external-link>}}, don't you know).
-
-Feel free to take a look at my CV, or if you prefer you can find me on LinkedIn.
+Currently, I work as a full-stack developer in a small team at {{<external-link href="https://www.lancaster.ac.uk">}}Lancaster University{{</external-link>}} (one of {{<external-link href="https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019">}}the top 10 universities in the UK{{</external-link>}}, don't you know). We build internal apps and APIs for our students and staff, such as the {{<external-link href="https://portal.lancaster.ac.uk/intranet/news">}}Staff Intranet{{</external-link>}} and {{<external-link href="https://portal.lancaster.ac.uk/portal/news">}}Student Portal{{</external-link>}}. Our current technology stack is Vue.js, .NET WebAPI and SQL Server.
 
 ## Not work
 
-Doing dad-things takes up most of my non-work time. While this is awesome, I try and do other, non-code related, things too!
+Doing dad-things takes up most of my non-work time. While this is awesome, I try and do other (non-code related!) things too
 
 I'm really into climbing, having had a late start to the sport a few years ago. Of late, I've also been trying to get back into playing the guitar after an extended foray in drumming. Occasionally I kid myself into thinking that I can still skateboard (I can't), and find myself really relating to {{<external-link href="https://pkewx3.bandcamp.com/track/mid-20s-skateboarder-4" title="Mid-20's Skateboarder by Pkew Pkew Pkew">}}this song{{</external-link>}} by Pkew Pkew Pkew (early&ndash;thirties and mid&ndash;twenties are practically the same thing, aren't they?).
 
 You can get a better idea of what I'm up to _right now_ on [my now page](/now).
+
+## Contact
+
+Email is the best way to get hold of me, but here are all the places you can find me:
+
+- Email (me @ this domain)
+- {{<external-link href="https://github.com/bl-rd">}}Github{{</external-link>}}
+- {{<external-link href="https://codepen.io/bl-rd">}}Codepen{{</external-link>}}
+- {{<external-link href="https://twitter.com/_bl_rd">}}Twitter{{</external-link>}}
 
 {{<signoff>}}
 
