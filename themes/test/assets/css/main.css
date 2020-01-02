@@ -16,6 +16,7 @@
 @import 'components/_signoff.css';
 @import 'components/_list.css';
 @import 'components/_code.css';
+@import 'components/_img.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

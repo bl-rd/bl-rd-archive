@@ -1,0 +1,12 @@
+img {
+  --greyscale: 100%;
+
+  filter: grayscale(var(--greyscale));
+  transition: filter 0.16s ease-out;
+  margin: 2rem auto;
+  display: block;
+}
+
+img:hover {
+  --greyscale: 0%;
+}
