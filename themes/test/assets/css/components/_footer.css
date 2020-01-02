@@ -21,6 +21,7 @@ body > footer li {
   margin: 0.75em;
   color: var(--app-colour-background);
   font-size: var(--font-size-reduced);
+  list-style: none;
 }
 
 body > footer li a {
