@@ -23,7 +23,7 @@ My plan for 2020 is to focus on becoming a **specialist** front-end developer - 
 
 ## Indieweb
 
-The {{<external-link href="https://indieweb.org/">}}indieweb{{</external-link>}} sounds pretty cool, and ticks a lot of boxes for me. Even as a reasonably seasoned developer though, I find the sheer amount of concepts in rather overwhelming &mdash; thankfully sites like {{<external-link href="https://indiewebify.me/">}}indewebify.me{{</external-link>}} simplify things a bit. It'll be a continual work in progress, but as with most things on the web, a fun challenge.
+The {{<external-link href="https://indieweb.org/">}}indieweb{{</external-link>}} sounds pretty cool, and ticks a lot of boxes for me. Even as a reasonably seasoned developer though, I find the sheer amount of concepts in rather overwhelming &mdash; thankfully sites like {{<external-link href="https://indiewebify.me/">}}indiewebify.me{{</external-link>}} simplify things a bit. It'll be a continual work in progress, but as with most things on the web, a fun challenge.
 
 ## Self-documentation
 
