@@ -90,4 +90,8 @@ small {
   :root {
     --measure-width: auto;
   }
+
+  h1 {
+    font-size: var(--s3);
+  }
 }

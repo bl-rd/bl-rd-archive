@@ -315,6 +315,10 @@ function style() {
             button {
                 top: initial;
                 bottom: 1rem;
+                right: 1rem;
+            }
+            nav li a {
+                font-size: var(--s2);
             }
         }
 

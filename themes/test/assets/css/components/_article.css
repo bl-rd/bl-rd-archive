@@ -92,4 +92,12 @@
   .single > footer li {
     list-style-position: inside;
   }
+
+  .single > .supplementary + *:first-of-type,
+  .single > header + :not(.supplementary):first-of-type {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
