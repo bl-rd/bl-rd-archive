@@ -5,6 +5,5 @@
 {{ $slide := resources.Get "js/components/slide-menu.js" | resources.Minify }}
 {{ $backToTop := resources.Get "js/components/back-to-top.js" | resources.Minify }}
 
-<script type="module" src="{{ $slide.Permalink }}" async defer></script>
-<script type="module" src="{{ $backToTop.Permalink }}" async defer></script>
-</script>
+<script type="module" src="{{ $slide.Permalink }}" defer></script>
+<script type="module" src="{{ $backToTop.Permalink }}" defer></script>

@@ -19,10 +19,16 @@
 <link rel="preload" href="{{ $css.Permalink }}" as="style" />
 <link rel="stylesheet" href="{{ $css.Permalink }}" />
 
+{{/* web components */}}
 {{ $slide := resources.Get "js/components/slide-menu.js" | resources.Minify }}
 {{ $backToTop := resources.Get "js/components/back-to-top.js" | resources.Minify }}
 <link rel="preload" href="{{ $slide.Permalink }}" as="script" crossorigin="anonymous" />
 <link rel="preload" href="{{ $backToTop.Permalink }}" as="script" crossorigin="anonymous" />
+
+{{/* other scripts */}}
+{{ $textAnim := resources.Get "js/animations/text.js" | resources.Minify}}
+<link rel="preload" href="{{ $textAnim.Permalink }}" as="script" crossorigin="anonymous" />
+<script defer src="{{ $textAnim.Permalink }}"></script>
 
 <script>
   (function() {
