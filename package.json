@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run serve",
     "serve": "hugo server -D",
+    "build": "hugo",
     "lint:js": "eslint '**/*.{js,html}' --fix",
     "lint:css": "stylelint **/*.css --fix"
   },
