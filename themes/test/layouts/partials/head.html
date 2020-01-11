@@ -26,7 +26,7 @@
 <link rel="preload" href="{{ $backToTop.Permalink }}" as="script" crossorigin="anonymous" />
 
 {{/* other scripts */}}
-{{ $textAnim := resources.Get "js/animations/text.js" | resources.Minify}}
+{{ $textAnim := resources.Get "js/animations/text.js" | resources.Minify }}
 <link rel="preload" href="{{ $textAnim.Permalink }}" as="script" crossorigin="anonymous" />
 <script defer src="{{ $textAnim.Permalink }}"></script>
 
