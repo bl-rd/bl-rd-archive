@@ -30,4 +30,4 @@
 </style>
 
 {{ $script := resources.Get "js/animations/1-hello-world.js" | resources.Minify }}
-<script src="{{ $script.Permalink }}" async defer></script>
+<script src="{{ $script.Permalink }}" defer></script>

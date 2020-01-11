@@ -4,6 +4,7 @@ date: 2020-01-07T21:29:54Z
 draft: true
 description: "Wait, you don't need JavaScript?"
 intro: "Or; a simple lesson was learned."
+animation: "anim-2-javascript-mindset.html"
 ---
 
 ## The problem

@@ -32,9 +32,13 @@
 
 <script>
   (function() {
-      document.documentElement.classList.remove('no-js');
+      let body = document.documentElement;
+      body.classList.remove('no-js');
       if ('customElements' in window) {
-          document.documentElement.classList.remove('no-component');
+          body.classList.remove('no-component');
+      }
+      if (HTMLElement.prototype.animate) {
+          body.classList.remove('no-animate');
       }
   })();
 </script>
