@@ -47,6 +47,10 @@
   margin: 3rem 0 2rem;
 }
 
+.single > h3 {
+  margin: 2.5rem 0 1.75rem;
+}
+
 .single a[data-footnote] > * {
   font-weight: bold;
 }

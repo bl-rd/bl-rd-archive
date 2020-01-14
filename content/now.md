@@ -18,15 +18,21 @@ In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my
 
 ## More fun related updates:
 
-I'm listening to {{<external-link href="https://music.monstercat.com/album/fear-is-fleeting-ep">}}Fear is Fleeting{{</external-link>}} and {{<external-link href="https://music.monstercat.com/album/life-overseas-ep">}}Life Overseas{{</external-link>}} by {{<external-link href="http://puppetmusic.net/">}}Puppet{{</external-link>}} pretty much on repeat. I find it difficult to explain why I like Puppet's music so much, but it's awesome.
+### 🎧 Listening
 
-Just finished reading vols. 1-3 of Naruto. I was given it as a gift well over a year ago and just got round to reading it and am surprised how much I enjoyed it. I really want to read more, or failing that watch the anime!
+{{<external-link href="https://music.monstercat.com/album/fear-is-fleeting-ep">}}Fear is Fleeting{{</external-link>}} and {{<external-link href="https://music.monstercat.com/album/life-overseas-ep">}}Life Overseas{{</external-link>}} by {{<external-link href="http://puppetmusic.net/">}}Puppet{{</external-link>}} are pretty much on repeat. I find it difficult to explain why I like Puppet's music so much, but it's **awesome**. Also the manga artwork really adds to the music &mdash; art direction ftw!
 
-Playing Super Mario Odyssey. It reminds me of Super Mario Galaxy (my favourite Mario games), mixed in with the best elements of Banjo Kazooie. What's not to love?
+### 📕 Reading
 
-## Now pages
+I'm reading {{<external-link href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">}}Around the World in Eighty Days{{</external-link>}} for the first time &mdash; mainly because I enjoyed playing the {{<external-link href="https://www.inklestudios.com/80days/">}}80 Days{{</external-link>}} game so much!
 
-Find out more about {{<external-link href="https://nownownow.com/about">}}now pages.{{</external-link>}}
+### 🎮 Playing
+
+A little late to the party but I'm finally playing {{<external-link href="http://www.celestegame.com/">}}Celeste{{</external-link>}} and it's great.
+
+## Now pages?
+
+Yeah, {{<external-link href="https://nownownow.com/about">}}now pages.{{</external-link>}}
 
 {{<signoff>}}
 
