@@ -1,6 +1,6 @@
 ---
 title: "My JavaScript Mindset"
-date: 2020-01-07T21:29:54Z
+date: 2020-01-13T21:29:54Z
 description: "Wait, you don't need JavaScript?"
 intro: "Or; a simple lesson was learned."
 animation: "anim-2-javascript-mindset.html"
