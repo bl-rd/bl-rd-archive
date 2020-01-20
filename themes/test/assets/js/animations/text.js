@@ -19,8 +19,8 @@ function anim() {
     const emphFrames = [
         { transform: 'translateY(0)', offset: 0 },
         { transform: 'translateY(0.05em)', offset: 0.33 },
-        { transform: 'translateY(-0.05em)', offset: 0.66 },
-        { transform: 'translateY(0)', offset: 1 }
+        { transform: 'translateY(0)', offset: 0.66 },
+        { transform: 'translateY(-0.05em)', offset: 1 }
     ];
 
     // the base settings for the timing options
@@ -94,8 +94,9 @@ function anim() {
     const emphLetters = Array.from(document.querySelectorAll('.animation-word__letter--emphasis'));
     emphLetters.forEach((l, idx) => {
         let anim = l.animate(emphFrames, Object.assign(timings, {
-            delay: idx * 20,
-            duration: 1000
+            delay: idx * 40,
+            duration: 700,
+            easing: 'ease-in'
         }));
         
         let observer = new IntersectionObserver(entries => {
