@@ -78,7 +78,7 @@ Initially, I was a little bit embarrassed by this and thought I should forget al
 
 At work, I've spent the last few years developing applications using JavaScript frameworks. While they are great, this example made me stop and reflect that maybe they've affected how I think about problems. The thing that bothered me was I _knew_ all about the target pseudo-class, but I just dived straight into solving the problem with a script.
 
-This might be a trivial example, but **what** I was trying to achieve isn't the point &mdash; it was the **how.** Hopefully this will serve as a small, personal reminder to think a bit differently about front-end problems in the future. Actually, make that a reminder just to think...
+This might be a trivial example, but **what** I was trying to achieve isn't the point &mdash; it was the **how**. Hopefully this will serve as a small, personal reminder to think a bit differently about front-end problems in the future. Actually, make that a reminder just to think...
 
 {{<signoff>}}
 

@@ -56,7 +56,7 @@
   margin-right: calc(var(--elem-width) * 2);
 }
 
-strong::before,
+/* strong::before,
 strong::after {
   content: '*';
 }
@@ -69,14 +69,28 @@ em::after {
 a[data-footnote] em::before,
 a[data-footnote] em::after {
   content: '';
-}
+} */
 
 .animation-word {
   display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.animation-word__word {
+  margin: 0 0.4ch;
+}
+
+.animation-word__word:first-of-type {
+  margin-left: inherit;
+}
+
+.animation-word__word:last-of-type {
+  margin-right: inherit;
 }
 
 .animation-word__letter {
   position: relative;
+  display: inline-block;
 }
 
 @keyframes flash {

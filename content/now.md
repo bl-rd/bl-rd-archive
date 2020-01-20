@@ -6,7 +6,7 @@ description: "Where I try and keep track of the things that are currently have m
 
 ## High-level
 
-My main focus is trying to shift my skillset from being a full-stack developer who prefers working on the front-end to a _front-end developer_ proper. And I don't mean learning React!
+My main focus is trying to shift my skillset from being a full-stack developer who prefers working on the front-end to a _front-end developer_ proper&trade;. And I don't mean learning React!
 
 What I am really wanting to hone in on is performant, accessible **design**. In other words, making stuff - starting with this website! It's pretty simple in its current form, but I've got plenty of ideas that I'd love to implement.
 

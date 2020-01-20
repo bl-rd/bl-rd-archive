@@ -32,9 +32,18 @@ function anim() {
 
     // trick from https://tobiasahlin.com/moving-letters/
     bold.forEach(b => {
-        b.classList.add('animation-word');        
-        b.innerHTML = b.innerHTML.replace(/\s/g, '&nbsp;');
-        b.innerHTML = b.textContent.replace(/\S/g, '<span class="animation-word__letter animation-word__letter--bold">$&</span>');
+        const mod = `
+            <span class="animation-word"><span class="animation-word__word">
+                ${b.textContent.trim().replace(/\s/ig,'</span><span class="animation-word__word">$&')}
+            </span>
+        `;
+        b.innerHTML = mod;
+
+        const words = Array.from(b.querySelectorAll('.animation-word__word'));
+        words.forEach(word => {
+            word.innerHTML = word.innerHTML.replace(/\s/g, '');
+            word.innerHTML = word.textContent.replace(/\S/g, '<span class="animation-word__letter animation-word__letter--bold">$&</span>');
+        });
     });
 
     // animate the individual letters
@@ -66,9 +75,19 @@ function anim() {
         if (e.parentElement.hasAttribute('data-footnote')) {
             continue;
         }
-        e.classList.add('animation-word');
-        e.innerHTML = e.innerHTML.replace(/\s/g, '&nbsp;');
-        e.innerHTML = e.textContent.replace(/\S/g, '<span class="animation-word__letter animation-word__letter--emphasis">$&</span>');
+
+        const mod = `
+            <span class="animation-word"><span class="animation-word__word">
+                ${e.textContent.trim().replace(/\s/ig,'</span><span class="animation-word__word">$&')}
+            </span>
+        `;
+        e.innerHTML = mod;
+
+        const words = Array.from(e.querySelectorAll('.animation-word__word'));
+        words.forEach(word => {
+            word.innerHTML = word.innerHTML.replace(/\s/g, '');
+            word.innerHTML = word.textContent.replace(/\S/g, '<span class="animation-word__letter animation-word__letter--emphasis">$&</span>');
+        });
     }
 
     // animate the individual letters
