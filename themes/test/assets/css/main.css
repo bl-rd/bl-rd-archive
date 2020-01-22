@@ -17,6 +17,7 @@
 @import 'components/_list.css';
 @import 'components/_code.css';
 @import 'components/_img.css';
+@import 'components/_svg.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

@@ -56,6 +56,7 @@ function style() {
             transition: all 0.66s ease-out;
             opacity: var(--btt-opacity);
             font-family: var(--font-body-bold);
+            color: var(--app-colour-body);
         }
 
         .back-to-top--visible {
@@ -102,8 +103,8 @@ function style() {
             background-color: var(--app-colour-body);
             background: repeating-linear-gradient(
               -45deg,
-              rgba(0, 0, 0, 0),
-              rgba(0, 0, 0, 0) var(--stripe-width),
+              var(--gradient-colour),
+              var(--gradient-colour) var(--stripe-width),
               #000 var(--stripe-width),
               #000 calc(var(--stripe-width) * 2)
             );

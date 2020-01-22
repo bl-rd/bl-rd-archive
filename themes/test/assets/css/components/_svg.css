@@ -1,0 +1,4 @@
+svg > * {
+  stroke: var(--app-colour-body);
+  fill: var(--app-colour-body);
+}
