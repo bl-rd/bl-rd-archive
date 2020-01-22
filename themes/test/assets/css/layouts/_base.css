@@ -87,7 +87,8 @@ i {
   font-family: 'SpaceMono Italic', monospace;
 }
 
-small {
+small,
+small > * {
   font-size: var(--s-small);
 }
 
