@@ -164,7 +164,7 @@ function style() {
             min-width: var(--measure-width);
         }
         
-        nav div:nth-of-type(2) {
+        nav > div + div {
             position: fixed;
 			right: 2rem;
 			top: 2rem;
@@ -324,6 +324,17 @@ function style() {
 
         [hidden] > ul {
             display: none;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            nav > div + div {
+                background-color: var(--black-secondary);
+            }
+
+            nav li a {
+                color: var(--white);
+                text-shadow: -0.2ch 0 0 var(--black-secondary);
+            }
         }
 	`;
 }

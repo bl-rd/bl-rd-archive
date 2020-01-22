@@ -45,3 +45,14 @@ body > footer li a {
     margin-left: 0;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  body > footer {
+    background-color: var(--black-secondary);
+  }
+
+  body > footer li,
+  body > footer li a {
+    color: var(--app-color-body);
+  }
+}

@@ -27,3 +27,13 @@
     border-radius: 0;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .highlight * {
+    color: var(--app-color-body);
+  }
+
+  pre {
+    background-color: var(--black-secondary) !important;
+  }
+}
