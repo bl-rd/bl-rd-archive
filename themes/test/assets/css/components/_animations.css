@@ -67,21 +67,8 @@ a[data-footnote] em::after {
   content: '';
 } */
 
-.animation-word {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-
 .animation-word__word {
-  margin: 0 0.4ch;
-}
-
-.animation-word__word:first-of-type {
-  margin-left: inherit;
-}
-
-.animation-word__word:last-of-type {
-  margin-right: inherit;
+  display: inline-block;
 }
 
 .animation-word__letter {

@@ -35,14 +35,16 @@ function anim() {
         const mod = `
             <span class="animation-word"><span class="animation-word__word">
                 ${b.textContent.trim().replace(/\s/ig,'</span><span class="animation-word__word">$&')}
-            </span>
-        `;
+            </span>`;
         b.innerHTML = mod;
 
         const words = Array.from(b.querySelectorAll('.animation-word__word'));
-        words.forEach(word => {
+        words.forEach((word, index) => {
             word.innerHTML = word.innerHTML.replace(/\s/g, '');
             word.innerHTML = word.textContent.replace(/\S/g, '<span class="animation-word__letter animation-word__letter--bold">$&</span>');
+            if (words.length > 1 && index < words.length - 1) {
+                word.innerHTML += '&nbsp;';
+            }
         });
     });
 
@@ -79,14 +81,16 @@ function anim() {
         const mod = `
             <span class="animation-word"><span class="animation-word__word">
                 ${e.textContent.trim().replace(/\s/ig,'</span><span class="animation-word__word">$&')}
-            </span>
-        `;
+            </span>`;
         e.innerHTML = mod;
 
         const words = Array.from(e.querySelectorAll('.animation-word__word'));
-        words.forEach(word => {
+        words.forEach((word, index) => {
             word.innerHTML = word.innerHTML.replace(/\s/g, '');
             word.innerHTML = word.textContent.replace(/\S/g, '<span class="animation-word__letter animation-word__letter--emphasis">$&</span>');
+            if (words.length > 1 && index < words.length - 1) {
+                word.innerHTML += '&nbsp;';
+            }
         });
     }
 
