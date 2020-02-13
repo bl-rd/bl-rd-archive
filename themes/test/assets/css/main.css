@@ -18,6 +18,7 @@
 @import 'components/_code.css';
 @import 'components/_img.css';
 @import 'components/_svg.css';
+@import 'components/_iframe.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

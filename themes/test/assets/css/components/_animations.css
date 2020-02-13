@@ -67,11 +67,11 @@ a[data-footnote] em::after {
   content: '';
 } */
 
-.animation-word__word {
+.vg-text-animation__word {
   display: inline-block;
 }
 
-.animation-word__letter {
+.vg-text-animation__letter {
   position: relative;
   display: inline-block;
 }

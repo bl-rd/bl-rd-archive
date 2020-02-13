@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{ range .Site.Data.config.fonts }}
+  <link rel="preload" href="{{ . }}" as="font" crossorigin="anonymous" />
+  {{ end }}
+
+  {{ $css := resources.Get "css/layouts/_base.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
+  <link rel="preload" href="{{ $css.Permalink }}" as="style" />
+  <link rel="stylesheet" href="{{ $css.Permalink }}" />
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <main>
+    {{ .Content }}
+  </main>
+</body>
+</html>
