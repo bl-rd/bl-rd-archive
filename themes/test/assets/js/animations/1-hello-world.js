@@ -1,3 +1,9 @@
+const {
+  matchMedia: mm
+} = window;
+
+const noAnim = mm && mm('(prefers-reduced-motion: reduce)').matches;
+
 const timings = {
   iterations: 1,
   direction: 'normal',
@@ -28,15 +34,15 @@ const frames3 = [
   
 // anims contain the secondary animation
 let anims = [];
-anims.push(divs[0].animate( frames1, Object.assign(timings, {
-  delay: initialDelay + 500,
-  duration: 600
+anims.push(divs[0].animate(frames1, Object.assign(timings, {
+  delay: noAnim ? 0 : initialDelay + 500,
+  duration: noAnim ? 0 : 600
 })));
 anims.push(divs[1].animate(frames2, Object.assign(timings, {
-  delay: initialDelay + 1000,
-  duration: 500
+  delay: noAnim ? 0 : initialDelay + 1000,
+  duration: noAnim ? 0 :500
 })));
 anims.push(divs[2].animate(frames3, Object.assign(timings, {
-  delay: initialDelay + 1000,
-  duration: 500
+  delay: noAnim ? 0 : initialDelay + 1000,
+  duration: noAnim ? 0 : 500
 })));

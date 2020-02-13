@@ -108,7 +108,16 @@ function style() {
               #000 var(--stripe-width),
               #000 calc(var(--stripe-width) * 2)
             );
-          }
+        }
+
+        @media screen and
+            (prefers-reduced-motion: reduce), 
+            (update: slow) {
+            * {
+                transition-duration: 0.001ms !important;
+                transition: none !important;
+            }
+        }
     `;
 }
 

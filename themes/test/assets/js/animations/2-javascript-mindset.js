@@ -5,6 +5,11 @@
   const circles = Array.from(document.querySelectorAll('circle'));
   const rect = document.querySelector('rect');
 
+  const {
+    matchMedia: mm
+  } = window;
+  const noAnim = mm && mm('(prefers-reduced-motion: reduce)').matches;
+
   const frames = [
     { transform: 'translate(50%, 100%) scale(0)', offset: 0 },
     { transform: 'translate(0%, 0%) scale(1)', offset: 1 }
@@ -38,19 +43,19 @@
 
   circles.forEach((circle, idx) => {
     circle.animate(frames, Object.assign(timings, {
-      delay: idx * (100 + (idx * 2)),
-      duration: 2000//(idx + 2) * 200
+      delay: noAnim ? 0 : idx * (100 + (idx * 2)),
+      duration: noAnim ? 0 : 2000//(idx + 2) * 200
     }));
   });
 
   let r = rect.animate(rectFrames, Object.assign(timings, {
-    delay: circles.length * (100 + (circles.length * 2)),
+    delay: noAnim ? 0 : circles.length * (100 + (circles.length * 2)),
   }));
 
   r.onfinish = function() {
     rect.animate(rectFrames2, Object.assign(timings, {
       delay: 0,
-      duration: 400,
+      duration: noAnim ? 0 : 400,
       easing: 'cubic-bezier(.64,-0.5,.26,1.28)'
     }));
   };

@@ -336,6 +336,18 @@ function style() {
                 text-shadow: -0.2ch 0 0 var(--black-secondary);
             }
         }
+
+        @media screen and
+            (prefers-reduced-motion: reduce), 
+            (update: slow) {
+            * {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                animation-delay: none !important;
+                transition-duration: 0.001ms !important;
+                transition: none !important;
+            }
+        }
 	`;
 }
 
