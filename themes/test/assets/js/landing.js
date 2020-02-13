@@ -3,19 +3,19 @@
  * time of day.
  */
 (function() {
-    const element = document.querySelector('h1');
+  const element = document.querySelector('h1');
     
-    const hour = (new Date()).getHours();
+  const hour = (new Date()).getHours();
 
-    let msg = 'Good day';
+  let msg = 'Good day';
 
-    if (hour < 12) {
-        msg = 'Good morning';
-    } else if (hour < 18) {
-        msg = 'Good afternoon';
-    } else {
-        msg = 'Good evening';
-    }
+  if (hour < 12) {
+    msg = 'Good morning';
+  } else if (hour < 18) {
+    msg = 'Good afternoon';
+  } else {
+    msg = 'Good evening';
+  }
 
-    element.innerText = msg;
+  element.innerText = msg;
 })();

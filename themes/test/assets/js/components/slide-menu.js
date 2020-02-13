@@ -1,163 +1,163 @@
 class SlideMenu extends HTMLElement {
-    constructor() {
-        super();
-        let template = document.getElementById('slide-menu-template');
-        this.attachShadow({ mode: 'open'}).appendChild(template.content.cloneNode(true));
+  constructor() {
+    super();
+    let template = document.getElementById('slide-menu-template');
+    this.attachShadow({ mode: 'open'}).appendChild(template.content.cloneNode(true));
 
-        const link = document.createElement('style');
-        link.textContent = style();
-        this.shadowRoot.appendChild(link);
-    }
+    const link = document.createElement('style');
+    link.textContent = style();
+    this.shadowRoot.appendChild(link);
+  }
 
-    connectedCallback() {
-        // button state
-        this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
-        this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');
-        this.button = this.shadowRoot.querySelector('button');
-        this.button.addEventListener.apply(this.button, ['click', () => this.toggle()]);
+  connectedCallback() {
+    // button state
+    this.openSvg = this.shadowRoot.querySelector('#open-menu-icon');
+    this.closeSvg = this.shadowRoot.querySelector('#close-menu-icon');
+    this.button = this.shadowRoot.querySelector('button');
+    this.button.addEventListener.apply(this.button, ['click', () => this.toggle()]);
 
-        // menu state
-        this.activeLinkIndex = 0;
-        this.menu = this.shadowRoot.querySelector('nav div:nth-of-type(2)');
-        this.links = Array.from(this.shadowRoot.querySelectorAll('nav li a'));
+    // menu state
+    this.activeLinkIndex = 0;
+    this.menu = this.shadowRoot.querySelector('nav div:nth-of-type(2)');
+    this.links = Array.from(this.shadowRoot.querySelectorAll('nav li a'));
 
-        this.initialiseNavStyles();
-    }
+    this.initialiseNavStyles();
+  }
 
-    /**
+  /**
      * Is the menu currently in the `open` state
      * @returns {Boolean}
      */
-    get open() {
-        return this.menu && this.menu.classList.contains('show');
-    }
+  get open() {
+    return this.menu && this.menu.classList.contains('show');
+  }
 
-    /**
+  /**
      * @returns {HTMLAnchorElement}
      */
-    get activeLink() {
-        return Array.isArray(this.links)
-            ? this.links[this.activeLinkIndex]
-            : null;
-    }
+  get activeLink() {
+    return Array.isArray(this.links)
+      ? this.links[this.activeLinkIndex]
+      : null;
+  }
 
-    /**
+  /**
      * Update all the attributes on the menu
      */
-    attributeHandler() {
-        const { menu, links, button } = this;
-        if (this.open) {
-            menu.removeAttribute('hidden');
-            button.setAttribute('aria-expanded', 'true');
+  attributeHandler() {
+    const { menu, links, button } = this;
+    if (this.open) {
+      menu.removeAttribute('hidden');
+      button.setAttribute('aria-expanded', 'true');
 
-            // focus on the first element
-            // ...or maybe not
-            // links[0].focus();
+      // focus on the first element
+      // ...or maybe not
+      // links[0].focus();
 
-            // make all the anchor elements focusable
-            links.forEach(l => l.setAttribute('tabindex', '0'));
+      // make all the anchor elements focusable
+      links.forEach(l => l.setAttribute('tabindex', '0'));
 
-            // keep focus with the menu
-            document.addEventListener.apply(this, ['keydown', this.keypressHandler]);
-        } else {
-            // this.menuButton.focus();
-            button.setAttribute('aria-expanded', 'false');
-            menu.setAttribute('hidden', 'true');
+      // keep focus with the menu
+      document.addEventListener.apply(this, ['keydown', this.keypressHandler]);
+    } else {
+      // this.menuButton.focus();
+      button.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('hidden', 'true');
 
-            // don't make the links focusable if the parent is hidden
-            // https://www.w3.org/TR/using-aria/#fourth
-            links.forEach(l => l.setAttribute('tabindex', '-1'));
+      // don't make the links focusable if the parent is hidden
+      // https://www.w3.org/TR/using-aria/#fourth
+      links.forEach(l => l.setAttribute('tabindex', '-1'));
 
-            document.removeEventListener.apply(this, ['keydown', this.keypressHandler]);
-        }
+      document.removeEventListener.apply(this, ['keydown', this.keypressHandler]);
     }
+  }
 
-    /**
+  /**
      * Handle keypresses
      * @param {KeyboardEvent} e 
      */
-    keypressHandler(e) {
+  keypressHandler(e) {
 
-        const { keyCode: key, shiftKey } = e;
+    const { keyCode: key, shiftKey } = e;
 
-        switch (key) {
-        // ESC
-        case 27:
-            this.toggle();
-            this.button.focus();
-            break;
-            // TAB
-        case 9:
-            e.preventDefault();
-            this.updateActiveLinkIndex(shiftKey);
-            break;
-        }
+    switch (key) {
+    // ESC
+    case 27:
+      this.toggle();
+      this.button.focus();
+      break;
+      // TAB
+    case 9:
+      e.preventDefault();
+      this.updateActiveLinkIndex(shiftKey);
+      break;
     }
+  }
 
-    /**
+  /**
      * Flip the state of the menu
      */
-    toggle() {
-        this.openSvg.classList.toggle('active');
-        this.closeSvg.classList.toggle('active');
-        this.menu.classList.toggle('show');
-        this.attributeHandler();
-    }
+  toggle() {
+    this.openSvg.classList.toggle('active');
+    this.closeSvg.classList.toggle('active');
+    this.menu.classList.toggle('show');
+    this.attributeHandler();
+  }
 
-    /**
+  /**
      * Add the active class to the active route
      */
-    initialiseNavStyles() {        
-        const { pathname } = location;
-        const { links } = this;
+  initialiseNavStyles() {        
+    const { pathname } = location;
+    const { links } = this;
 
-        links.forEach(l => {
-            const href = l.getAttribute('href');
-            // only add on the root if it matches exactly
-            if (href === pathname) {
-                l.parentElement.classList.add('active');
-                return;
-            }
-            if (pathname.indexOf(href) > -1 && href !== '/') {
-                l.parentElement.classList.add('active');
-            }
-        });
-    }
+    links.forEach(l => {
+      const href = l.getAttribute('href');
+      // only add on the root if it matches exactly
+      if (href === pathname) {
+        l.parentElement.classList.add('active');
+        return;
+      }
+      if (pathname.indexOf(href) > -1 && href !== '/') {
+        l.parentElement.classList.add('active');
+      }
+    });
+  }
 
-    /**
+  /**
      * Update which element should be focused next
      * @param {Boolean} shiftPressed
      */
-    updateActiveLinkIndex(shiftPressed) {
+  updateActiveLinkIndex(shiftPressed) {
 
-        // check if the menu button is the currently focused element
-        const onButton = this.shadowRoot.activeElement.nodeName.toLowerCase() === 'button';
+    // check if the menu button is the currently focused element
+    const onButton = this.shadowRoot.activeElement.nodeName.toLowerCase() === 'button';
 
-        if (onButton) {
-            this.activeLinkIndex = shiftPressed
-                ? this.links.length - 1
-                : 0;
-            this.links[this.activeLinkIndex].focus();
-            return;
-        }
-
-        // update the index up (or down, if shift is pressed)
-        shiftPressed ? this.activeLinkIndex-- : this.activeLinkIndex++;
-
-        // if at beginning or end of array the button should be focused to provide an exit!
-        if (this.activeLinkIndex < 0 || this.activeLinkIndex >= this.links.length) {
-            this.activeLinkIndex = 0;
-            this.button.focus();
-            return;
-        }
-
-        // focus on the new active link
-        this.activeLink && this.activeLink.focus();
+    if (onButton) {
+      this.activeLinkIndex = shiftPressed
+        ? this.links.length - 1
+        : 0;
+      this.links[this.activeLinkIndex].focus();
+      return;
     }
+
+    // update the index up (or down, if shift is pressed)
+    shiftPressed ? this.activeLinkIndex-- : this.activeLinkIndex++;
+
+    // if at beginning or end of array the button should be focused to provide an exit!
+    if (this.activeLinkIndex < 0 || this.activeLinkIndex >= this.links.length) {
+      this.activeLinkIndex = 0;
+      this.button.focus();
+      return;
+    }
+
+    // focus on the new active link
+    this.activeLink && this.activeLink.focus();
+  }
 }
 
 function style() {
-    return String.raw`
+  return String.raw`
 		nav ul {
             list-style: none;
             margin: 0 auto;
@@ -340,7 +340,7 @@ function style() {
 }
 
 if ('customElements' in window) {
-    customElements.define('slide-menu', SlideMenu);
+  customElements.define('slide-menu', SlideMenu);
 }
 
 export default SlideMenu;
