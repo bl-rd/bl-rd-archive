@@ -114,7 +114,7 @@ small > * {
   * {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    animation-delay: none !important;
+    animation-delay: 0.01s !important;
     transition: none !important;
     transition-duration: 0.001ms !important;
   }

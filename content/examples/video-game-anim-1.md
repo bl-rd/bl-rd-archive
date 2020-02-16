@@ -2,7 +2,6 @@
 title: "Video Game Anim 1"
 date: 2020-02-07T16:43:42Z
 description: ""
-draft: true
 ---
 
 {{<rawHtml>}}

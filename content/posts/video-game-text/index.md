@@ -3,7 +3,6 @@ title: "Video-game style text"
 date: 2020-02-16T14:28:45Z
 description: "Making text look like it came from a _video-game_ &mdash; with the power of **JavaScript**!"
 intro: "In which I learned to use the Web Animations API to give my body text some video game pizazz."
-draft: true
 animation: "anim-3-video-game-text.html"
 thumbnail: true
 thumbnail_alt: "A stylised image of an old-school computer game controller"
@@ -104,6 +103,8 @@ letters.forEach((l, idx) => {
 {{<rawHtml>}}
 <iframe height="300" src="/examples/video-game-anim-1"></iframe>
 {{</rawHtml>}}
+
+I've replicated this on {{<external-link href="https://codepen.io/bl-rd/pen/vYEeoNm">}}CodePen{{</external-link>}}, so feel free to have a more in depth look.
 
 ## Bonus points
 
