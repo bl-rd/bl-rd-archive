@@ -6,6 +6,7 @@ intro: "In which I learned to use the Web Animations API to give my body text so
 draft: true
 animation: "anim-3-video-game-text.html"
 thumbnail: true
+thumbnail_alt: "A stylised image of an old-school computer game controller"
 ---
 
 ## But why?
