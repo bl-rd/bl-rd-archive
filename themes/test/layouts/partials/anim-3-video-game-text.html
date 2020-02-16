@@ -1,151 +1,98 @@
-<style>  
-  .outline {
-    position: absolute;
-    width: 100%;
-    height: calc(var(--elem-width) * 0.75);
-    background-color: var(--app-colour-body);
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .top {
-    animation: expand-up 1s 1 normal forwards cubic-bezier(0.9,-1,0.1,1);
-  }
-  
-  .bottom {
-    animation: expand-down 1s 1 normal forwards cubic-bezier(0.9,-1,0.1,1);
-  }
-  
-  .up {
-    width: 50%;
-    left: 50%;
-    transform-origin: left center;
-    animation: expand-vertical 1s 1 normal forwards cubic-bezier(0.9,-1,0.1,1);
-  }
-  
-  .button {
-    height: calc(var(--elem-width) * 2);
-    width: calc(var(--elem-width) * 2);
-    background-color: var(--app-colour-body);
-    border-radius: 50%;
-    position: absolute;
-    transform-origin: center;
-    transform: translate(-50%);
-    top: 50%;
+<style>
+  .vgt-controller {
     opacity: 0;
   }
-  
-  .button--a {
-    right: 20%;
-    animation: pop 1s 0.5s 1 normal forwards cubic-bezier(0.9,-1,0.1,1);
+
+  .vgt-controller__top {
+    animation: expand-up 2s cubic-bezier(0.9,-1,0.1,1) forwards normal;
   }
-  
-  .button--b {
-    right: 5%;
-    animation: pop 1s 0.55s 1 normal forwards cubic-bezier(0.9,-1,0.1,1);
+
+  .vgt-controller__bottom {
+    animation: expand-down 2s cubic-bezier(0.9,-1,0.1,1) forwards normal;
   }
-  
-  .d-pad {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    width: calc(var(--elem-width) * 4);
-    height: calc(var(--elem-width) * 4);
-    position: absolute;
-    transform-origin: center;
-    transform: translateY(-50%) translateX(-50%);
-    top: 50%;
-    left: 25%;
+
+  .vgt-controller__cable {
+    animation: expand-vertical 2s 0.1s cubic-bezier(0.9,-1,0.1,1) forwards normal;
+  }
+
+  .vgt-button {
     opacity: 0;
-    animation: pop-d-pad 1s 0.55s 1 normal forwards cubic-bezier(0.9,-1,0.1,1);
+    animation: pop 2s cubic-bezier(0.9,-1,0.1,1) forwards normal;
   }
-  .d-pad__button {
-    background-color: var(--app-colour-body);
+
+  .vgt-button__a {
+    animation-delay: .6s;
   }
-  .d-pad__button--up {
-    grid-column: 2/3;
+
+  .vgt-button__b {
+    animation-delay: .7s;
   }
-  .d-pad__button--right {
-    grid-column: 3/4;
-    grid-row: 2/3;
+
+  .vgt-d-pad {
+    opacity: 0;
+    animation: pop-d-pad 2s 0.8s cubic-bezier(0.9,-1,0.1,1) forwards normal;
   }
-  .d-pad__button--down {
-    grid-column: 2/3;
-    grid-row: 3/4;
-  }
-  .d-pad__button--left {
-    grid-column: 1/2;
-    grid-row: 2/3;
-  }
-  .d-pad__button--centre {
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  
+
   @keyframes expand-up {
     from {
-      top: 50%;
+      transform: translateY(100px);
     }
     to {
-      top: 30%;
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
   @keyframes expand-down {
     from {
-      top: 50%;
+      transform: translateY(-100px);
     }
     to {
-      top: 70%;
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
   @keyframes expand-vertical {
     from {
-      top: 50%;
+      transform: translateY(100px) rotate(90deg);
     }
     to {
-      top: 30%;
-      transform: rotate(-90deg);
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
     }
   }
   
   @keyframes pop {
     from {
-      opacity: 0;
-      top: 100%;
+      transform: translateY(100%);
     }
     to {
       opacity: 1;
-      top: 45%;
+      transform: translateY(0);
     }
   }
   
   @keyframes pop-d-pad {
     from {
-      opacity: 0;
-      top: 100%;
+      transform: translateY(100%);
     }
     to {
       opacity: 1;
-      top: 50%;
+      transform: translateY(0);
     }
   }
 </style>
 
-<div class="animation" aria-hidden="true">
-  <div class="animation__container">
-    <div class="outline top"></div>
-    <div class="outline bottom"></div>
-    <div class="outline up"></div>
-    <div class="button button--a"></div>
-    <div class="button button--b"></div>
-    <div class="d-pad">
-      <div class="d-pad__button d-pad__button--up"></div>
-      <div class="d-pad__button d-pad__button--right"></div>
-      <div class="d-pad__button d-pad__button--down"></div>
-      <div class="d-pad__button d-pad__button--left"></div>
-      <div class="d-pad__button d-pad__button--centre"></div>
-    </div>
+<div class="animation">
+  <div class="animation__container padding:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" class="animation container">
+      <rect class="vgt-controller vgt-controller__top" x="18" y="163" width="464" height="15"/>
+      <rect class="vgt-controller vgt-controller__bottom" x="18" y="329" width="464" height="15"/>
+      <rect class="vgt-controller vgt-controller__cable" x="242.26" y="17.56" width="15" height="147.44"/>
+      <circle class="vgt-button vgt-button__a" cx="310.5" cy="261.5" r="24.5"/>
+      <circle class="vgt-button vgt-button__b" cx="367.5" cy="261.5" r="24.5"/>
+      <polygon class="vgt-d-pad" points="189.5 240.5 189.5 268.5 162 268.5 162 296 134 296 134 268.5 106.5 268.5 106.5 240.5 134 240.5 134 213 162 213 162 240.5 189.5 240.5"/>
+    </svg>
   </div>
 </div>

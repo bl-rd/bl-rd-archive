@@ -5,6 +5,7 @@ description: "Making text look like it came from a _video-game_ &mdash; with the
 intro: "In which I learned to use the Web Animations API to give my body text some video game pizazz."
 draft: true
 animation: "anim-3-video-game-text.html"
+thumbnail: true
 ---
 
 ## But why?

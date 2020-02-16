@@ -1,5 +1,5 @@
 ---
-title: Hello, World!
+title: Hello, world!
 date: 2020-01-02T21:44:37Z
 description: Now on the internet property ladder...
 intro: I've created a personal website! It has a blog! Ok, now what?

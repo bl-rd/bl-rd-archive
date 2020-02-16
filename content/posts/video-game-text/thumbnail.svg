@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <path d="M480,20V480H20V20H480M500,0H0V500H500V0Z"/>
+  <rect x="18" y="163" width="464" height="15"/>
+  <rect x="18" y="329" width="464" height="15"/>
+  <rect x="242.26" y="17.56" width="15" height="147.44"/>
+  <circle cx="310.5" cy="261.5" r="24.5"/>
+  <circle cx="367.5" cy="261.5" r="24.5"/>
+  <polygon points="189.5 240.5 189.5 268.5 162 268.5 162 296 134 296 134 268.5 106.5 268.5 106.5 240.5 134 240.5 134 213 162 213 162 240.5 189.5 240.5"/>
+  <rect x="225" y="213" width="26" height="8" rx="4" transform="translate(-83.73 231.85) rotate(-45)"/>
+  <rect x="248" y="213" width="26" height="8" rx="4" transform="translate(-77 248.11) rotate(-45)"/>
+</svg>

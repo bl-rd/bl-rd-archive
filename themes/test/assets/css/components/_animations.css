@@ -23,6 +23,11 @@
   animation: appear 1s forwards;
 }
 
+.animation__container svg {
+  margin: 0;
+  padding: 0;
+}
+
 .animation__container::before {
   --stripe-width: 6px;
 
