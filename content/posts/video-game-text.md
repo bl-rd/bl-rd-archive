@@ -1,7 +1,7 @@
 ---
-title: "Video Game Style Text"
-date: 2020-02-06T11:46:30Z
-description: ""
+title: "Video-game style text"
+date: 2020-02-16T14:28:45Z
+description: "Making text look like it came from a _video-game_ &mdash; with the power of **JavaScript**!"
 intro: "In which I learned to use the Web Animations API to give my body text some video game pizazz."
 draft: true
 animation: "anim-3-video-game-text.html"
@@ -12,8 +12,6 @@ animation: "anim-3-video-game-text.html"
 Because _it's my website_ and **I wanted to**!
 
 I've been playing a few pixel art games over the last year or so (for example {{<external-link href="https://yachtclubgames.com/shovel-knight/">}}Shovel Knight{{</external-link>}}, {{<external-link href="http://www.celestegame.com/">}}Celeste{{</external-link>}}) and liked how adding movement to text could add extra meaning.
-
-<video/gif>
 
 As moving of the letters is used for extra emphasis, or to imply some significance, I liked the idea of adding some movement to the `<em>` and `<strong>` tags to add further meaning to their semantics.
 

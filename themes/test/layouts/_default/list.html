@@ -17,7 +17,7 @@
         <small>
           <time timestamp="{{ .PublishDate.Format "2006-01-02T15:04:05Z" }}">{{ .PublishDate.Format "2 January 2006" }}</time>
         </small>
-        <p>{{ .Description }}</p>
+        <p>{{ .Description | markdownify }}</p>
       </article>
     </li>
   {{ end }}
