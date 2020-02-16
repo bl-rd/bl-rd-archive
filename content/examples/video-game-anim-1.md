@@ -31,7 +31,7 @@ p {
 </style>
 {{</rawHtml>}}
 
-> Throughout human history, we have been dependent on **machines to survive.**
+> Throughout human history, we have been dependent on **machines** to survive. Fate, it seems, is not without a **sense of irony**.
 >
 > &mdash; {{<rawHtml>}}<cite>Morpheus</cite>{{</rawHtml>}}
 

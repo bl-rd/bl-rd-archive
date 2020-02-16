@@ -1,4 +1,5 @@
 iframe {
   min-height: 40vmin;
+  width: 100%;
   overflow-y: hidden;
 }

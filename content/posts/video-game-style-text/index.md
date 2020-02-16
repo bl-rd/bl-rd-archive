@@ -4,6 +4,7 @@ date: 2020-02-06T11:46:30Z
 description: ""
 intro: "In which I learned to use the Web Animations API to give my body text some video game pizazz."
 draft: true
+animation: "anim-3-video-game-text.html"
 ---
 
 ## But why?
@@ -69,7 +70,7 @@ You can call `animate` on an appropriate DOMElement to trigger an animation. Thi
 
 The {{<external-link href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate">}}animate function{{</external-link>}} takes two arguments &mdash; `keyframes` and `options`.
 
-The `keyframes` can be thought of as a JavaScript of version of the steps defined in a CSS `@keyframes` animation. To be honest, I found this step difficult. This was mainly due to browser support for animating from or two a property that hasn't been explicitly stated {{<footnote-link ropey>}}seems ropey at present{{</footnote-link>}}.
+The `keyframes` can be thought of as a JavaScript of version of the steps defined in a CSS `@keyframes` animation. To be honest, I found this step difficult. This was mainly due to browser support for animating from or to a property that hasn't been explicitly stated {{<footnote-link ropey>}}seems ropey at present{{</footnote-link>}}.
 
 The `options` argument is the equivalent of all the other animation properties that you can be defined in CSS. I'd recommend a look at the {{<external-link href="https://css-tricks.com/css-animations-vs-web-animations-api/">}}CSS Tricks article{{</external-link>}} that looks at the differences and similiarites between CSS animations and the Web Animations API.
 
@@ -101,12 +102,12 @@ letters.forEach((l, idx) => {
 ## The result
 
 {{<rawHtml>}}
-<iframe height="250" src="/examples/video-game-anim-1"></iframe>
+<iframe height="300" src="/examples/video-game-anim-1"></iframe>
 {{</rawHtml>}}
 
 ## Bonus points
 
-Performance wise, it isn't a good idea to have a load of animations running when the user isn't even looking at them. As these animations are being triggered via JavaScript, it means the {{<external-link href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">}}Intersection Observer API{{</external-link>}} can also be used to only start the animation when elements are in the viewport.
+Performance wise, I'd prefer not to have a load of animations running when the user isn't even looking at them. As these animations are being triggered via JavaScript, it means the {{<external-link href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">}}Intersection Observer API{{</external-link>}} can also be used to only start the animation when elements are in the viewport.
 
 ```javascript
 letters.forEach((l, idx) => {
@@ -160,8 +161,15 @@ if (media && media('(prefers-reduced-motion: reduce)').matches) {
   return;
 }
 ```
+In the future, I'd like to have a toggle for people who find the animations annoying, but don't generally want them disabled everywhere!
 
+## Is it worth it?
 
+Maybe? I think it does add some extra (appropriate) emphasis, as well as a bit of character but I appreciate it might not be to everyone's taste.
+
+I liked learning about the Web Animations API and **love** that there is a library free way of doing this type of animation. I'm sure there are certainly plenty of creative possibilities to be had in the future, especially when {{<external-link href="https://caniuse.com/#feat=web-animation">}}the full implementation of the API appears in browsers{{</external-link>}}.
+
+As it stands I like it and, as I said before, _it's my website_!
 
 {{<signoff>}}
 
