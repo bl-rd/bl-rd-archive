@@ -20,11 +20,11 @@ In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my
 
 ### 🎧 Listening
 
-{{<external-link href="https://music.monstercat.com/album/fear-is-fleeting-ep">}}Fear is Fleeting{{</external-link>}} and {{<external-link href="https://music.monstercat.com/album/life-overseas-ep">}}Life Overseas{{</external-link>}} by {{<external-link href="http://puppetmusic.net/">}}Puppet{{</external-link>}} are pretty much on repeat. I find it difficult to explain why I like Puppet's music so much, but it's **awesome**. Also the manga artwork really adds to the music &mdash; art direction ftw!
+{{<external-link href="https://en.wikipedia.org/wiki/The_Shape_of_Punk_to_Come">}}The Shape of Punk to Come{{</external-link>}} by {{<external-link href="https://www.officialrefused.com/">}}Refused{{</external-link>}}. Not sure how I have never listened to this album fully before, but I think it's fast becoming one of my favourite punk albums.
 
 ### 📕 Reading
 
-I'm reading {{<external-link href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">}}Around the World in Eighty Days{{</external-link>}} for the first time &mdash; mainly because I enjoyed playing the {{<external-link href="https://www.inklestudios.com/80days/">}}80 Days{{</external-link>}} game so much!
+I'm sorry to say that I'm another sucker who has started reading The Witcher. Haven't played any of the games (yet) or seen the Netflix show (also yet) but I'm hopeful I'm going to enjoy it.
 
 ### 🎮 Playing
 
@@ -32,7 +32,7 @@ A little late to the party but I'm finally playing {{<external-link href="http:/
 
 ## Now pages?
 
-Yeah, {{<external-link href="https://nownownow.com/about">}}now pages.{{</external-link>}}
+Aye, {{<external-link href="https://nownownow.com/about">}}now pages.{{</external-link>}}
 
 {{<signoff>}}
 
