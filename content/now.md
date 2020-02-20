@@ -16,6 +16,8 @@ Currently learning about the {{<external-link href="https://developer.mozilla.or
 
 In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my front-end skill set, I'm learning {{<external-link href="https://www.rust-lang.org/">}}Rust{{</external-link>}} and {{<external-link href="https://webassembly.org/">}}WebAssembly{{</external-link>}} by, slowly but surely, working my way through the {{<external-link href="https://doc.rust-lang.org/stable/book/title-page.html">}}Rust language book{{</external-link>}} and the {{<external-link href="https://rustwasm.github.io/docs/book/">}}Rust WebAssembly book{{</external-link>}} &mdash; both really great introductions into the language. Hopefully, I'll be able to update this page with Rust-related projects soon!
 
+Also going to try and keep up with the {{<external-link href="https://codepen.io/collection/AEWMxz">}}Codepen Challenges{{</external-link>}} for some experimentation.
+
 ## More fun related updates:
 
 ### 🎧 Listening
@@ -24,11 +26,11 @@ In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my
 
 ### 📕 Reading
 
-I'm sorry to say that I'm another sucker who has started reading The Witcher. Haven't played any of the games (yet) or seen the Netflix show (also yet) but I'm hopeful I'm going to enjoy it.
+I'm sorry to say that I'm another sucker who has started reading The Witcher. Haven't played any of the games (yet) or seen the Netflix show (also yet) but I'm ~~hopeful I'm going to enjoy~~ really enjoying it.
 
 ### 🎮 Playing
 
-A little late to the party but I'm finally playing {{<external-link href="http://www.celestegame.com/">}}Celeste{{</external-link>}} and it's great.
+Playing through {{<external-link href="http://www.aviaryattorney.com/">}}Aviary Attorney{{</external-link>}} with my wife, and I am enjoying it **way** more than I thought I would. Mainly because I love good puns/dad-jokes.
 
 ## Now pages?
 
