@@ -5,11 +5,30 @@ newContentEditor: code
 theme: test
 enableGitInfo: true
 markup:
-    highlight:
-        codeFences: true
-        lineNoStart: 1
-        lineNos: false
-        lineNumbersInTable: true
-        noClasses: true
-        style: swapoff
-        tabWidth: 2
+  defaultMarkdownHandler: blackFriday
+  blackFriday:
+    angledQuotes: false
+    extensions: null
+    extensionsMask: null
+    footnoteAnchorPrefix: ""
+    footnoteReturnLinkContents: ""
+    fractions: true
+    hrefTargetBlank: false
+    latexDashes: true
+    nofollowLinks: true
+    noreferrerLinks: true
+    noopenerLinks: true
+    plainIDAnchors: true
+    skipHTML: false
+    smartDashes: true
+    smartypants: true
+    smartypantsQuotesNBSP: false
+    taskLists: true
+  highlight:
+    codeFences: true
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: swapoff
+    tabWidth: 2

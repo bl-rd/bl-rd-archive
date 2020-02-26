@@ -4,7 +4,6 @@ date: 2020-02-07T16:43:42Z
 description: ""
 ---
 
-{{<rawHtml>}}
 <style>
 main {
   display: flex;
@@ -28,13 +27,11 @@ p {
   display: inline-block;
 }
 </style>
-{{</rawHtml>}}
 
 > Throughout human history, we have been dependent on **machines** to survive. Fate, it seems, is not without a **sense of irony**.
 >
-> &mdash; {{<rawHtml>}}<cite>Morpheus</cite>{{</rawHtml>}}
+> &mdash; <cite>Morpheus</cite>
 
-{{<rawHtml>}}
 <script>
   (function () {
     const {
@@ -87,4 +84,3 @@ p {
     });
   })();
 </script>
-{{</rawHtml>}}

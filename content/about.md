@@ -10,13 +10,13 @@ I live ~~in~~ very near the Lake District in Cumbria, not too far away from wher
 
 ## Work
 
-Currently, I work as a full-stack developer in a small team at {{<external-link href="https://www.lancaster.ac.uk">}}Lancaster University{{</external-link>}} (one of {{<external-link href="https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019">}}the top 10 universities in the UK{{</external-link>}}, don't you know). We build internal apps and APIs for our students and staff, such as the {{<external-link href="https://portal.lancaster.ac.uk/intranet/news">}}Staff Intranet{{</external-link>}} and {{<external-link href="https://portal.lancaster.ac.uk/portal/news">}}Student Portal{{</external-link>}}. Our current technology stack is Vue.js, .NET WebAPI and SQL Server.
+Currently, I work as a full-stack developer in a small team at [Lancaster University](https://www.lancaster.ac.uk) (one of [the top 10 universities in the UK](https://www.theguardian.com/education/ng-interactive/2018/may/29/university-league-tables-2019), don't you know). We build internal apps and APIs for our students and staff, such as the [Staff Intranet](https://portal.lancaster.ac.uk/intranet/news) and [Student Portal](https://portal.lancaster.ac.uk/portal/news). Our current technology stack is Vue.js, .NET WebAPI and SQL Server.
 
 ## Not work
 
 Doing dad-things takes up most of my non-work time. While this is awesome, I try and do other (non-code related!) things too
 
-I'm really into climbing, having had a late start to the sport a few years ago. Of late, I've also been trying to get back into playing the guitar after an extended foray in drumming. Occasionally I kid myself into thinking that I can still skateboard (I can't), and find myself really relating to {{<external-link href="https://pkewx3.bandcamp.com/track/mid-20s-skateboarder-4" title="Mid-20's Skateboarder by Pkew Pkew Pkew">}}this song{{</external-link>}} by Pkew Pkew Pkew (early&ndash;thirties and mid&ndash;twenties are practically the same thing, aren't they?).
+I'm really into climbing, having had a late start to the sport a few years ago. Of late, I've also been trying to get back into playing the guitar after an extended foray in drumming. Occasionally I kid myself into thinking that I can still skateboard (I can't), and find myself really relating to [this song](https://pkewx3.bandcamp.com/track/mid-20s-skateboarder-4 "Mid-20s Skateboarder") by Pkew Pkew Pkew (early&ndash;thirties and mid&ndash;twenties are practically the same thing, aren't they?).
 
 You can get a better idea of what I'm up to _right now_ on [my now page](/now).
 
@@ -25,9 +25,9 @@ You can get a better idea of what I'm up to _right now_ on [my now page](/now).
 Email is the best way to get hold of me, but here are all the places you can find me:
 
 - Email (me @ this domain)
-- {{<external-link href="https://github.com/bl-rd">}}Github{{</external-link>}}
-- {{<external-link href="https://codepen.io/bl-rd">}}Codepen{{</external-link>}}
-- {{<external-link href="https://twitter.com/_bl_rd">}}Twitter{{</external-link>}}
+- <a href="https://github.com/bl-rd" rel="me nofollow noopener">Github</a>
+- <a href="https://codepen.io/bl-rd" rel="me nofollow noopener">Codepen</a>
+- <a href="https://twitter.com/_bl_rd" rel="me nofollow noopener">Twitter</a>
 
 {{<signoff>}}
 

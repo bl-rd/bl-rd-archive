@@ -8,7 +8,7 @@ animation: "anim-2-javascript-mindset.html"
 
 ## The problem
 
-For this website, I wanted to have a way of having relevant content outside the main body. While there is {{<external-link href="https://www.kooslooijesteijn.net/blog/semantic-sidenotes">}}no semantic HTML element for this yet{{</external-link>}}, I thought a footnote approach ({{<footnote-link demo>}}like this{{</external-link>}}) was the next best option. I can make it accessible, it doesn't break up the flow of the document, and it is relatively easy to navigate the page.
+For this website, I wanted to have a way of having relevant content outside the main body. While there is [no semantic HTML element for this yet](https://www.kooslooijesteijn.net/blog/semantic-sidenotes), I thought a footnote approach ({{<footnote-link demo>}}like this{{</footnote-link>}}) was the next best option. I can make it accessible, it doesn't break up the flow of the document, and it is relatively easy to navigate the page.
 
 The problem came about when trying to add some temporary styling to the footnote that the reader is jumping to &mdash; providing some clarity as to which part of the page should be read.
 
@@ -59,11 +59,11 @@ links.forEach(link => {
 ```
 I was typing the git commit message when the doubt began creeping in, and it slowly dawned on me that there was a better way of doing this.
 
-As {{<external-link href="https://alistapart.com/article/paint-the-picture-not-the-frame/">}}the browser provides everything users need{{</external-link>}}, so it turns out (in this case) that CSS already has a well-established solution...
+As [the browser provides everything users need](https://alistapart.com/article/paint-the-picture-not-the-frame/), so it turns out (in this case) that CSS already has a well-established solution...
 
 ## The actual solution
 
-So I ditched all my lovingly hand-crafted (and completely unnecessary) JavaScript as well as the defunct CSS class. Enter the beautiful {{<external-link href="https://www.w3.org/TR/selectors-3/#target-pseudo">}}target pseudo-class{{</external-link>}}.
+So I ditched all my lovingly hand-crafted (and completely unnecessary) JavaScript as well as the defunct CSS class. Enter the beautiful [target pseudo-class](https://www.w3.org/TR/selectors-3/#target-pseudo).
 
 ```css
 article a:target {

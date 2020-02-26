@@ -12,17 +12,17 @@ What I am really wanting to hone in on is performant, accessible **design**. In 
 
 ## What I'm doing now
 
-Currently learning about the {{<external-link href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">}}Web Animations API{{</external-link>}} and how it can be applied to motion design on the web.
+Currently learning about the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) and how it can be applied to motion design on the web.
 
-In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my front-end skill set, I'm learning {{<external-link href="https://www.rust-lang.org/">}}Rust{{</external-link>}} and {{<external-link href="https://webassembly.org/">}}WebAssembly{{</external-link>}} by, slowly but surely, working my way through the {{<external-link href="https://doc.rust-lang.org/stable/book/title-page.html">}}Rust language book{{</external-link>}} and the {{<external-link href="https://rustwasm.github.io/docs/book/">}}Rust WebAssembly book{{</external-link>}} &mdash; both really great introductions into the language. Hopefully, I'll be able to update this page with Rust-related projects soon!
+In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my front-end skill set, I'm learning [Rust](https://www.rust-lang.org/) and [WebAssembly](https://webassembly.org/) by, slowly but surely, working my way through the [Rust language book](https://doc.rust-lang.org/stable/book/title-page.html) and the [Rust WebAssembly book](https://rustwasm.github.io/docs/book/) &mdash; both really great introductions into the language. Hopefully, I'll be able to update this page with Rust-related projects soon!
 
-Also going to try and keep up with the {{<external-link href="https://codepen.io/collection/AEWMxz">}}Codepen Challenges{{</external-link>}} for some experimentation.
+Also going to try and keep up with the [Codepen Challenges](https://codepen.io/collection/AEWMxz) for some experimentation.
 
 ## More fun related updates:
 
 ### 🎧 Listening
 
-{{<external-link href="https://en.wikipedia.org/wiki/The_Shape_of_Punk_to_Come">}}The Shape of Punk to Come{{</external-link>}} by {{<external-link href="https://www.officialrefused.com/">}}Refused{{</external-link>}}. Not sure how I have never listened to this album fully before, but I think it's fast becoming one of my favourite punk albums.
+[The Shape of Punk to Come](https://refused.bandcamp.com/album/the-shape-of-punk-to-come) by [Refused](https://www.officialrefused.com/). Not sure how I have never listened to this album fully before, but I think it's fast becoming one of my favourite punk albums.
 
 ### 📕 Reading
 
@@ -30,17 +30,17 @@ I'm sorry to say that I'm another sucker who has started reading The Witcher. Ha
 
 ### 🎮 Playing
 
-Playing through {{<external-link href="http://www.aviaryattorney.com/">}}Aviary Attorney{{</external-link>}} with my wife, and I am enjoying it **way** more than I thought I would. Mainly because I love good puns/dad-jokes.
+Playing through [Aviary Attorney](http://www.aviaryattorney.com/) with my wife, and I am enjoying it **way** more than I thought I would. Mainly because I love good puns/dad-jokes.
 
 ## Now pages?
 
-Aye, {{<external-link href="https://nownownow.com/about">}}now pages.{{</external-link>}}
+Aye, [now pages](https://nownownow.com/about).
 
 {{<signoff>}}
 
 {{<blogfooter>}}
 <li id="monoculture-footnote">
-    I saw a really great lightening talk by {{<external-link href="https://andregarzia.com/">}}Andre Alves Garzia{{</external-link>}} about the monoculture of the web that got me thinking about using WebAssembly. {{<external-link href="https://youtu.be/gjlBcsSNEpU?t=1438">}}Watch it on YouTube{{</external-link>}}.
+    I saw a really great lightening talk by [Andre Alves Garzia](https://andregarzia.com/) about the monoculture of the web that got me thinking about using WebAssembly. [Watch it on YouTube](https://youtu.be/gjlBcsSNEpU?t=1438).
     {{<footnote-back monoculture-link >}}
 </li>
 {{</blogfooter>}}
