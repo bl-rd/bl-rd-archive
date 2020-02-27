@@ -6,21 +6,22 @@
 <body>
   {{ partial "header.html" .Site.Data }}
   <main>
-    <article class="single h-entry">
+    <article class="single h-entry" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
       <header>
         <!--  -->
         {{ if isset .Params "animation" }}
         {{ $anim := index .Params "animation" }}
         {{ partial $anim }}
         {{ end }}
-        <h1 class="p-name">{{ .Title }}</h1>
-        <p class="p-summary">
+        <h1 class="p-name" itemprop="headline">{{ .Title }}</h1>
+        <p class="p-summary" itemprop="description">
           {{ if isset .Params "intro" }}
           {{ index .Params "intro" }}
           {{ else }}
           {{ index .Params "description" }}
           {{ end }}
         </p>
+        <meta itemprop="author" content="Bill Reid" />
       </header>
 
       {{ if eq .Type "posts" }}
@@ -32,7 +33,7 @@
       <p>Last updated: <time datetime="{{.Lastmod.Format "2006-01-02T15:04:05Z"}}" class="dt-updated">{{ .Lastmod.Format "January 2, 2006" }}</time></p>
       {{ end }}
       
-      <div class="e-content">
+      <div class="e-content" itemprop="articleBody">
         {{ .Content }}
       </div>
 
