@@ -7,7 +7,7 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
-  --s-small: calc(var(--s0) * 0.75);
+  --s-small: calc(var(--s0) * 0.85);
 
   /* font variables */
   --font-heading: 'Manrope', sans-serif;

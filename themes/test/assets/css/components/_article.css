@@ -26,28 +26,27 @@
   margin-left: 0.5ch;
 }
 
-.single > footer {
-  grid-column: 1/5;
+.single footer {
   margin: 1rem 0 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--app-colour-body);
 }
 
-.single > footer li {
+.single footer li {
   list-style: inherit;
   font-size: var(--s-small);
   max-width: none;
 }
 
-.single > footer li * {
+.single footer li * {
   font-size: var(--s-small);
 }
 
-.single > h2 {
+.single h2 {
   margin: 3rem 0 2rem;
 }
 
-.single > h3 {
+.single h3 {
   margin: 2.5rem 0 1.75rem;
 }
 
@@ -80,10 +79,12 @@
   margin: 1rem 0;
 }
 
-.single > .supplementary + *:first-of-type,
-.single > header + :not(.supplementary):first-of-type {
+.single > div:not(.supplementary) {
   border-top: solid 0.25rem var(--app-colour-body);
-  padding-top: 2rem;
+}
+
+.single > div:not(.supplementary) > *:first-child {
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 66rem) {
@@ -97,16 +98,16 @@
     font-size: 10vmin;
   }
 
-  .single > footer li {
+  .single footer li {
     list-style-position: inside;
   }
 
-  .single > h2 {
+  .single h2 {
     font-size: 9vmin;
     word-break: break-word;
   }
 
-  .single > h3 {
+  .single h3 {
     font-size: 7vmin;
   }
 

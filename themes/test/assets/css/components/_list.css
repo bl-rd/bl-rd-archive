@@ -2,3 +2,16 @@
   list-style: none;
   margin-bottom: 3rem;
 }
+
+.list ul {
+  border-top: solid 0.25rem var(--app-colour-body);
+  padding-top: 2rem;
+}
+
+.list h2 {
+  margin-bottom: 0.5rem;
+}
+
+.list h2:first-of-type {
+  margin-top: 1rem;
+}

@@ -41,7 +41,7 @@ aside li a {
 
 .supplementary {
   grid-column: 1/2;
-  grid-row: 2/99;
+  grid-row: 2/3;
 }
 
 .supplementary .supplementary__date {

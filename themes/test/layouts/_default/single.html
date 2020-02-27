@@ -6,15 +6,15 @@
 <body>
   {{ partial "header.html" .Site.Data }}
   <main>
-    <article class="single">
+    <article class="single h-entry">
       <header>
         <!--  -->
         {{ if isset .Params "animation" }}
         {{ $anim := index .Params "animation" }}
         {{ partial $anim }}
         {{ end }}
-        <h1>{{ .Title }}</h1>
-        <p>
+        <h1 class="p-name">{{ .Title }}</h1>
+        <p class="p-summary">
           {{ if isset .Params "intro" }}
           {{ index .Params "intro" }}
           {{ else }}
@@ -25,13 +25,16 @@
 
       {{ if eq .Type "posts" }}
       {{ partial "supplementary.html" . }}
+      {{ partial "h-card.html" }}
       {{ end }}
 
       {{ if eq .Title "/now" }}
-      <p>Last updated: <time datetime="{{.Lastmod.Format "2006-01-02T15:04:05Z"}}">{{ .Lastmod.Format "January 2, 2006" }}</time> </p>
+      <p>Last updated: <time datetime="{{.Lastmod.Format "2006-01-02T15:04:05Z"}}" class="dt-updated">{{ .Lastmod.Format "January 2, 2006" }}</time></p>
       {{ end }}
-
-      {{ .Content }}
+      
+      <div class="e-content">
+        {{ .Content }}
+      </div>
 
     </article>
   </main>
