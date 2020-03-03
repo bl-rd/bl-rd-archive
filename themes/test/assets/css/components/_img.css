@@ -5,6 +5,7 @@ img {
   transition: filter 0.16s ease-out;
   margin: 2rem auto;
   display: block;
+  max-width: 100%;
 }
 
 img:hover {

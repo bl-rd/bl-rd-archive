@@ -103,7 +103,7 @@ small > * {
   }
 
   h1 {
-    font-size: 13vmin;
+    font-size: 10vmin;
     word-break: break-word;
   }
 }

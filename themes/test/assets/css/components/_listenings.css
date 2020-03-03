@@ -1,0 +1,14 @@
+.listenings {
+  padding-bottom: 5rem;
+}
+
+.listenings__art img {
+  border-left: 0.6rem double var(--app-colour-body);
+  border-bottom: 0.75rem dotted var(--app-colour-body);
+  padding: 0 1rem 1rem;
+}
+
+.listenings__details {
+  list-style: none;
+  margin-left: 0;
+}

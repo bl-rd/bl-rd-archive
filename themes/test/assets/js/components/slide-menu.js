@@ -105,8 +105,8 @@ class SlideMenu extends HTMLElement {
   }
 
   /**
-     * Add the active class to the active route
-     */
+   * Add the active class to the active route
+   */
   initialiseNavStyles() {        
     const { pathname } = location;
     const { links } = this;
@@ -125,9 +125,9 @@ class SlideMenu extends HTMLElement {
   }
 
   /**
-     * Update which element should be focused next
-     * @param {Boolean} shiftPressed
-     */
+    * Update which element should be focused next
+    * @param {Boolean} shiftPressed
+    */
   updateActiveLinkIndex(shiftPressed) {
 
     // check if the menu button is the currently focused element
@@ -256,6 +256,10 @@ function style() {
 
         nav div.show li:nth-child(4) {
 			animation-delay: 0.5s;
+        }
+
+        nav div.show li:nth-child(5) {
+			animation-delay: 0.6s;
         }
 
 		@keyframes list-appear {

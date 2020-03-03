@@ -34,6 +34,9 @@
       {{ end }}
       
       <div class="e-content" itemprop="articleBody">
+        {{ if eq .Type "posts" }}
+        {{ partial "supplementary-mobile.html" . }}
+        {{ end }}
         {{ .Content }}
       </div>
 

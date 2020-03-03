@@ -6,18 +6,39 @@
 <body>
   {{ partial "header.html" .Site.Data }}
   <main>
-    <article class="single">
+    <article class="single listenings">
       <header>
-        {{ with .Resources.GetMatch "album.*" }}
-          <img src="{{ .RelPermalink }}" />
-        {{ end }}
+        {{ $original := .Resources.GetMatch "album.*" }}
+        {{ .Scratch.Set "image_large" ($original.Resize "400x")}}
+        {{ .Scratch.Set "image_small" ($original.Resize "250x")}}
+        {{ $image_large := .Scratch.Get "image_large" }}
+        {{ $image_small := .Scratch.Get "image_small" }}
+        <picture class="listenings__art">
+          <source srcset="{{ $image_small.RelPermalink }}" media="(max-width: 50em)">
+          <img src="{{ $image_large.RelPermalink }}" />
+        </picture>
         <h1>{{ .Title }}</h1>
       </header>
 
       {{ partial "supplementary.html" . }}
 
       <div>
+        {{ partial "supplementary-mobile.html" . }}
         {{ .Content }}
+        <ul class="listenings__details">
+          {{ with .Params.artist }}
+          <li>Artist: <b>{{ . }}</b></li>
+          {{ end}}
+          {{ with .Params.year }}
+          <li>Year: <b>{{ . }}</b></li>
+          {{ end }}
+          {{ with .Params.bandcampUrl }}
+          <li><a href="noopener nofollow" href="{{.}}">Listen on BandCamp</a></li>
+          {{ end }}
+          {{ with .Params.spotifyUrl }}
+          <li><a href="noopener nofollow" href="{{.}}">Listen on Spotify</a></li>
+          {{ end }}
+        </ul>
       </div>
 
     </article>

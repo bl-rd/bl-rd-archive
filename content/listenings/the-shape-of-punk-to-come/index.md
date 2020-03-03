@@ -2,12 +2,11 @@
 title: "The Shape of Punk to Come"
 date: 2020-02-04T21:27:43Z
 description: ""
-image: ""
 draft: true
 artist: "Refused"
 year: 1998
-bandcampUrl: ""
-spotifyUrl: ""
+bandcampUrl: "https://refused.bandcamp.com/album/the-shape-of-punk-to-come"
+spotifyUrl: "https://open.spotify.com/album/2Us9qPHLvLoTl6HkYAPcz2?si=CHytfuNZTne64GKUHWrpPw"
 ---
 
 How have I not listened to this album before?! I remember hearing &ldquo;New Noise&rdquo; sometime in the last decade or so, but that’s it as far as Refused are concerned. I think historically it was probably because I was put off by music that was a bit too **shout-y** (and Refused are very shout-y).
