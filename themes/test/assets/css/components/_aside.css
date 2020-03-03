@@ -64,7 +64,6 @@ div[data-button-observer] {
 .supplementary--mobile {
   display: none;
   visibility: hidden;
-  margin-bottom: 2rem;
 }
 
 .supplementary--mobile::after {

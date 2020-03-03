@@ -28,7 +28,6 @@ code:not([class^="language"]) {
     margin: 1rem 0;
     max-width: 100%;
     padding: 0;
-    overflow: scroll;
   }
 
   .highlight pre {
