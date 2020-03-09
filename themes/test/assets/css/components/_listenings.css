@@ -12,3 +12,9 @@
   list-style: none;
   margin-left: 0;
 }
+
+.listenings__details::before {
+  content: '...';
+  display: block;
+  margin-bottom: 1rem;
+}

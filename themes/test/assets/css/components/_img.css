@@ -1,11 +1,16 @@
 img {
-  --greyscale: 100%;
+  --greyscale: 0%;
 
-  filter: grayscale(var(--greyscale));
-  transition: filter 0.16s ease-out;
   margin: 2rem auto;
   display: block;
   max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: grayscale(var(--greyscale));
+    transition: filter 0.16s ease-out;
+  }
 }
 
 img:hover {

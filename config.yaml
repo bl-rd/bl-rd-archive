@@ -4,6 +4,7 @@ title: Bill's Website
 newContentEditor: code
 theme: test
 enableGitInfo: true
+paginate: 30
 markup:
   defaultMarkdownHandler: blackFriday
   blackFriday:
