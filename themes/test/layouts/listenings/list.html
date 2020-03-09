@@ -1,5 +1,7 @@
 {{ define "main" }}
 
+{{ $lazy := resources.Get "js/lazy-load.js" | resources.Minify }}
+
 <div class="single list listenings">
 
   <header>
@@ -13,15 +15,22 @@
   {{ range first 30 .Pages }}
     <li>
       <article>
+        {{ $large := "250x" }}
+        {{ $small := "125x" }}
         {{ $original := .Resources.GetMatch "*.jpg" }}
-        {{ .Scratch.Set "image_large" ($original.Resize "250x")}}
-        {{ .Scratch.Set "image_small" ($original.Resize "125x")}}
+        {{ .Scratch.Set "image_large" ($original.Resize $large) }}
+        {{ .Scratch.Set "image_small" ($original.Resize $small) }}
+        {{ .Scratch.Set "placeholder" ($original.Resize "1x") }}
+        {{ .Scratch.Set "placeholder_large" ((.Scratch.Get "placeholder").Resize $large )}}
+        {{ .Scratch.Set "placeholder_small" ((.Scratch.Get "placeholder").Resize $small )}}
         {{ $image_large := .Scratch.Get "image_large" }}
         {{ $image_small := .Scratch.Get "image_small" }}
+        {{ $placeholder_large := .Scratch.Get "placeholder_large" }}
+        {{ $placeholder_small := .Scratch.Get "placeholder_small" }}
         {{ $alt := print "Album art for " .Title }}
         <picture>
-          <source srcset="{{ $image_small.RelPermalink }}" media="(max-width: 66rem)">
-          <img src="{{ $image_large.RelPermalink }}" alt="{{ $alt }}"/>
+          <source class="lazy" srcset="{{ $placeholder_small.RelPermalink }}" data-src="{{ $image_small.RelPermalink }}" media="(max-width: 66rem)">
+          <img class="lazy" src="{{ $placeholder_large.RelPermalink }}" alt="{{ $alt }}" data-src="{{ $image_large.RelPermalink }}"/>
         </picture>
         <div>
           <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -48,4 +57,9 @@
   {{ end }}
   </ul>
 </div>
+
+<script defer type="module">
+  import { lazyLoad } from '{{ $lazy.Permalink }}';
+  lazyLoad('.lazy');
+</script>
 {{ end }}
