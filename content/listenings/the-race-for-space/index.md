@@ -2,7 +2,6 @@
 title: "The Race for Space"
 date: 2019-06-01T21:05:23Z
 description: ""
-draft: true
 artist: "Public Service Broadcasting"
 year: 2014
 bandcampUrl: ""

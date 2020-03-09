@@ -2,7 +2,6 @@
 title: "Piano EP"
 date: 2019-04-25T16:57:15Z
 description: ""
-draft: true
 artist: "Yvette Young"
 year: 2019
 bandcampUrl: "https://yvetteyoung.bandcamp.com/album/piano-ep"
