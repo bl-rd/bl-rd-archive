@@ -259,7 +259,7 @@ function style() {
         }
 
         nav div.show li:nth-child(5) {
-			animation-delay: 0.6s;
+			animation-delay: 0.55s;
         }
 
 		@keyframes list-appear {

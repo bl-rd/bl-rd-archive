@@ -2,7 +2,6 @@
 title: "Math the Band the Band the Album"
 date: 2019-11-15T11:46:03Z
 description: ""
-draft: true
 artist: "Math the Band"
 year: "2015"
 bandcampUrl: "https://maththeband.bandcamp.com/album/math-the-band-the-band-the-album"

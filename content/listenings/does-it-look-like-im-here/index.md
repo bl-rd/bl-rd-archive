@@ -2,7 +2,6 @@
 title: "Does It Look Like I'm Here?"
 date: 2020-01-10T11:19:45Z
 description: ""
-draft: true
 artist: "Emeralds"
 year: "2010"
 bandcampUrl: "https://emeraldsemego.bandcamp.com/album/does-it-look-like-im-here"

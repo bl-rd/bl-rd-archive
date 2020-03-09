@@ -2,7 +2,6 @@
 title: "Camp Cope"
 date: 2018-01-04T21:15:20Z
 description: ""
-draft: true
 artist: "Camp Cope"
 year: 2016
 bandcampUrl: "https://campcope.bandcamp.com/album/camp-cope"
