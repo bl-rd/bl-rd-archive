@@ -12,11 +12,13 @@ What I am really wanting to hone in on is performant, accessible **design**. In 
 
 ## What I'm doing now
 
-Currently learning about the [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) and how it can be applied to motion design on the web.
+**TL;DR** Not loads of development stuff outside of work!
 
-In an attempt {{<footnote-link monoculture>}}to diversify{{</footnote-link>}} my front-end skill set, I'm learning [Rust](https://www.rust-lang.org/) and [WebAssembly](https://webassembly.org/) by, slowly but surely, working my way through the [Rust language book](https://doc.rust-lang.org/stable/book/title-page.html) and the [Rust WebAssembly book](https://rustwasm.github.io/docs/book/) &mdash; both really great introductions into the language. Hopefully, I'll be able to update this page with Rust-related projects soon!
+Alongside a large part of the world, I'm currently in lockdown. While for many this has proven a good opportunity to get down to learning some new skills, for me it's more of a case of just getting through the day with two children who can no longer go to school or nursery! When it gets to the end of the day I find that I can't bring myself to look at a laptop.
 
-Also going to try and keep up with the [Codepen Challenges](https://codepen.io/collection/AEWMxz) for some experimentation.
+On the plus side, this means I'm managing to catch-up with various books, games and TV!
+
+Once I get into a rhythm then I'm sure I'll get back into doing more web stuff &mdash; I'm really keen to start re-designing [my white noise app](https://bl-rd.github.io/white-noise-app/) and porting the JavaScript to Rust.
 
 ## More fun related updates:
 
@@ -26,21 +28,14 @@ Also going to try and keep up with the [Codepen Challenges](https://codepen.io/c
 
 ### 📕 Reading
 
-I'm sorry to say that I'm another sucker who has started reading The Witcher. Haven't played any of the games (yet) or seen the Netflix show (also yet) but I'm ~~hopeful I'm going to enjoy~~ really enjoying it.
+Finally getting around to reading The Book of Dust (Volume One) by Philip Pullman. I've been a big fan of His Dark Materials since they came out and have read the original trilogy many, many times. So no pressure for this one then!
 
 ### 🎮 Playing
 
-Playing through [Aviary Attorney](http://www.aviaryattorney.com/) with my wife, and I am enjoying it **way** more than I thought I would. Mainly because I love good puns/dad-jokes.
+Currently battling my way through Dark Souls Remastered. Historically this is the type of game I would have avoided like the Undead (hehe), but I'm addicted. Seriously, it's masochistic.
 
 ## Now pages?
 
 Aye, [now pages](https://nownownow.com/about).
 
 {{<signoff>}}
-
-{{<blogfooter>}}
-<li id="monoculture-footnote">
-    I saw a really great lightening talk by [Andre Alves Garzia](https://andregarzia.com/) about the monoculture of the web that got me thinking about using WebAssembly. [Watch it on YouTube](https://youtu.be/gjlBcsSNEpU?t=1438).
-    {{<footnote-back monoculture-link >}}
-</li>
-{{</blogfooter>}}
