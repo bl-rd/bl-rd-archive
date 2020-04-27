@@ -33,6 +33,9 @@
           {{ with .Params.year }}
           <li>Year: <b>{{ . }}</b></li>
           {{ end }}
+          {{ with .Params.favouriteTrack }}
+          <li>Favourite track: <b>{{ . }}</b></li>
+          {{ end }}
           {{ with .Params.bandcampUrl }}
           <li><a rel="noopener nofollow" href="{{.}}">Listen on BandCamp</a></li>
           {{ end }}

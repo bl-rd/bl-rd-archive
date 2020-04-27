@@ -43,6 +43,9 @@
               {{ with .Params.artist }}
               <li class="flex-basis:100">Artist: <b>{{ . }}</b></li>
               {{ end}}
+              {{ with .Params.favouriteTrack }}
+              <li class="flex-basis:100">Favourite track: <b>{{ . }}</b></li>
+              {{ end }}
               {{ with .Params.bandcampUrl }}
               <li><a rel="noopener nofollow" href="{{.}}">BandCamp</a></li>
               {{ end }}
