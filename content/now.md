@@ -24,7 +24,7 @@ Once I get into a rhythm then I'm sure I'll get back into doing more web stuff &
 
 ### 🎧 Listening
 
-[The Shape of Punk to Come](https://refused.bandcamp.com/album/the-shape-of-punk-to-come) by [Refused](https://www.officialrefused.com/). Not sure how I have never listened to this album fully before, but I think it's fast becoming one of my favourite punk albums.
+[La Vita Nuova](https://open.spotify.com/album/3uF0lelesKigBc6H9NGzDq?si=6LTRW9uBSte4H86cY6S_uQ) by [Christine and the Queens](http://www.christineandthequeens.com/). On repeat.
 
 ### 📕 Reading
 
