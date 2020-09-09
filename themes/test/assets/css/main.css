@@ -20,6 +20,7 @@
 @import 'components/_svg.css';
 @import 'components/_iframe.css';
 @import 'components/_listenings.css';
+@import 'components/_blockquote.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

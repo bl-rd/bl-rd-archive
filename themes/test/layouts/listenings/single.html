@@ -16,7 +16,7 @@
         {{ $alt := print "Album art for " .Title }}
         <picture class="listenings__art">
           <source srcset="{{ $image_small.RelPermalink }}" media="(max-width: 50em)">
-          <img src="{{ $image_large.RelPermalink }}" alt="{{ $alt }}" />
+          <img src="{{ $image_large.RelPermalink }}" alt="{{ $alt }}"/>
         </picture>
         <h1>{{ .Title }}</h1>
       </header>
