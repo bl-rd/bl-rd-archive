@@ -27,7 +27,7 @@ Email is the best way to get hold of me, but here are all the places you can fin
 - Email (me @ this domain)
 - <a href="https://github.com/bl-rd" rel="me nofollow noopener">Github</a>
 - <a href="https://codepen.io/bl-rd" rel="nofollow noopener">Codepen</a>
-- <a href="https://twitter.com/_bl_rd" rel="me nofollow noopener">Twitter</a>
+- <a href="https://twitter.com/_bl_rd_dev" rel="me nofollow noopener">Twitter</a>
 
 {{<signoff>}}
 
