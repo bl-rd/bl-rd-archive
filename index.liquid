@@ -1,0 +1,35 @@
+---
+layout: home.liquid
+title: "Bill's website"
+---
+{% comment %}
+- Home page layout
+{% endcomment %}
+
+<ul>
+  {% for post in collections.posts.pages %}
+  <li>
+    <article>
+      <a href="{{ post.permalink }}" id="{{ post.slug }}">
+        <h2>{{ post.title }}</h2>
+      </a>
+      
+      {% if post.is_draft == false %}
+      <time datetime="{{ post.published_date}}">{{ post.published_date | date: "%b %d %Y" }}</time>
+      {% endif %}
+
+      <p>
+        {{ post.description }}
+      </p>
+
+      <p>
+        {% if post.data.is_thing %}
+        <a href="{{ post.data.thing_link }}" rel="nofollow noopener noreferrer">{{ post.data.thing_link_text }}</a>
+        {% else %}
+        <a href="{{ post.permalink }}">Read <cite>{{ post.title }}</cite></a>
+        {% endif %}
+      </p>
+    </article>
+  </li>
+  {% endfor %}
+</ul>
