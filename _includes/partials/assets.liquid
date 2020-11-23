@@ -1,0 +1,15 @@
+{% comment %}
+- CSS is inlined. Generated via a PostCSS build step and put into _includes/styles/main.css
+{% endcomment %}
+{% include "styles/main.html" %}
+
+{% comment %}
+- Key javascript file paths are saved in _date/config.yaml.
+- They are defer loaded so should be non-critical for content
+{% endcomment %}
+{% for script in site.data.config.scripts %}
+
+<link rel="prefetch" as="script" href="{{ site.base_url}}/{{ script }}" />
+<script src="{{ site.base_url }}/{{ script }}" defer type="module"></script>
+
+{% endfor %}

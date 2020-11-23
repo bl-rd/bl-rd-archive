@@ -1,0 +1,11 @@
+title: "bl-rd 🖖"
+author: "Bill Reid"
+
+# animations config
+page_animations_path: "assets/js/animations/"
+
+# Main javascript files to include
+scripts: [
+  "assets/js/lib/text.js",
+  "assets/js/components/back-to-top.js"
+]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+  {% include "partials/head.liquid" %}
+
+  <title>{{ page.title }} | {{ site.data.config.title }}</title>
+</head>
+
+<body class="no-js no-animate no-component">
+  <main>
+    <article class="single h-entry" itemid="{{site.base_url}}/{{page.permalink}}">
+      <header>
+        {% if page.data.has_animation %}
+        {% assign animation_file = page.data.animation_file %}
+        {% include animation_file %}
+        {% endif %}
+
+        <h1 class="p-name" itemprop="headline">{{ page.title }}</h1>
+
+        <p class="p-summary" itemprop="description">
+          {{ page.description }}
+        </p>
+
+        <meta itemprop="author" content="{{ site.data.config.author }}" />
+      </header>
+
+      <div class="supplementary">
+        <div class="supplementary__date">
+          {% if page.is_draft == false %}
+          <time class="dt-published" datetime="{{ page.published_date }}" itemprop="datePublished">
+            {{ page.published_date | date: "%b %d %Y" }}
+          </time>
+          {% endif %}
+        </div>
+        <div data-button-observer></div>
+        <back-to-top></back-to-top>
+      </div>
+
+      <div class="e-content" itemprop="articleBody">
+        {{ page.content }}
+      </div>
+    </article>
+  </main>
+
+  {% comment %}
+  - Include any required component templates
+  {% endcomment %}
+  {% include "components/back-to-top.liquid" %}
+</body>
+
+</html>

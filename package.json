@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run serve",
-    "serve": "hugo server -D",
-    "build": "hugo",
+    "serve": "cobalt serve --drafts",
+    "build": "cobalt build",
+    "build:css": "postcss assets/css/main.css -o _includes/styles/main.css",
     "lint:js": "eslint '**/*.{js,html}' --fix",
     "lint:css": "stylelint **/*.css --fix"
   },
