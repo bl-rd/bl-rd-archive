@@ -3,7 +3,7 @@
 
 /* top-level layouts (excl. base) */
 @import 'misc/_fallbacks.css';
-@import 'layouts/_landing.css';
+@import 'layouts/_home.css';
 
 /* components */
 @import 'components/_navigation.css';

@@ -8,17 +8,18 @@
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
   --s-small: calc(var(--s0) * 0.85);
+  --font-sans-serif: 'Manrope', 'Open Sans', 'Roboto', 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  --font-monospace: 'SpaceMono', 'Fira Code', 'JetBrains Mono', 'Courier New', 'Lucida Console', 'Consolas', monospace;
 
   /* font variables */
-  --font-heading: 'Manrope', sans-serif;
-  --font-sub-heading: 'Manrope', Helvetica, Arial, sans-serif;
-  --font-body: 'SpaceMono', 'Fira Code', monospace;
-  --font-body-bold: 'SpaceMono Bold', 'Fira Code Bold', 'Fira Code', monospace;
+  --font-heading: var(--font-sans-serif);
+  --font-sub-heading: var(--font-sans-serif);
+  --font-body: var(--font-monospace);
   --font-size-reduced: 0.8em;
 
   /* colours */
   --white: #fff;
-  --black: #000;
+  --black: #111;
   --black-secondary: #121211;
   --highlight: #ff2877;
   --highlight-offset: #cc215f;

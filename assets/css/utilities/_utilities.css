@@ -30,3 +30,7 @@
 .flex-basis\:100 {
   flex-basis: 100%;
 }
+
+.list\:none {
+  list-style: none;
+}

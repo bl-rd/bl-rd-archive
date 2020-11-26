@@ -17,10 +17,12 @@ class BackToTop extends HTMLElement {
     // add an intersection observer listener for the transition styles
     let element = this.shadowRoot.querySelector('button');
     this.observer = new IntersectionObserver(function(entries) {
-      const { isIntersecting } = entries.pop();
+      const { y } = entries.pop().boundingClientRect;
       const visiblityClass = 'back-to-top--visible';
-            
-      if (isIntersecting) {
+
+      // if the y position is less than one (i.e. its "stuck")
+      // then we can show the component
+      if (y > 1) {
         element.classList.remove(visiblityClass);
       } else {
         element.classList.add(visiblityClass);
@@ -55,7 +57,8 @@ function style() {
             padding-left: 0;
             transition: all 0.66s ease-out;
             opacity: var(--btt-opacity);
-            font-family: var(--font-body-bold);
+            font-family: var(--font-body);
+            font-weight: bold;
             color: var(--app-colour-body);
         }
 

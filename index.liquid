@@ -3,19 +3,29 @@ layout: home.liquid
 title: "Bill's website"
 ---
 {% comment %}
-- Home page layout
+# Home page layout
+
+- Generates a list of the most recent articles
 {% endcomment %}
 
 <ul>
   {% for post in collections.posts.pages %}
-  <li>
+
+  {% assign post_url = post.permalink %}
+  {% assign post_cta = "Read more" %}
+
+  {% if post.data.is_thing %}
+    {% assign post_url = post.data.thing_link %}
+    {% assign post_cta = post.data.thing_link_text %}
+  {% endif %}
+  <li class="list:none">
     <article>
-      <a href="{{ post.permalink }}" id="{{ post.slug }}">
+      <a href="{{ post_url }}" id="{{ post.slug }}">
         <h2>{{ post.title }}</h2>
       </a>
       
       {% if post.is_draft == false %}
-      <time datetime="{{ post.published_date}}">{{ post.published_date | date: "%b %d %Y" }}</time>
+      <time datetime="{{ post.published_date}}">⌚ {{ post.published_date | date: "%b %d %Y" }}</time>
       {% endif %}
 
       <p>
@@ -23,11 +33,7 @@ title: "Bill's website"
       </p>
 
       <p>
-        {% if post.data.is_thing %}
-        <a href="{{ post.data.thing_link }}" rel="nofollow noopener noreferrer">{{ post.data.thing_link_text }}</a>
-        {% else %}
-        <a href="{{ post.permalink }}">Read <cite>{{ post.title }}</cite></a>
-        {% endif %}
+        <a href="{{ post_url }}" rel="nofollow noopener noreferrer">{{ post_cta }}</a>
       </p>
     </article>
   </li>

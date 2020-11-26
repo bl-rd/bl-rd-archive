@@ -1,0 +1,34 @@
+.home {
+  --rotation: rotate3d(0, 1, 0.3, 20deg);
+  --scale--normal: scale(1);
+  --scale--big: scale(1.2);
+  --scale: var(--scale--normal);
+  --skew: skew(6deg, 2deg);
+  --blur: 2px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.home li {
+  padding-left: 5rem;
+}
+
+.home li:nth-child(2) {
+  --scale: var(--scale--big);
+  --blur: 0;
+
+  padding-left: 0;
+  margin: 2rem 0;
+}
+
+.home li article {
+  --list-column: 2/3;
+
+  filter: blur(var(--blur));
+  transform: var(--rotation) var(--skew) var(--scale);
+}
+
+.home li:nth-child(2) article {
+  --list-column: 1/2;
+}

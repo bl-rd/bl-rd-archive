@@ -7,11 +7,11 @@ header > div:not(.animation) {
   visibility: hidden;
 }
 
-.no-component header > div {
+/* .no-component header > div {
   display: block;
   visibility: visible;
   max-width: none;
-}
+} */
 
 noscript nav *,
 .no-component nav * {
