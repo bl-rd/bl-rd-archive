@@ -8,7 +8,7 @@ title: "Bill's website"
 - Generates a list of the most recent articles
 {% endcomment %}
 
-<ul>
+<ul class="max-width:none">
   {% for post in collections.posts.pages %}
 
   {% assign post_url = post.permalink %}
@@ -18,7 +18,7 @@ title: "Bill's website"
     {% assign post_url = post.data.thing_link %}
     {% assign post_cta = post.data.thing_link_text %}
   {% endif %}
-  <li class="list:none">
+  <li class="list:none max-width:none">
     <article>
       <a href="{{ post_url }}" id="{{ post.slug }}">
         <h2>{{ post.title }}</h2>

@@ -4,31 +4,22 @@
   --scale--big: scale(1.2);
   --scale: var(--scale--normal);
   --skew: skew(6deg, 2deg);
-  --blur: 2px;
+  --blur: 0;
+}
 
+.home ul {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .home li {
-  padding-left: 5rem;
-}
-
-.home li:nth-child(2) {
-  --scale: var(--scale--big);
-  --blur: 0;
-
-  padding-left: 0;
-  margin: 2rem 0;
+  margin: 5rem 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .home li article {
-  --list-column: 2/3;
-
   filter: blur(var(--blur));
   transform: var(--rotation) var(--skew) var(--scale);
-}
-
-.home li:nth-child(2) article {
-  --list-column: 1/2;
+  width: 50vw;
 }
