@@ -34,20 +34,22 @@
   padding: 3rem 1rem;
 }
 
-.home article.article--cyan {
-  --article-background: var(--highlight-2);
-}
-
-.home article.article--post {
+.home .article--post article {
   background-color: var(--app-colour-background);
 }
 
-.home article.article--thing {
+.home .article--thing article {
+  --article-background: var(--highlight);
+
   filter: blur(var(--blur)) drop-shadow(0 0 0.4rem var(--article-background));
   background-color: var(--article-background);
 }
 
-.home article.article--thing::before {
+.home .article--thing:nth-of-type(even) article {
+  --article-background: var(--highlight-2);
+}
+
+.home .article--thing article::before {
   content: '';
   display: block;
   width: 100%;
@@ -78,7 +80,7 @@
     width: 100%;
   }
 
-  .home article.article--thing::before {
+  .home .article--thing article::before {
     display: none;
   }
 }

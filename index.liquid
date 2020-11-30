@@ -18,10 +18,10 @@ title: "Home"
   {% if post.data.is_thing %}
     {% assign post_url = post.data.thing_link %}
     {% assign post_cta = post.data.thing_link_text %}
-    {% assign post_class = "article--thing article--cyan" %}
+    {% assign post_class = "article--thing" %}
   {% endif %}
-  <li class="list:none max-width:none">
-    <article class="{{ post_class }}">
+  <li class="list:none max-width:none {{ post_class }}">
+    <article>
       <a href="{{ post_url }}" id="{{ post.slug }}">
         <h2>{{ post.title }}</h2>
       </a>

@@ -1,15 +1,15 @@
 ---
+permalink: "/{{parent}}/{{slug}}/"
+title: Some pen
+description: "YO yo yo"
 layout: post.liquid
-title: First Post
 is_draft: true
-permalink: /{{parent}}/{{slug}}/
-description: Put the pages's abstract here...
 data: {
   has_animation: false,
   animation_file: null,
-  is_thing: false,
-  thing_link: null,
-  thing_link_text: null
+  is_thing: true,
+  thing_link: "https://codepen.io",
+  thing_link_text: "View pen"
 }
 ---
 
