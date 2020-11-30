@@ -1,5 +1,5 @@
 .home {
-  --rotation: rotate3d(0, 1, 0.3, 20deg);
+  --rotation: rotate3d(-2, -1, 1, 20deg);
   --scale--normal: scale(1);
   --scale--big: scale(1.2);
   --scale: var(--scale--normal);
@@ -10,6 +10,10 @@
 .home ul {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: 95%;
+  width: 80%;
+  width: clamp(55rem, 60vw, 80%);
 }
 
 .home li {
@@ -18,8 +22,63 @@
   justify-content: flex-end;
 }
 
-.home li article {
+.home article {
+  --article-background: transparent;
+
   filter: blur(var(--blur));
   transform: var(--rotation) var(--skew) var(--scale);
+  max-width: 100%;
+  width: 360px;
   width: 50vw;
+  width: clamp(360px, 50vw, 60vh);
+  padding: 3rem 1rem;
+}
+
+.home article.article--cyan {
+  --article-background: var(--highlight-2);
+}
+
+.home article.article--post {
+  background-color: var(--app-colour-background);
+}
+
+.home article.article--thing {
+  filter: blur(var(--blur)) drop-shadow(0 0 0.4rem var(--article-background));
+  background-color: var(--article-background);
+}
+
+.home article.article--thing::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  background: linear-gradient(to top, var(--app-colour-background), var(--article-background));
+  filter: drop-shadow(0, 0, 1rem, var(--article-background));
+  position: absolute;
+  left: -300px;
+  top: 400px;
+  transform: skew(-70deg, 0deg);
+  opacity: 0.04;
+}
+
+.article--thing * {
+  color: var(--app-colour-background);
+}
+
+@media only screen and (max-width: 55rem) {
+  .home li {
+    justify-content: center;
+  }
+
+  .home article {
+    transform: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 100%;
+  }
+
+  .home article.article--thing::before {
+    display: none;
+  }
 }

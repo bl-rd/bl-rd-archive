@@ -1,18 +1,15 @@
 .signoff {
-  display: block;
-  content: '';
   margin-top: 5rem;
-  filter: drop-shadow(-1ch 1ch 0 var(--highlight));
-  width: 6vmin;
-  height: 6vmin;
-  background-color: var(--app-colour-body);
-  margin-left: 1ch;
-  margin-bottom: 5rem;
+  display: flex;
 }
 
-@media only screen and (max-width: 66rem) {
-  .signoff {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.signoff p {
+  background-color: var(--app-colour-body);
+  color: var(--app-colour-background);
+  width: auto;
+  padding: 1.33rem 0.2rem 1rem;
+  font-size: var(--s1);
+  display: inline-block;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }

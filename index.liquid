@@ -1,6 +1,6 @@
 ---
 layout: home.liquid
-title: "Bill's website"
+title: "Home"
 ---
 {% comment %}
 # Home page layout
@@ -8,18 +8,20 @@ title: "Bill's website"
 - Generates a list of the most recent articles
 {% endcomment %}
 
-<ul class="max-width:none">
+<ul>
   {% for post in collections.posts.pages %}
 
   {% assign post_url = post.permalink %}
   {% assign post_cta = "Read more" %}
+  {% assign post_class = "article--post" %}
 
   {% if post.data.is_thing %}
     {% assign post_url = post.data.thing_link %}
     {% assign post_cta = post.data.thing_link_text %}
+    {% assign post_class = "article--thing article--cyan" %}
   {% endif %}
   <li class="list:none max-width:none">
-    <article>
+    <article class="{{ post_class }}">
       <a href="{{ post_url }}" id="{{ post.slug }}">
         <h2>{{ post.title }}</h2>
       </a>

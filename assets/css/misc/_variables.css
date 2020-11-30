@@ -9,7 +9,7 @@
   --s5: calc(var(--s4) * var(--ratio));
   --s-small: calc(var(--s0) * 0.85);
   --font-sans-serif: 'Manrope', 'Open Sans', 'Roboto', 'Source Sans Pro', Helvetica, Arial, sans-serif;
-  --font-monospace: 'SpaceMono', 'Fira Code', 'JetBrains Mono', 'Courier New', 'Lucida Console', 'Consolas', monospace;
+  --font-monospace: 'SpaceMono', 'Fira Code', 'JetBrains Mono', 'mononoki', 'Courier New', 'Lucida Console', 'Consolas', monospace;
 
   /* font variables */
   --font-heading: var(--font-sans-serif);
@@ -23,7 +23,7 @@
   --black-secondary: #121211;
   --highlight: #ff2877;
   --highlight-offset: #cc215f;
-  --highlight-2: #d4ff02;
+  --highlight-2: #0ff;
 
   /* theme */
   --app-colour-body: var(--black);
