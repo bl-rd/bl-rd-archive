@@ -39,20 +39,16 @@
   --background: var(--app-colour-background);
   --foreground: var(--app-colour-body);
   --gradient-colour: rgba(0, 0, 0, 0);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /*
-      Make black and white less contrasty in dark mode
-    */
-
-    /* --black: #121212; */
-    --white: #cdcdcc;
-    --app-colour-body: var(--white);
-    --app-colour-background: var(--black);
-    --gradient-colour: var(--foreground);
-  }
+  /*
+      These variables keep the site in "dark" mode. To have
+      it respond to the OS settings then wrap in a
+      @media (prefers-color-scheme: dark) query
+  */
+  --white: #cdcdcc;
+  --app-colour-body: var(--white);
+  --app-colour-background: var(--black);
+  --gradient-colour: var(--foreground);
 }
 
 * {
