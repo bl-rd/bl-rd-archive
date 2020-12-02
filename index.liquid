@@ -2,42 +2,10 @@
 layout: home.liquid
 title: "Home"
 ---
-{% comment %}
-# Home page layout
 
-- Generates a list of the most recent articles
-{% endcomment %}
+<header>
+  <h1>Bill's website</h1>
+  <p>How do?</p>
+</header>
 
-<ul>
-  {% for post in collections.posts.pages %}
-
-  {% assign post_url = post.permalink %}
-  {% assign post_cta = "Read more" %}
-  {% assign post_class = "article--post" %}
-
-  {% if post.data.is_thing %}
-    {% assign post_url = post.data.thing_link %}
-    {% assign post_cta = post.data.thing_link_text %}
-    {% assign post_class = "article--thing" %}
-  {% endif %}
-  <li class="list:none max-width:none {{ post_class }}">
-    <article>
-      <a href="{{ post_url }}" id="{{ post.slug }}">
-        <h2>{{ post.title }}</h2>
-      </a>
-      
-      {% if post.is_draft == false %}
-      <time datetime="{{ post.published_date}}">⌚ {{ post.published_date | date: "%b %d %Y" }}</time>
-      {% endif %}
-
-      <p>
-        {{ post.description }}
-      </p>
-
-      <p>
-        <a href="{{ post_url }}" rel="nofollow noopener noreferrer">{{ post_cta }}</a>
-      </p>
-    </article>
-  </li>
-  {% endfor %}
-</ul>
+{% include "partials/list.liquid" %}

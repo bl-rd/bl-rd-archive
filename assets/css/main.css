@@ -18,6 +18,7 @@
 @import 'components/_svg.css';
 @import 'components/_iframe.css';
 @import 'components/_blockquote.css';
+@import 'components/_code.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';
