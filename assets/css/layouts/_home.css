@@ -1,10 +1,15 @@
 .home {
-  --rotation: rotate3d(-2, -1, 1, 20deg);
   --scale--normal: scale(1);
   --scale--big: scale(1.2);
   --scale: var(--scale--normal);
-  --skew: skew(6deg, 2deg);
   --blur: 0;
+}
+
+.home header {
+  max-width: 66rem;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 60vh;
 }
 
 .home ul {
@@ -66,6 +71,16 @@
 
 .article--thing * {
   color: var(--app-colour-background);
+}
+
+.article--codepen .thing-descriptor::before {
+  content: "コデペン";
+  display: block;
+}
+
+.article--github .thing-descriptor::before {
+  content: "ゲテホべ";
+  display: block;
 }
 
 @media only screen and (max-width: 55rem) {

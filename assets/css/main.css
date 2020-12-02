@@ -19,6 +19,7 @@
 @import 'components/_iframe.css';
 @import 'components/_blockquote.css';
 @import 'components/_code.css';
+@import 'components/_background.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

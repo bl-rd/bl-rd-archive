@@ -8,17 +8,27 @@ Generates a list of the most recent articles
   {% assign post_url = post.permalink %}
   {% assign post_cta = "Read more" %}
   {% assign post_class = "article--post" %}
+  {% assign thing_type_class = "" %}
 
   {% if post.data.is_thing %}
     {% assign post_url = post.data.thing_link %}
     {% assign post_cta = post.data.thing_link_text %}
     {% assign post_class = "article--thing" %}
+
+    {% if post_url contains "codepen.io" %}
+      {% assign thing_type_class = "article--codepen" %}
+    {% elsif post_url contains "github.com" %}
+      {% assign thing_type_class = "article--github" %}
+    {% endif %}
   {% endif %}
-  <li class="list:none max-width:none {{ post_class }}">
+
+  <li class="list:none max-width:none {{ post_class }} {{ thing_type_class }}">
     <article>
       <a href="{{ post_url }}" id="{{ post.slug }}">
         <h2>{{ post.title }}</h2>
       </a>
+
+      <span class="thing-descriptor"></span>
       
       {% if post.is_draft == false %}
       <time datetime="{{ post.published_date}}">⌚ {{ post.published_date | date: "%b %d %Y" }}</time>

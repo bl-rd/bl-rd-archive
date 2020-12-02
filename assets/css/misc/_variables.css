@@ -40,6 +40,10 @@
   --foreground: var(--app-colour-body);
   --gradient-colour: rgba(0, 0, 0, 0);
 
+  /* slanty variables */
+  --rotation: rotate3d(-2, -1, 1, 20deg);
+  --skew: skew(6deg, 2deg);
+
   /*
       These variables keep the site in "dark" mode. To have
       it respond to the OS settings then wrap in a
