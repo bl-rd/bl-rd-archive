@@ -28,7 +28,7 @@ Generates a list of the most recent articles
         <h2>{{ post.title }}</h2>
       </a>
 
-      <span class="thing-descriptor"></span>
+      <span class="thing-descriptor" aria-hidden="true"></span>
       
       {% if post.is_draft == false %}
       <time datetime="{{ post.published_date}}">⌚ {{ post.published_date | date: "%b %d %Y" }}</time>

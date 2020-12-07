@@ -37,6 +37,7 @@
   width: 50vw;
   width: clamp(360px, 50vw, 60vh);
   padding: 3rem 1rem;
+  position: relative;
 }
 
 .home .article--post article {
@@ -73,14 +74,28 @@
   color: var(--app-colour-background);
 }
 
+.thing-descriptor {
+  position: absolute;
+  top: -3.5ch;
+  right: 0;
+  padding: 0 0.5ch;
+  font-size: var(--s2);
+  color: var(--article-background);
+  border: 2px solid var(--article-background);
+  display: block;
+}
+
+.thing-descriptor::before {
+  display: block;
+  text-align: right;
+}
+
 .article--codepen .thing-descriptor::before {
   content: "コデペン";
-  display: block;
 }
 
 .article--github .thing-descriptor::before {
   content: "ゲテホべ";
-  display: block;
 }
 
 @media only screen and (max-width: 55rem) {
