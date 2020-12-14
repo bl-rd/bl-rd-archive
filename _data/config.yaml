@@ -2,7 +2,7 @@ title: "bl-rd 🖖"
 author: "Bill Reid"
 
 # animations config
-page_animations_path: "assets/js/animations/"
+page_animations_path: "assets/js/animations"
 
 # lines background on home page
 home_background: false
