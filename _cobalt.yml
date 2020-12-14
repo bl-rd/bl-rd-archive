@@ -5,6 +5,7 @@ ignore:
 site:
   title: cobalt blog
   description: Blog Posts Go Here
-  base_url: https://bl-rd.dev
+  base_url: https://bl-rd.github.io/bl-rd
+  # base_url: https://bl-rd.dev
 posts:
   rss: rss.xml
