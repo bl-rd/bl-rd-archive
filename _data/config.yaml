@@ -4,6 +4,9 @@ author: "Bill Reid"
 # animations config
 page_animations_path: "assets/js/animations/"
 
+# lines background on home page
+home_background: false
+
 # Main javascript files to include
 scripts: [
   "assets/js/lib/text.js",

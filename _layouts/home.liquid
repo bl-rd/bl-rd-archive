@@ -6,7 +6,10 @@
 </head>
 
 <body class="no-js no-animate no-component">
-  {% include "partials/background.html" %}
+  {% if site.data.config.home_background %}
+    {% include "partials/background.html" %}
+  {% endif %}
+  
   <main class="home">
     {{ page.content }}
   </main>
