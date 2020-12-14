@@ -4,3 +4,12 @@ code {
   padding: 0.1rem;
   background-color: grey;
 }
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+pre span {
+  font-size: 0.8em;
+}

@@ -6,7 +6,8 @@
 @import 'layouts/_home.css';
 
 /* components */
-@import 'components/_navigation.css';
+
+/* @import 'components/_navigation.css'; */
 @import 'components/_anchor.css';
 @import 'components/_article.css';
 @import 'components/_aside.css';
@@ -20,6 +21,7 @@
 @import 'components/_blockquote.css';
 @import 'components/_code.css';
 @import 'components/_background.css';
+@import 'components/_diagonal-lines.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

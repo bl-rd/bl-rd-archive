@@ -2,10 +2,11 @@
   Navigation for when there is no JS, or when web components aren't
   supported. Styling for the main navigation is done in the slide-menu.js component
 */
-header > div:not(.animation) {
+
+/* header > div:not(.animation) {
   display: none;
   visibility: hidden;
-}
+} */
 
 /* .no-component header > div {
   display: block;

@@ -2,7 +2,7 @@
 permalink: "/{{parent}}/{{slug}}/"
 title: "Hello, world!"
 description: "I've created a personal website! It has a blog! Ok, now what?"
-published_date: "2020-11-23 14:37:33 +0000"
+published_date: "2020-01-02 14:37:33 +0000"
 layout: post.liquid
 is_draft: false
 data:

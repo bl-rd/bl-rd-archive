@@ -6,10 +6,10 @@ permalink: /{{parent}}/{{slug}}/
 description: Put the pages's abstract here...
 data: {
   has_animation: false,
-  animation_file: null,
+  animation_file: ~,
   is_thing: false,
-  thing_link: null,
-  thing_link_text: null
+  thing_link: ~,
+  thing_link_text: ~
 }
 ---
 
