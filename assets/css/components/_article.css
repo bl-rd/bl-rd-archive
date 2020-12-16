@@ -54,6 +54,17 @@
   margin: 2.5rem 0 1.75rem;
 }
 
+.single > header {
+  grid-column: 1/5;
+  margin: 0;
+  padding: 0 2rem 0.8rem 0;
+}
+
+.single > header p,
+.single > header p * {
+  font-size: var(--s2);
+}
+
 .single a[data-footnote] > * {
   font-weight: bold;
 }
@@ -67,16 +78,6 @@
 
 .single .supplementary + h2 {
   margin-top: 0;
-}
-
-.single > header {
-  grid-column: 1/5;
-  margin: 0;
-  padding: 0 2rem 0.8rem 0;
-}
-
-.single > header p {
-  font-size: var(--s2);
 }
 
 .single nav ul {
