@@ -3,9 +3,8 @@ ignore:
   - "package*"
   - "postcss.config.js"
 site:
-  title: cobalt blog
-  description: Blog Posts Go Here
-  base_url: https://bl-rd.github.io/bl-rd
-  # base_url: https://bl-rd.dev
+  title: Bill's website
+  description: Website of Bill
+  base_url: https://bl-rd.dev
 posts:
   rss: rss.xml
