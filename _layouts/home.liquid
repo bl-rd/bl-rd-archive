@@ -14,7 +14,22 @@
     {{ page.content }}
   </main>
 
-  <script src="{{ site.base_url }}/assets/js/lib/list-scroll.js" defer type="module"></script>
+  <script>
+    (function() {
+      const mm = window.matchMedia;
+    
+      // accessibility checks
+      if (mm && (mm('(prefers-reduced-motion: reduce)').matches || mm('(max-height: 800px').matches)) {
+        return;
+      }
+
+      const s = document.createElement('script');
+      s.setAttribute('type', 'module');
+      s.setAttribute('defer', 'true');
+      s.src = '{{ site.base_url }}/assets/js/lib/list-scroll.js';
+      document.body.append(s);
+    })();
+  </script>
 </body>
 
 </html>

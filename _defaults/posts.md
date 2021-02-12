@@ -17,6 +17,6 @@ data: {
 
 Add some content...
 
-{% if page.data.is_link %}
-View the [project]({{page.data.link_url}})
+{% if page.data.is_thing %}
+[{{ page.data.thing_link_text }}]({{ page.data.thing_link }})
 {% endif %}

@@ -1,13 +1,4 @@
 (function () {
-  const {
-    matchMedia: mm
-  } = window;
-
-  // accessibility checks
-  if (mm && mm('(prefers-reduced-motion: reduce)').matches) {
-    return;
-  }
-
   const articles = Array.from(document.querySelectorAll('article'));
 
   articles.forEach(x => {
