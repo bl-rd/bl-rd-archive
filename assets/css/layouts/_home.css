@@ -112,7 +112,7 @@
   color: var(--app-colour-background);
 }
 
-.thing-descriptor {
+.article--thing .thing-descriptor {
   position: absolute;
   top: -3.5ch;
   right: 0;
