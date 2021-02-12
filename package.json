@@ -9,7 +9,9 @@
     "build": "cobalt clean && npm run build:css && cobalt build",
     "build:css": "postcss assets/css/main.css -o _includes/styles/main.css",
     "lint:js": "eslint '**/*.{js,html}' --fix",
-    "lint:css": "stylelint **/*.css --fix"
+    "lint:css": "stylelint **/*.css --fix",
+    "deploy": "netlify deploy -d _site",
+    "deploy:prod": "npm run deploy -- --prod"
   },
   "keywords": [],
   "author": "",
