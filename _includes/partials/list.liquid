@@ -1,6 +1,9 @@
 {% comment %}
 Generates a list of the most recent articles
 {% endcomment %}
+{% if page.data.title %}
+  <h2 class="body:width list-title animation:flash-before">{{ page.data.title }}</h2>
+{% endif %}
 
 <ul>
   {% for post in collections.posts.pages %}

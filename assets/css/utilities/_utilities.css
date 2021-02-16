@@ -34,3 +34,26 @@
 .list\:none {
   list-style: none;
 }
+
+.body\:width {
+  max-width: 95%;
+  width: 80%;
+  width: clamp(55rem, 60vw, 80%);
+  margin: 0 auto;
+}
+
+.text-align\:right {
+  text-align: right;
+}
+
+.animation\:flash,
+.animation\:flash-before::before {
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+
+  /* animation: flash 2s linear 0s infinite forwards; */
+}

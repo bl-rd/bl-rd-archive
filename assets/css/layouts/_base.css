@@ -111,7 +111,9 @@ small > * {
 @media screen and
   (prefers-reduced-motion: reduce),
   (update: slow) {
-  * {
+  *,
+  .animation\:flash,
+  .animation\:flash-before::before {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     animation-delay: 0.01s !important;

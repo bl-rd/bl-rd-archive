@@ -7,27 +7,53 @@
 
 .home header {
   max-width: 66rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 1rem;
-  min-height: 40vh;
+  min-height: 80vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
 .home header h1,
 .home header p {
+  padding: 0.5rem;
   background-color: var(--app-colour-background);
+}
+
+.home header h1 {
+  transform: rotate(-2deg);
+}
+
+.home header p {
+  transform: rotate(2deg);
+}
+
+.home h2.list-title {
+  text-align: right;
+  margin-bottom: 5rem;
+  font-family: var(--font-monospace);
+}
+
+.home h2.list-title::before {
+  content: '';
+  display: inline-block;
+  margin-right: 1ch;
+  width: 1ch;
+  height: 1ch;
+  background-color: var(--app-colour-body);
 }
 
 .home header svg {
   position: absolute;
   max-height: 100%;
   z-index: -1;
-
-  --animation-delay: 0s;
+  left: 50%;
+  top: 50%;
+  filter: drop-shadow(0 0 0.4rem var(--app-colour-body));
+  transform: translate(-50%, -50%);
 }
 
 .home header svg * {
