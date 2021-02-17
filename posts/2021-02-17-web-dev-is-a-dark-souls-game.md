@@ -2,16 +2,16 @@
 permalink: "/{{parent}}/{{slug}}/"
 title: Web dev is a Dark Souls game
 description: YOU DIED
+published_date: "2021-02-17 21:05:01 +0000"
 layout: post.liquid
-is_draft: true
+is_draft: false
 data:
-  thing_link: ~
-  animation_file: animations/dark-souls.html
   is_thing: false
-  has_animation: true
+  thing_link: ~
   thing_link_text: ~
+  animation_file: animations/dark-souls.html
+  has_animation: true
 ---
-
 ## Sorry, a what now?
 
 I didn't really know what Dark Souls was (other than a computer game), although I had at least _heard_ about it. Then lockdown 1.0 happened and it was on offer, so I tried it out.
