@@ -1,56 +1,8 @@
-/*
-  Navigation for when there is no JS, or when web components aren't
-  supported. Styling for the main navigation is done in the slide-menu.js component
-*/
-
-/* header > div:not(.animation) {
-  display: none;
-  visibility: hidden;
-} */
-
-/* .no-component header > div {
-  display: block;
-  visibility: visible;
-  max-width: none;
-} */
-
-noscript nav *,
-.no-component nav * {
-  animation: none;
-}
-
-noscript nav,
-.no-component nav {
-  position: initial;
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  max-width: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-noscript nav ul,
-.no-component nav ul {
-  width: var(--measure-width);
-  margin: 0 auto;
+nav ul {
   display: flex;
-  justify-content: flex-end;
-  padding: 1.5rem 3ch 1.5rem 0;
 }
 
-@supports (display: grid) {
-  noscript nav,
-  .no-component nav ul {
-    grid-column: 2/6;
-  }
-}
-
-noscript nav ul li,
-.no-component nav ul li {
-  margin-left: 2rem;
-  margin-right: initial;
-  opacity: 1;
+nav li {
+  margin: 1rem;
   list-style: none;
 }

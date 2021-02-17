@@ -1,7 +1,6 @@
 .single {
   counter-reset: footnotes;
   margin: 0 auto;
-  max-width: calc(var(--measure-width) + 5vw);
   display: grid;
   grid-template-columns: var(--grid-columns-full);
   grid-template-rows: auto;

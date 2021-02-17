@@ -23,6 +23,7 @@
 @import 'components/_background.css';
 @import 'components/_diagonal-lines.css';
 @import 'components/_text.css';
+@import 'components/_navigation.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

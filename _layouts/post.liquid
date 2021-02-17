@@ -6,8 +6,11 @@
 </head>
 
 <body class="no-js no-animate no-component">
+  
+  {% include "partials/navigation.liquid" %}
+
   <main>
-    <article class="single h-entry" itemid="{{site.base_url}}/{{page.permalink}}">
+    <article class="single h-entry max-width:base5" itemid="{{site.base_url}}/{{page.permalink}}">
       <header>
         {% if page.data.has_animation == "true" %}
         {% assign animation_file = page.data.animation_file %}

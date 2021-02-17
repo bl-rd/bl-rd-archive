@@ -6,6 +6,11 @@
   max-width: none;
 }
 
+.max-width\:base5 {
+  max-width: var(--body-width);
+  margin: 0 auto;
+}
+
 .display\:none {
   display: none;
   visibility: hidden;

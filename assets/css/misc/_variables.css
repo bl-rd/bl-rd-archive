@@ -32,6 +32,7 @@
 
   /* layout */
   --measure-width: 66ch;
+  --body-width: calc(var(--measure-width) + 5vw);
   --grid-columns-full: repeat(4, 1fr);
 
   /* animation */
