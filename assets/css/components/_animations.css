@@ -57,6 +57,10 @@
   margin-right: calc(var(--elem-width) * 2);
 }
 
+.animation__container--paused * {
+  animation-play-state: paused !important;
+}
+
 /* strong::before,
 strong::after {
   content: '*';
