@@ -22,6 +22,7 @@
 @import 'components/_code.css';
 @import 'components/_background.css';
 @import 'components/_diagonal-lines.css';
+@import 'components/_text.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';

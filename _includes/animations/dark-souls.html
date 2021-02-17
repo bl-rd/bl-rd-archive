@@ -1,0 +1,62 @@
+<style>
+  .ds-soul {
+    width: 30%;
+    height: 30%;
+    position: relative;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: var(--app-colour-body);
+    filter: drop-shadow(0 0 0.3rem var(--app-colour-body));
+
+    animation: ds-bob 1.25s 0s infinite alternate forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  .ds-soul__particle {
+    --particle-delay: 0s;
+    --particle-offset: 0%;
+    width: 50%;
+    height: 50%;
+    top: 30%;
+    left: var(--particle-offset);
+    border-radius: 50%;
+    background-color: var(--app-colour-body);
+    position: absolute;
+
+    animation: ds-ascend 2s linear var(--particle-delay) infinite normal forwards;
+  }
+  
+  @keyframes ds-bob {
+    from {
+      transform: translate(-50%, -5%);
+    }
+    to {
+      transform: translate(-50%, 5%);
+    }
+  }
+
+  @keyframes ds-ascend {
+    0% {
+      top: 30%;
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      top: -110%;
+      opacity: 0;
+      transform: scale(0.1);
+    }
+  }
+</style>
+
+<div class="animation" aria-hidden="true">
+  <div class="animation__container">
+    <div class="ds-soul">
+      <div class="ds-soul__particle"></div>
+      <div class="ds-soul__particle" style="--particle-delay:0.7s;--particle-offset:50%;"></div>
+      <div class="ds-soul__particle" style="--particle-delay:1s;--particle-offset:20%;"></div>
+    </div>
+  </div>
+</div>
