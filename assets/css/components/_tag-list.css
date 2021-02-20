@@ -1,0 +1,10 @@
+.tag-list ul {
+  display: inline-flex;
+  margin: 0;
+}
+
+.tag-list li {
+  margin-left: 1rem;
+  margin-left: 1ch;
+  margin-bottom: 0;
+}

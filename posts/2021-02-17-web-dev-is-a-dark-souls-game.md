@@ -11,6 +11,7 @@ data:
   thing_link_text: ~
   animation_file: animations/dark-souls.html
   has_animation: true
+tags: [ web, javascript, games ]
 ---
 ## Sorry, a what now?
 

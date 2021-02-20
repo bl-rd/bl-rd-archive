@@ -1,0 +1,58 @@
+---
+layout: content_list.liquid
+title: Content tagged "web"
+data: {
+  tag: "web"
+}
+pagination:
+  include: Tags
+---
+
+
+{% if paginator.indexes %} {% comment %} meta paginator case {% endcomment %}
+  <h1>Tags</h1>
+  <p>
+    {% for ptag in paginator.indexes %}
+      <span>
+        <a href="/{{ ptag.index_permalink }}/" 
+           style="font-size: {{ ptag.total_pages | times: 4 | plus: 80 }}%">
+          {{ ptag.index_title }} ({{ ptag.total_pages }})
+        </a>
+      </span>
+    {% endfor %}
+  </p>
+{% else %} {% comment %} normal paginator case {% endcomment %}
+
+<header class="max-width:base5 padding:1em">
+  <h1>
+    Content tagged &ldquo;{{ paginator.index_title }}&rdquo;
+  </h1>
+</header>
+<main class="max-width:base5">
+  <ul>
+    {% for page in paginator.pages %}
+      <li class="list:none">
+        <article>
+          <a href="/{{ page.permalink }}">
+            <h2>{{ page.title }}</h2>
+          </a>
+          <p>{{ page.description }}</p>
+          {% if page.tags.size > 0 %}
+          <div class="tag-list">
+            Tagged:
+            <ul>
+              {% for tag in page.tags %}
+              <li class="list:none">
+                <a class="link-highlight" href="{{ site.base_url }}/tag/{{ tag }}">{{ tag }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
+
+{% endif %}

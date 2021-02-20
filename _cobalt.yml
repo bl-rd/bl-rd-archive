@@ -1,10 +1,12 @@
 ignore:
   - "node_modules/**/*"
   - "package*"
+  - "pnpm-lock.yaml"
   - "postcss.config.js"
 site:
   title: Bill's website
-  description: Website of Bill
+  description: Bletherings of Bill, a web developer based in Cumbria.
   base_url: https://bl-rd.dev
 posts:
   rss: rss.xml
+  jsonfeed: json-feed.json

@@ -29,3 +29,11 @@ a:active {
   background-color: var(--highlight);
   text-decoration: none;
 }
+
+a.link-highlight {
+  color: var(--highlight);
+}
+
+a.link-highlight:hover {
+  color: var(--app-colour-body);
+}

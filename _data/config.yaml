@@ -7,6 +7,22 @@ page_animations_path: "assets/js/animations"
 # lines background on home page
 home_background: true
 
+# notes config
+notes_overflow_size: 75
+
+# tags config
+valid_tags: [
+  "web",
+  "indieweb",
+  "javascript",
+  "css",
+  "codepen",
+  "html",
+  "rust",
+  "games",
+  "music"
+]
+
 # Main javascript files to include
 scripts: [
   "assets/js/lib/text.js",

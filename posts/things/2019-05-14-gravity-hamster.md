@@ -10,7 +10,11 @@ data:
   thing_link: "https://codepen.io/bl-rd/full/RmKNqZ"
   thing_link_text: View the pen
   is_thing: true
-  has_animation: false
+  has_animation: 
+tags: [
+  css,
+  codepen
+]
 ---
 {% if page.data.is_link %}
 View the [pen]({{page.data.link_url}})

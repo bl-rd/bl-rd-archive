@@ -11,6 +11,10 @@ data:
   thing_link: "https://github.com/bl-rd/rock-paper-rusty-scissors"
   is_thing: true
   animation_file: ~
+tags: [
+  rust,
+  games
+]
 ---
 
 [{{ page.data.thing_link_text }}]({{ page.data.thing_link }})

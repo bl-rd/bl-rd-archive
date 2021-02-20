@@ -32,6 +32,10 @@
   padding: 0;
 }
 
+.padding\:1em {
+  padding: 1em;
+}
+
 .flex-basis\:100 {
   flex-basis: 100%;
 }

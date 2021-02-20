@@ -94,13 +94,9 @@
   transform: var(--rotation) var(--skew) var(--scale);
   max-width: 100%;
   width: 360px;
-  width: 50vw;
-  width: clamp(360px, 50vw, 70vh);
+  width: 70%;
   padding: 3rem 1rem;
   position: relative;
-}
-
-.home .article--post article {
   background-color: var(--app-colour-background);
 }
 
@@ -162,9 +158,20 @@
   content: "ゲテホべ";
 }
 
+@media only screen and (max-width: 66rem) {
+  .home article {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 55rem) {
   .home li {
     justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .home li.article--thing {
+    margin-top: 4rem;
   }
 
   .home article {
@@ -180,5 +187,14 @@
 
   .home .article--thing article::before {
     display: none;
+  }
+
+  .home header svg {
+    top: 35%;
+  }
+
+  .home h2.list-title {
+    margin-bottom: 1rem;
+    font-size: var(--s1);
   }
 }

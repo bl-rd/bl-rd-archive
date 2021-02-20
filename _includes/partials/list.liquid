@@ -6,11 +6,13 @@ Generates a list of the most recent articles
 {% endif %}
 
 <ul>
-  {% for post in collections.posts.pages %}
+{% for post in collections.posts.pages %}
 
   {% assign post_url = post.permalink %}
   {% assign post_cta = "Read more" %}
   {% assign post_class = "article--post" %}
+  {% assign post_content = post.description %}
+  {% assign post_show_read_more = true %}
   {% assign thing_type_class = "" %}
 
   {% if post.data.is_thing %}
@@ -22,6 +24,16 @@ Generates a list of the most recent articles
       {% assign thing_type_class = "article--codepen" %}
     {% elsif post_url contains "github.com" %}
       {% assign thing_type_class = "article--github" %}
+    {% endif %}
+  {% endif %}
+
+  {% if post.data.is_note %}
+    {% assign post_class = "article--note" %}
+    {% assign post_content = post.content %}
+
+    {% assign content_length = post_content | size %}
+    {% if content_length < site.data.config.notes_overflow_size %}
+      {% assign post_show_read_more = false %}
     {% endif %}
   {% endif %}
 
@@ -38,13 +50,15 @@ Generates a list of the most recent articles
       {% endif %}
 
       <p>
-        {{ post.description }}
+        {{ post_content }}
       </p>
 
+      {% if post_show_read_more %}
       <p>
         <a href="{{ post_url }}" rel="nofollow noopener noreferrer">{{ post_cta }}</a>
       </p>
+      {% endif %}
     </article>
   </li>
-  {% endfor %}
+{% endfor %}
 </ul>

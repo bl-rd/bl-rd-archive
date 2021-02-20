@@ -11,6 +11,7 @@ data:
   thing_link: ~
   thing_link_text: ~
   animation_file: animations/video-game-text.html
+tags: [ web, javascript, games, animation ]
 ---
 ## But why?
 

@@ -5,11 +5,20 @@ is_draft: true
 permalink: /{{parent}}/{{slug}}/
 description: Put the pages's abstract here...
 data: {
+  # animation config
   has_animation: false,
   animation_file: ~,
+
+  # thing config
   is_thing: false,
   thing_link: ~,
-  thing_link_text: ~
+  thing_link_text: ~,
+
+  # note config
+  is_note: false,
+
+  # tags config
+  tags: []
 }
 ---
 

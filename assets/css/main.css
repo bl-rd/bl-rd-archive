@@ -24,6 +24,7 @@
 @import 'components/_diagonal-lines.css';
 @import 'components/_text.css';
 @import 'components/_navigation.css';
+@import 'components/_tag-list.css';
 
 /* utilities */
 @import 'utilities/_utilities.css';
