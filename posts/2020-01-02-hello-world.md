@@ -9,7 +9,7 @@ data:
   animation_file: animations/hello-world.html
   has_animation: true
 tags: [ web, indieweb ]
-categories: [ post ]
+categories: [ posts ]
 ---
 ## Why
 

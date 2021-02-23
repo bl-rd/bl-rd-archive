@@ -15,7 +15,7 @@ tags: [
   rust,
   games
 ]
-categories: [ thing ]
+categories: [ things ]
 ---
 
 [{{ page.data.thing_link_text }}]({{ page.data.thing_link }})

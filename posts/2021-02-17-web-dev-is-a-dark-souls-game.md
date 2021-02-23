@@ -12,7 +12,7 @@ data:
   animation_file: animations/dark-souls.html
   has_animation: true
 tags: [ web, javascript, games ]
-categories: [ post ]
+categories: [ posts ]
 ---
 ## Sorry, a what now?
 
