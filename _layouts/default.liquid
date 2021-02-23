@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   {% include "partials/head.liquid" %}
 </head>
 
 <body class="no-js no-animate no-component">
-  <main>
-    <h2>{{ page.title }}</h2>
-    {{ page.content }}
-  </main>
+  {% include "partials/navigation.liquid" %}
+  {{ page.content }}
 </body>
 
 </html>
