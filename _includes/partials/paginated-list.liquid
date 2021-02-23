@@ -1,11 +1,16 @@
 {% if paginator.pages %}
-<ul>
+<ul class="paginated-list">
   {% for page in paginator.pages %}
     <li class="list:none">
       <article>
         <a href="/{{ page.permalink }}">
           <h2>{{ page.title }}</h2>
         </a>
+
+        {% if page.is_draft == false %}
+        <time class="font:reduced" datetime="{{ page.published_date}}">{{ page.published_date | date: "%b %d %Y" }}</time>
+        {% endif %}
+
         <p>{{ page.description }}</p>
         {% if page.tags %}
         <div class="tag-list">
