@@ -1,12 +1,13 @@
 ---
 layout: default.liquid
 pagination:
-  include: Tags
+  include: Categories
 ---
+
 
 {% if paginator.indexes %} {% comment %} meta paginator case {% endcomment %}
   <header class="max-width:base5 padding:1em">
-    <h1>Tags</h1>
+    <h1>Categories</h1>
   </header>
 
   {% include "partials/paginated-meta.liquid" %}
@@ -15,7 +16,7 @@ pagination:
 
   <header class="max-width:base5 padding:1em">
     <h1>
-      Content tagged &ldquo;{{ paginator.index_title }}&rdquo;
+      {{ paginator.index_title }}s
     </h1>
   </header>
   <main class="max-width:base5">

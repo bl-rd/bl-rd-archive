@@ -1,0 +1,26 @@
+{% if paginator.pages %}
+<ul>
+  {% for page in paginator.pages %}
+    <li class="list:none">
+      <article>
+        <a href="/{{ page.permalink }}">
+          <h2>{{ page.title }}</h2>
+        </a>
+        <p>{{ page.description }}</p>
+        {% if page.tags %}
+        <div class="tag-list">
+          Tagged:
+          <ul>
+            {% for tag in page.tags %}
+            <li class="list:none">
+              <a class="link-highlight" href="{{ site.base_url }}/tag/{{ tag }}">{{ tag }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}

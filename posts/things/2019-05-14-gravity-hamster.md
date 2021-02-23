@@ -15,6 +15,7 @@ tags: [
   css,
   codepen
 ]
+categories: [ thing ]
 ---
 {% if page.data.is_link %}
 View the [pen]({{page.data.link_url}})
