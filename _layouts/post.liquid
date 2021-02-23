@@ -40,6 +40,21 @@
 
       <div class="e-content" itemprop="articleBody">
         {{ page.content }}
+
+        {% if page.tags %}
+        <section aria-label="tags" class="tag-list tag-list--right">
+          <ul>
+            Tagged:
+            {% for tag in page.tags %}
+            <li>
+              <a href="{{ site.base_url }}/tag/{{ tag }}" class="link-highlight">
+                {{ tag }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
       </div>
 
       {% include "partials/signoff.liquid" %}

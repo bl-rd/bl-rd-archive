@@ -12,9 +12,9 @@ data: {
 Generates a list of the most recent articles
 {% endcomment %}
 
-{% if page.data.title %}
-  <h2 class="body:width list-title animation:flash-before">{{ page.data.title }}</h2>
-{% endif %}
+<h2 class="body:width list-title animation:flash-before">
+  Latest posts
+</h2>
 
 <ul>
 {% for post in collections.posts.pages %}
@@ -73,7 +73,7 @@ Generates a list of the most recent articles
       {% endif %}
 
       {% if post.tags %}
-      <div class="tag-list tag-list--home">
+      <div class="tag-list tag-list--home tag-list--right">
         <ul>
           {% for tag in post.tags %}
           <li>

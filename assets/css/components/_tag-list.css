@@ -4,8 +4,10 @@
   margin: 0;
 }
 
-.tag-list.tag-list--home ul {
+.tag-list.tag-list--right ul {
   justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .tag-list li,
