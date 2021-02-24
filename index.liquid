@@ -59,7 +59,7 @@ Generates a list of the most recent articles
       <span class="thing-descriptor" aria-hidden="true"></span>
       
       {% if post.is_draft == false %}
-      <time datetime="{{ post.published_date}}">{{ post.published_date | date: "%b %d %Y" }}</time>
+      <time datetime="{{ post.published_date }}">{{ post.published_date | date: "%b %d %Y" }}</time>
       {% endif %}
 
       <p>

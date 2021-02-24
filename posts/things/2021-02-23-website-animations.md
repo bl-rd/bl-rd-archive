@@ -17,4 +17,5 @@ data:
   thing_link: "https://codepen.io/collection/AEbPGN"
   is_thing: true
 ---
-[page.data.thing_link_text]({{page.data.thing_link}})
+
+[{{page.data.thing_link_text}}]({{page.data.thing_link}})

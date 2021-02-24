@@ -6,9 +6,6 @@ published_date: "2021-02-17 21:05:01 +0000"
 layout: post.liquid
 is_draft: false
 data:
-  is_thing: false
-  thing_link: ~
-  thing_link_text: ~
   animation_file: animations/dark-souls.html
   has_animation: true
 tags: [ web, javascript, games ]
