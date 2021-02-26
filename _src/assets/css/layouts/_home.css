@@ -100,6 +100,16 @@
   background-color: var(--app-colour-background);
 }
 
+.home article .article__observer {
+  width: 100%;
+  height: 35vh;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
 .home .article--thing article {
   --article-background: var(--highlight);
 

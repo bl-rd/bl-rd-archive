@@ -1,11 +1,14 @@
 (function () {
-  const articles = Array.from(document.querySelectorAll('article'));
+  const observers = Array.from(document.querySelectorAll('article .article__observer'));
 
-  articles.forEach(x => {
+  observers.forEach(x => {
     const observer = new IntersectionObserver(function (entries) {
       const entry = entries.pop();
-      const { intersectionRatio: ratio, target } = entry;
-      if (ratio >= 1) {
+      const { intersectionRatio: ratio, target, boundingClientRect } = entry;
+
+      // For the time being, don't blur when the item leaves
+      // the top of the viewport
+      if (ratio >= 1 || boundingClientRect.y < 0) {
         setBlur(target, 0);
       } else if (ratio >= 0.9) {
         setBlur(target, 1);
@@ -50,11 +53,11 @@
   }
 
   /**
-   * 
+   * Set the blur intensity
    * @param {Element} target
    * @param {Number} val 
    */
   function setBlur(target, val) {
-    target.style = `--blur: ${val}px`;
+    target.parentElement.style = `--blur: ${val}px`;
   }
 })();

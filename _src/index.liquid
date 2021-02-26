@@ -23,11 +23,12 @@ Generates a list of the most recent articles
   {% assign post_cta = "Read more" %}
   {% assign post_class = "article--post" %}
   {% assign post_content = post.description %}
+  {% assign post_category = post.categories | strip %}
   {% assign post_show_read_more = true %}
   {% assign thing_type_class = "" %}
   {% assign tag_css_injections = "--tag-background-colour:var(--app-colour-body);--article-background:var(--app-colour-background)" %}
 
-  {% if post.data.is_thing %}
+  {% if post_category == "things" %}
     {% assign post_url = post.data.thing_link %}
     {% assign post_cta = post.data.thing_link_text %}
     {% assign post_class = "article--thing" %}
@@ -40,18 +41,28 @@ Generates a list of the most recent articles
     {% endif %}
   {% endif %}
 
-  {% if post.data.is_note %}
+  {% if post_category == "notes" %}
     {% assign post_class = "article--note" %}
     {% assign post_content = post.content %}
 
     {% assign content_length = post_content | size %}
     {% if content_length < site.data.config.notes_overflow_size %}
+      {% comment %} Hard coding to false for now as just showing everything {% endcomment %}
       {% assign post_show_read_more = false %}
     {% endif %}
+    {% comment %} Hard coding to false for now as just showing everything {% endcomment %}
+    {% assign post_show_read_more = false %}
   {% endif %}
 
   <li class="list:none max-width:none {{ post_class }} {{ thing_type_class }}">
     <article>
+
+      <div class="article__observer"></div>
+
+      {% comment %} Ridiculous way of removing the last "s" from a string {% endcomment %}
+      {% assign cat_arr = post_category | split: "" | reverse | join: "" %}
+      {% assign cat_str = cat_arr | remove_first: "s" | split: "" | reverse | join: "" %}
+      <span aria-hidden="true">{{ cat_str }}</span>
       <a href="{{ post_url }}" id="{{ post.slug }}">
         <h2>{{ post.title }}</h2>
       </a>

@@ -10,22 +10,17 @@ data: {
   animation_file: ~,
 
   # thing config
-  is_thing: false,
   thing_link: ~,
-  thing_link_text: ~,
-
-  # note config
-  is_note: false,
-
-  # tags config
-  tags: []
+  thing_link_text: ~
 }
+tags: []
+categories: [ posts ]
 ---
 
 ## Don't put the title in a h1 as the layout will take care of that...
 
 Add some content...
 
-{% if page.data.is_thing %}
+{% if page.data.thing_link %}
 [{{ page.data.thing_link_text }}]({{ page.data.thing_link }})
 {% endif %}
