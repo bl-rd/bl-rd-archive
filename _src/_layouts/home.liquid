@@ -21,7 +21,7 @@
       const mm = window.matchMedia;
     
       // accessibility checks
-      if (mm && (mm('(prefers-reduced-motion: reduce)').matches || mm('(max-height: 800px').matches)) {
+      if (mm && (mm('(prefers-reduced-motion: reduce)').matches)) {
         return;
       }
 
