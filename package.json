@@ -11,7 +11,10 @@
     "lint:js": "eslint '**/*.{js,html}' --fix",
     "lint:css": "stylelint **/*.css --fix",
     "deploy": "netlify deploy -d _site",
-    "deploy:prod": "npm run deploy -- --prod"
+    "deploy:prod": "npm run deploy -- --prod",
+    "new": "cobalt new --file=_src/posts/",
+    "new:note": "cobalt new --file=_src/posts/notes",
+    "new:thing": "cobalt new --file=_src/posts/things"
   },
   "keywords": [],
   "author": "",
