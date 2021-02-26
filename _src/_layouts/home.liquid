@@ -3,6 +3,10 @@
 
 <head>
   {% include "partials/head.liquid" %}
+
+  {% assign script_src = site.base_url | append: "/assets/js/dist/default.js" %}
+  <link rel="prefetch" as="script" href="{{ script_src }}" />
+  <script src="{{ script_src }}" defer type="module"></script>
 </head>
 
 <body class="no-js no-animate no-component">

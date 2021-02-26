@@ -1,6 +1,7 @@
 devDependencies:
   concurrently: 5.3.0
   cssnano: 4.1.10
+  esbuild: 0.8.52
   eslint: 6.8.0
   eslint-plugin-html: 6.1.1
   husky: 3.1.0
@@ -1210,6 +1211,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==
+  /esbuild/0.8.52:
+    dev: true
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-b5KzFweLLXoXQwdC/e2+Z80c8uo2M5MgP7yQEEebkFw6In4T9CvYcNoM2ElvJt8ByO04zAZUV0fZkXmXoi2s9A==
   /escalade/3.1.1:
     dev: true
     engines:
@@ -4705,6 +4712,7 @@ packages:
 specifiers:
   concurrently: ^5.3.0
   cssnano: ^4.1.10
+  esbuild: ^0.8.52
   eslint: ^6.8.0
   eslint-plugin-html: ^6.1.1
   husky: ^3.1.0

@@ -3,5 +3,6 @@ resources/
 public/
 _site/
 _src/_includes/styles/main.css
+_src/assets/js/dist/*
 # Local Netlify folder
 .netlify

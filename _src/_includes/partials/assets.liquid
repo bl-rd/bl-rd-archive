@@ -4,12 +4,5 @@
 {% include "styles/main.liquid" %}
 
 {% comment %}
-- Key javascript file paths are saved in _date/config.yaml.
-- They are defer loaded so should be non-critical for content
+- JavaScript builds are now done on a layout by layout basis...
 {% endcomment %}
-{% for script in site.data.config.scripts %}
-
-<link rel="prefetch" as="script" href="{{ site.base_url}}/{{ script }}" />
-<script src="{{ site.base_url }}/{{ script }}" defer type="module"></script>
-
-{% endfor %}

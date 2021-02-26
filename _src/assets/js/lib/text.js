@@ -1,4 +1,4 @@
-function anim() {
+export function videoGameText() {
 
   const {
     matchMedia: mm
@@ -142,5 +142,3 @@ function anim() {
     observer.observe(l);
   });
 }
-
-anim();

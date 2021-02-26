@@ -1,4 +1,4 @@
-(function () {
+export function blurItemsOnScroll () {
   const observers = Array.from(document.querySelectorAll('article .article__observer'));
 
   observers.forEach(x => {
@@ -60,4 +60,4 @@
   function setBlur(target, val) {
     target.parentElement.style = `--blur: ${val}px`;
   }
-})();
+}
