@@ -3,14 +3,12 @@ layout: post.liquid
 title: First Post
 is_draft: true
 permalink: /{{parent}}/{{slug}}/
-description: Put the pages's abstract here...
 data: {
+  # override for description for rss
+  abstract: ~,
+
   # animation config
   animation_file: ~,
-
-  # thing config
-  thing_link: ~,
-  thing_link_text: ~
 }
 tags: []
 categories: [ posts ]
@@ -20,6 +18,4 @@ categories: [ posts ]
 
 Add some content...
 
-{% if page.data.thing_link %}
-[{{ page.data.thing_link_text }}]({{ page.data.thing_link }})
-{% endif %}
+[Don't forget a link!](https://bl-rd.dev)

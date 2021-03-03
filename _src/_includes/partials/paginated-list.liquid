@@ -52,6 +52,12 @@
       {% endif %}
 
       <p>{{ content }}</p>
+
+      {% if category != "notes" %}
+        <p>
+          <a href="{{ post.permalink }}" class="link-highlight">Read more</a>
+        </p>
+      {% endif %}
       {% if post.tags %}
       <div class="tag-list">
         Filed under:
