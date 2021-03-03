@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cobalt clean && npm run build:js && concurrently \"npm run build:css -- --watch\" \"npm run serve\"",
     "serve": "cobalt serve --drafts",
-    "build": "cobalt clean && npm run build:css && cobalt build",
+    "build": "cobalt clean && npm run build:css && npm run build:js && cobalt build",
     "build:css": "postcss _src/assets/css/main.css -o _src/_includes/styles/main.css",
     "build:js": "node ./esbuild",
     "lint:js": "eslint '**/*.{js,html}' --fix",
