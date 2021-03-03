@@ -28,15 +28,22 @@ Generates a list of the most recent articles
   {% assign thing_type_class = "" %}
   {% assign tag_css_injections = "--tag-background-colour:var(--app-colour-body);--article-background:var(--app-colour-background)" %}
 
+  {% comment %} Override the post content for the rss hack {% endcomment %}
+  {% if post.data.abstract %}
+    {% assign post_content = post.data.abstract %}
+  {% else %}
+    {% assign post_content = "" %}
+  {% endif %}
+
   {% if post_category == "things" %}
-    {% assign post_url = post.data.thing_link %}
-    {% assign post_cta = post.data.thing_link_text %}
+    {% assign post_show_read_more = false %}
     {% assign post_class = "article--thing" %}
     {% assign tag_css_injections = "" %}
+    {% assign post_content = post.content %}
 
-    {% if post_url contains "codepen.io" %}
+    {% if post_content contains "codepen.io" %}
       {% assign thing_type_class = "article--codepen" %}
-    {% elsif post_url contains "github.com" %}
+    {% elsif post_content contains "github.com" %}
       {% assign thing_type_class = "article--github" %}
     {% endif %}
   {% endif %}
@@ -69,7 +76,9 @@ Generates a list of the most recent articles
       <span class="thing-descriptor" aria-hidden="true"></span>
       
       {% if post.is_draft == false %}
-      <time datetime="{{ post.published_date }}">{{ post.published_date | date: "%b %d %Y" }}</time>
+      <p>
+        <time datetime="{{ post.published_date }}">{{ post.published_date | date: "%b %d %Y" }}</time>
+      </p>
       {% endif %}
 
       <p>

@@ -5,12 +5,6 @@ description: "What I'm focusing on <strong>right now</strong>"
 published_date: "2020-12-16 22:05:15 +0000"
 layout: post.liquid
 is_draft: false
-data:
-  thing_link: ~
-  has_animation: false
-  is_thing: false
-  thing_link_text: ~
-  animation_file: ~
 ---
 ## S'up
 

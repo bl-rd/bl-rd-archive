@@ -1,13 +1,12 @@
 ---
 permalink: "/{{parent}}/{{slug}}/"
 title: Web dev is a Dark Souls game
-description: YOU DIED
 published_date: "2021-02-17 21:05:01 +0000"
 layout: post.liquid
 is_draft: false
 data:
+  abstract: YOU DIED
   animation_file: animations/dark-souls.html
-  has_animation: true
 tags: [ web, javascript, games ]
 categories: [ posts ]
 ---

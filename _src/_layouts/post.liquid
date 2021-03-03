@@ -13,10 +13,16 @@
   
   {% include "partials/navigation.liquid" %}
 
+  {% comment %}Put in the abstract override{% endcomment %}
+  {% assign page_description = page.description %}
+  {% if page.data.abstract %}
+    {% assign page_description = page.data.abstract %}
+  {% endif %}
+
   <main>
     <article class="single h-entry max-width:base5" itemid="{{site.base_url}}/{{page.permalink}}">
       <header>
-        {% if page.data.has_animation == "true" %}
+        {% if page.data.animation_file %}
         {% assign animation_file = page.data.animation_file %}
         {% include animation_file %}
         {% endif %}
@@ -24,7 +30,7 @@
         <h1 class="p-name" itemprop="headline">{{ page.title }}</h1>
 
         <p class="p-summary" itemprop="description">
-          {{ page.description }}
+          {{ page_description }}
         </p>
 
         <meta itemprop="author" content="{{ site.data.config.author }}" />

@@ -4,6 +4,8 @@ ignore:
   - "package*"
   - "pnpm-lock.yaml"
   - "postcss.config.js"
+default:
+  excerpt_separator: ""
 site:
   title: Bill's website
   description: Bletherings of Bill, a web developer based in Cumbria.

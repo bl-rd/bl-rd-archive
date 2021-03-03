@@ -6,7 +6,6 @@ permalink: /{{parent}}/{{slug}}/
 description: Put the pages's abstract here...
 data: {
   # animation config
-  has_animation: false,
   animation_file: ~,
 
   # thing config

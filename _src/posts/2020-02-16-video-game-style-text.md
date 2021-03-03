@@ -1,15 +1,11 @@
 ---
 permalink: "/{{parent}}/{{slug}}/"
 title: Video-game style text
-description: In which I learned to use the Web Animations API to give body text some video game pizazz.
 published_date: "2020-02-16 16:55:38 +0000"
 layout: post.liquid
 is_draft: false
 data:
-  has_animation: true
-  is_thing: false
-  thing_link: ~
-  thing_link_text: ~
+  abstract: In which I learned to use the Web Animations API to give body text some video game pizazz.
   animation_file: animations/video-game-text.html
 tags: [ web, javascript, games, animation ]
 categories: [ posts ]

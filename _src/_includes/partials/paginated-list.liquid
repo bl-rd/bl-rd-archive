@@ -10,11 +10,35 @@
 
 <ul class="paginated-list">
 {% for post in col %}
+  {% assign category = post.categories | strip %}
+
+  {% comment %}
+    Manual removing of categories of the wrong type.
+    Need to do it this way for now as the category pagination
+    in Cobalt appears to be busted.
+  {% endcomment%}
   {% if paginated == false %}
-    {% assign category = post.categories | strip %}
     {% if category != page.data.filter %}
       {% continue %}
     {% endif %}
+  {% endif %}
+
+  {% comment %}
+    Page description override.
+    Get the custom "abstract" property so that
+    the description frontmatter doesn't override
+    the post content in the RSS
+  {% endcomment%}
+  {% assign content = post.description %}
+  {% if post.data.abstract %}
+    {% assign content = post.data.abstract %}
+  {% endif %}
+
+  {% comment %}
+    If it's a note, we want the content!
+  {% endcomment %}
+  {% if category == "notes" %}
+    {% assign content = post.content %}
   {% endif %}
 
   <li class="list:none">
@@ -27,7 +51,7 @@
       <time class="font:reduced" datetime="{{ post.published_date}}">{{ post.published_date | date: "%b %d %Y" }}</time>
       {% endif %}
 
-      <p>{{ post.description }}</p>
+      <p>{{ content }}</p>
       {% if post.tags %}
       <div class="tag-list">
         Filed under:
