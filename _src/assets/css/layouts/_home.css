@@ -145,6 +145,10 @@
   color: var(--app-colour-background);
 }
 
+.home .article__content {
+  margin-bottom: 1em;
+}
+
 .article--thing .thing-descriptor {
   position: absolute;
   top: -3.5ch;

@@ -30,10 +30,12 @@ a:active {
   text-decoration: none;
 }
 
-a.link-highlight {
+a.link-highlight,
+.link-highlight--all a {
   color: var(--highlight);
 }
 
-a.link-highlight:hover {
+a.link-highlight:hover,
+.link-highlight--all a:hover {
   color: var(--app-colour-body);
 }
