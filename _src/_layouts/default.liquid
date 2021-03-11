@@ -11,7 +11,12 @@
 
 <body class="no-js no-animate no-component">
   {% include "partials/navigation.liquid" %}
-  {{ page.content }}
+
+  <main>
+    {{ page.content }}
+  </main>
+
+  {% include "partials/footer.liquid" %}
 </body>
 
 </html>

@@ -1,58 +1,73 @@
-/**
- * Styles for the main footer element
- */
-
-body > footer {
-  background-color: var(--app-colour-body);
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  min-height: 15vh;
-  padding: 3rem 0 2rem 0;
+footer {
+  /* background-color: var(--black-secondary); */
+  width: 100%;
+  min-height: 20vh;
+  max-width: none;
+  padding: 1.66rem 0;
 }
 
-body > footer ul {
-  grid-column: 2/6;
+footer * {
+  font-size: var(--s-small);
+}
+
+footer .footer__image {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-body > footer li {
-  margin: 0.75em;
-  color: var(--app-colour-background);
-  font-size: var(--font-size-reduced);
-  list-style: none;
+footer .footer__image img {
+  width: 10vmax;
+  height: 10vmax;
+  max-width: 125px;
+  max-height: 125px;
+  border-radius: 50%;
+  filter: invert(100%) grayscale(100%) brightness(110%) contrast(150%);
 }
 
-body > footer li a {
-  color: var(--app-colour-background);
-  font-size: inherit;
+footer h2 {
+  font-size: var(--s1);
+  margin-bottom: 2rem;
 }
 
-@media only screen and (max-width: 66rem) {
-  body > footer {
-    display: block;
-    padding: 1rem 0;
+footer .footer__about {
+  border-left: 1ch solid var(--app-colour-body);
+  padding-left: var(--mobile-gutter-width);
+}
+
+footer .footer__links {
+  margin-top: 4rem;
+}
+
+footer .footer__links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+footer .footer__links li {
+  margin: 1em 2em;
+  margin: 1ch 2ch;
+  text-transform: lowercase;
+}
+
+footer .footer__formal {
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 66em) {
+  footer {
+    padding-left: var(--mobile-gutter-width);
+    padding-right: var(--mobile-gutter-width);
   }
 
-  body > footer ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-  }
-
-  body > footer li {
+  footer .footer__links ul {
     margin-left: 0;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body > footer {
-    background-color: var(--black-secondary);
+    flex-direction: column;
   }
 
-  body > footer li,
-  body > footer li a {
-    color: var(--app-color-body);
+  footer .footer__links ul li {
+    margin-left: 0;
   }
 }

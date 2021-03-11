@@ -40,6 +40,10 @@
   flex-basis: 100%;
 }
 
+ul.list\:none li {
+  list-style: none;
+}
+
 .list\:none {
   list-style: none;
 }
@@ -49,6 +53,10 @@
   width: 80%;
   width: clamp(55rem, 60vw, 80%);
   margin: 0 auto;
+}
+
+.text-align\:center {
+  text-align: center;
 }
 
 .text-align\:right {

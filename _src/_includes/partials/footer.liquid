@@ -1,0 +1,38 @@
+<footer>
+  <div class="max-width:base5">
+    <div class="footer__image">
+      <picture>
+        <img src="{{ site.base_url }}/assets/images/bee.png" />
+      </picture>
+    </div>
+    {% if page.permalink != "index.html" %}
+    <div class="footer__about">
+      <h2 id="about-me">Hello 👋</h2>
+        {% include "content/about.html" %}
+    </div>
+    {% include "partials/diagonal-lines.liquid" %}
+    {% endif %}
+    <div class="footer__links">
+      <ul id="about-links" class="list:none">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="{{ site.base_url }}/rss.xml">RSS</a>
+        </li>
+        <li>
+          <a href="https://github.com/bl-rd" rel="noopener nofollow">GitHub</a>
+        </li>
+        <li>
+          <a href="https://codepen.io/bl-rd" rel="noopener nofollow">Codepen</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/_bl_rd_dev" rel="noopener nofollow">Twitter [👻]</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__formal text-align:center">
+      &copy;2021
+    </div>
+  </div>
+</footer>

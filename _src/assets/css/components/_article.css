@@ -94,7 +94,7 @@
 @media only screen and (max-width: 66rem) {
   .single > * {
     grid-column: 1/5;
-    padding: 0 1rem;
+    padding: 0 var(--mobile-gutter-width);
     max-width: 100%;
   }
 
@@ -123,7 +123,7 @@
   .single > header + :not(.supplementary):first-of-type {
     padding-left: 0;
     padding-right: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: var(--mobile-gutter-width);
+    margin-right: var(--mobile-gutter-width);
   }
 }

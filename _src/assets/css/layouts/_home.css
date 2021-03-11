@@ -23,14 +23,6 @@
   background-color: var(--app-colour-background);
 }
 
-.home header h1 {
-  transform: rotate(-2deg);
-}
-
-.home header p {
-  transform: rotate(2deg);
-}
-
 .home h2.list-title {
   text-align: right;
   margin-bottom: 5rem;
@@ -62,6 +54,18 @@
   stroke-linecap: round;
   stroke-miterlimit: 10;
   stroke-width: 6px;
+}
+
+.home header div > * {
+  transform: rotate(-2deg);
+}
+
+.home .article--thing * {
+  color: var(--app-colour-background);
+}
+
+.home header > div *:nth-child(even) {
+  transform: rotate(2deg);
 }
 
 .home header .hello {
@@ -139,10 +143,6 @@
   top: 400px;
   transform: skew(-70deg, 0deg);
   opacity: 0.04;
-}
-
-.home .article--thing * {
-  color: var(--app-colour-background);
 }
 
 .home .article__content {

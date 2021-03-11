@@ -20,7 +20,7 @@
   /* colours */
   --white: #fff;
   --black: #111;
-  --black-secondary: #121211;
+  --black-secondary: #1a1a1b;
   --highlight: #ff2877;
   --highlight-offset: #cc215f;
   --highlight-2: #0ff;
@@ -34,6 +34,7 @@
   --measure-width: 66ch;
   --body-width: calc(var(--measure-width) + 5vw);
   --grid-columns-full: repeat(4, 1fr);
+  --mobile-gutter-width: 1rem;
 
   /* animation */
   --elem-width: 2vh;

@@ -52,9 +52,9 @@
         {{ page.content }}
 
         {% if page.tags %}
-        <section aria-label="tags" class="tag-list tag-list--right">
+        <section aria-label="tags" class="tag-list">
+          Filed under:
           <ul>
-            Filed under:
             {% for tag in page.tags %}
             <li>
               <a href="{{ site.base_url }}/tag/{{ tag }}" class="link-highlight">
@@ -66,10 +66,12 @@
         </section>
         {% endif %}
       </div>
-
       {% include "partials/signoff.liquid" %}
+
     </article>
   </main>
+
+  {% include "partials/footer.liquid" %}
 
   {% comment %}
   - Include any required component templates
