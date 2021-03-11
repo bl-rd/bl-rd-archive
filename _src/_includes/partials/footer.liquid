@@ -31,8 +31,10 @@
         </li>
       </ul>
     </div>
+    {% if site.data.config.show_copyright_date %}
     <div class="footer__formal text-align:center">
-      &copy;2021
+      &copy;{{ site.data.config.copyright_date }}
     </div>
+    {% endif %}
   </div>
 </footer>

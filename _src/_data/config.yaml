@@ -10,6 +10,11 @@ home_background: true
 # notes config
 notes_overflow_size: 75
 
+# show the copyright thing-y in the footer?
+show_copyright_date: false
+# can't seem to access the date dynamically 😢
+copyright_date: 2021
+
 # tags config
 valid_tags: [
   "web",
