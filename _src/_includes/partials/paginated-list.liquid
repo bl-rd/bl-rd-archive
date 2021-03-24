@@ -17,7 +17,7 @@
     Need to do it this way for now as the category pagination
     in Cobalt appears to be busted.
   {% endcomment%}
-  {% if paginated == false %}
+  {% if paginated == false and page.data.filter %}
     {% if category != page.data.filter %}
       {% continue %}
     {% endif %}
@@ -37,7 +37,7 @@
   {% comment %}
     If it's a note, we want the content!
   {% endcomment %}
-  {% if category == "notes" %}
+  {% if category != "posts" %}
     {% assign content = post.content %}
   {% endif %}
 
@@ -53,7 +53,7 @@
 
       <p>{{ content }}</p>
 
-      {% if category != "notes" %}
+      {% if category == "posts" %}
         <p>
           <a href="{{ post.permalink }}" class="link-highlight">Read more</a>
         </p>

@@ -16,9 +16,8 @@ Generates a list of the most recent articles
   Latest posts
 </h2>
 
-<ul>
+<ul class="home--featured">
 {% for post in collections.posts.pages %}
-
   {% assign post_url = post.permalink %}
   {% assign post_cta = "Read more" %}
   {% assign post_class = "article--post" %}
@@ -28,7 +27,9 @@ Generates a list of the most recent articles
   {% assign thing_type_class = "" %}
   {% assign tag_css_injections = "--tag-background-colour:var(--app-colour-body);--article-background:var(--app-colour-background)" %}
 
-  {% comment %} Override the post content for the rss hack {% endcomment %}
+  {% comment %}
+    Override the post content for the rss hack
+  {% endcomment %}
   {% if post.data.abstract %}
     {% assign post_content = post.data.abstract %}
   {% else %}
@@ -48,7 +49,15 @@ Generates a list of the most recent articles
     {% endif %}
   {% endif %}
 
+  {% comment %}
+    Notes may or may not be excluded from the latest
+    section. Check the config file.
+  {% endcomment %}
   {% if post_category == "notes" %}
+    {% if site.data.config.home_latest_notes == false %}
+      {% continue %}
+    {% endif %}
+
     {% assign post_class = "article--note" %}
     {% assign post_content = post.content %}
 
@@ -59,6 +68,14 @@ Generates a list of the most recent articles
     {% endif %}
     {% comment %} Hard coding to false for now as just showing everything {% endcomment %}
     {% assign post_show_read_more = false %}
+  {% endif %}
+
+  <span hidden>
+    {% increment counter %}
+  </span>
+
+  {% if counter > site.data.config.max_home_latest %}
+    {% break %}
   {% endif %}
 
   <li class="list:none max-width:none {{ post_class }} {{ thing_type_class }}">
@@ -106,3 +123,9 @@ Generates a list of the most recent articles
   </li>
 {% endfor %}
 </ul>
+
+<h2 class="body:width list-title list-title--left animation:flash-before">
+  All posts
+</h2>
+
+{% include "partials/paginated-list.liquid" %}

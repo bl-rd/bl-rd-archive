@@ -7,6 +7,12 @@ page_animations_path: "assets/js/animations"
 # lines background on home page
 home_background: true
 
+# how many "latest" posts/things should be on the home page
+max_home_latest: 3
+
+# include "notes" in "latest" section of home page?
+home_latest_notes: false
+
 # notes config
 notes_overflow_size: 75
 
