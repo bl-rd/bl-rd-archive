@@ -1,3 +1,7 @@
 ins {
   text-decoration: none;
 }
+
+sup {
+  font-size: var(--s-small);
+}
