@@ -1,7 +1,7 @@
 node_modules
 resources/
 public/
-_site/
+#_site/
 _src/_includes/styles/main.css
 _src/assets/js/dist/*
 # Local Netlify folder
