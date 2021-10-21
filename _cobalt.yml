@@ -9,7 +9,7 @@ default:
 site:
   title: Bill's website
   description: Bletherings of Bill, a web developer based in Cumbria.
-  base_url: https://bl-rd.dev
+  base_url: https://bl-rd.github.io/bl-rd/
 posts:
   rss: rss.xml
   jsonfeed: json-feed.json
