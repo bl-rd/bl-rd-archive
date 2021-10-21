@@ -43,7 +43,7 @@
 
   <li class="list:none">
     <article>
-      <a href="/{{ post.permalink }}">
+      <a href="{{ site.base_url }}/{{ post.permalink }}">
         <h2>{{ post.title }}</h2>
       </a>
 
@@ -55,7 +55,7 @@
 
       {% if category == "posts" %}
         <p>
-          <a href="{{ post.permalink }}" class="link-highlight">Read more</a>
+          <a href="{{ site.base_url }}/{{ post.permalink }}" class="link-highlight">Read more</a>
         </p>
       {% endif %}
       {% if post.tags %}
